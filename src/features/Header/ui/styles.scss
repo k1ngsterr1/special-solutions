@@ -1,0 +1,10 @@
+.header {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  @apply mt-8;
+
+  &__logo {
+    width: clamp(100px, 46.727999999999994vw, 400px);
+  }
+}

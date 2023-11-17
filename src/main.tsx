@@ -4,9 +4,13 @@ import { App } from "./app/App";
 
 // Styles
 import "./shared/styles/global.scss";
+import { Provider } from "react-redux";
+import { store } from "@shared/lib/redux/store";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
