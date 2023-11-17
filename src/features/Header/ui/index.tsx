@@ -14,6 +14,8 @@ export const Header = () => {
 
   function openMenu() {
     dispatch(toggleMenu());
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    setMenuOpen(!false);
   }
 
   return (

@@ -1,0 +1,13 @@
+.contact-link {
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @apply text-custom-orange;
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    @apply text-custom-black;
+  }
+}

@@ -1,0 +1,28 @@
+.button {
+  width: clamp(155px, 72.4284vw, 620px);
+  height: clamp(27.5px, 12.8502vw, 110px);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.full {
+  @apply bg-custom-orange;
+  @apply text-custom-white;
+  text-align: center;
+  font-family: Inter;
+  font-size: clamp(10px, 4.6728vw, 40px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.outline {
+  background: transparent;
+  @apply text-custom-black;
+  text-align: center;
+  font-family: Inter;
+  font-size: clamp(10px, 4.6728vw, 40px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}

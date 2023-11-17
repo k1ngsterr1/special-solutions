@@ -1,0 +1,13 @@
+.link {
+  @apply text-custom-black;
+  font-family: Inter;
+  font-size: clamp(15px, 7.0092vw, 60px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    @apply text-custom-orange;
+  }
+}
