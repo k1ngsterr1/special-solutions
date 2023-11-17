@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import "./styles.scss";
+
 interface GalleryPhotoProps {
   img: string;
   text: string;

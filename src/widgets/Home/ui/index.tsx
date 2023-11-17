@@ -1,3 +1,4 @@
+import { Gallery } from "@features/Gallery/ui";
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 
@@ -18,6 +19,7 @@ export const HomeScreen = () => {
           объекты для наших клиентов.
         </p>
       </Slide>
+      <Gallery />
     </main>
   );
 };

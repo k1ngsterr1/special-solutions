@@ -4,14 +4,12 @@ import { GalleryPhoto } from "@shared/ui/GalleryPhoto";
 // Assets
 import gallery01 from "@assets/design_gallery_01.webp";
 
+import "swiper/css";
 import "./styles.scss";
-interface GalleryProps {
-  img: string;
-}
 
-export const Gallery: React.FC<GalleryProps> = ({ img }) => {
+export const Gallery = () => {
   return (
-    <Swiper className="swiper">
+    <Swiper className="swiper" slidesPerView={1} spaceBetween={64}>
       <SwiperSlide className="swiper__slide">
         <GalleryPhoto
           text="Дизайн Интерьера"
@@ -42,7 +40,7 @@ export const Gallery: React.FC<GalleryProps> = ({ img }) => {
           subText="Интерьер"
           url=""
           img={gallery01}
-        />{" "}
+        />
       </SwiperSlide>
     </Swiper>
   );
