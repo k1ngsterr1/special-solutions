@@ -1,0 +1,35 @@
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &__text-container {
+    width: auto;
+    height: auto;
+
+    &__text {
+      text-align: center;
+      font-family: Inter;
+      font-size: clamp(12.5px, 5.840999999999999vw, 50px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      @apply text-custom-white;
+    }
+
+    &__sub-text {
+      text-align: center;
+      font-family: Inter;
+      font-size: clamp(9px, 4.20552vw, 36px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      @apply text-custom-orange;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: clamp(193.5px, 90.41868vw, 774px);
+  }
+}

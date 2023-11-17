@@ -1,0 +1,14 @@
+.swiper {
+  width: 100%;
+  height: auto;
+
+  &__slide {
+    width: 100%;
+    height: auto;
+
+    &__image {
+      width: 100%;
+      height: clamp(193.5px, 90.41868vw, 774px);
+    }
+  }
+}
