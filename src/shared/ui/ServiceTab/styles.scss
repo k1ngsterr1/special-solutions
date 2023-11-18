@@ -1,0 +1,37 @@
+.service-tab {
+  position: relative;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  &:hover {
+    &__text {
+      color: orange;
+    }
+  }
+
+  &__icon {
+    font-size: clamp(15px, 7.0092vw, 60px);
+    position: absolute;
+    top: clamp(8px, 3.73824vw, 32px);
+    right: clamp(8px, 3.73824vw, 32px);
+    color: white;
+  }
+
+  &__text {
+    width: 60%;
+    position: absolute;
+    color: #fff;
+    font-family: Rubik;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    bottom: clamp(14px, 6.541919999999999vw, 56px);
+    left: clamp(8px, 3.73824vw, 32px);
+  }
+
+  &__image {
+    width: 100%;
+    height: clamp(252.5px, 117.98819999999999vw, 1010px);
+  }
+}

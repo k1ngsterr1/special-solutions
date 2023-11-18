@@ -1,6 +1,10 @@
 import { Feature } from "@shared/ui/Feature";
 import { Slide } from "react-awesome-reveal";
 
+import Image from "@assets/about_image.webp";
+
+import "./styles.scss";
+
 export const AboutScreen = () => {
   return (
     <>
@@ -35,6 +39,18 @@ export const AboutScreen = () => {
           text="Изготовление и монтаж офисных перегородок"
           marginTop="mt-6"
         />
+      </Slide>
+      <Slide direction="left" triggerOnce={true}>
+        <img src={Image} className="about-image mt-12" alt="about-image" />
+      </Slide>
+      <Slide direction="right" triggerOnce={true}>
+        <p className="paragraph text-center mt-8">
+          Компания <span className="orange">Special Solution</span> занимается
+          разработкой передовых решений, способных удовлетворить самые
+          изысканные и специфические запросы наших клиентов. Мы сочетаем
+          глубокие знания отрасли с инновационным мышлением, чтобы предлагать
+          продукты и услуги, выходящие за рамки стандартных предложений.
+        </p>
       </Slide>
     </>
   );
