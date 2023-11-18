@@ -14,7 +14,7 @@ export const HomePage = () => {
       <Header />
       {isMenuOpen && <Menu />}
       <div className="container flex flex-col items-center">
-        <main className="w-full">
+        <main className="w-full flex flex-col items-center">
           <HomeScreen />
         </main>
         <AboutScreen />

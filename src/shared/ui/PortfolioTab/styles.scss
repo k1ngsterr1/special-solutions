@@ -1,0 +1,16 @@
+.portfolio-tab {
+  position: relative;
+  width: 100%;
+  height: clamp(190px, 88.7832vw, 760px);
+
+  &__icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    @apply text-custom-white;
+    transition: 0.3s all;
+  }
+
+  &__text {
+  }
+}

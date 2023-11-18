@@ -3,10 +3,11 @@
   width: 100%;
   height: auto;
   cursor: pointer;
-  &:hover {
-    &__text {
-      color: orange;
-    }
+  &:hover .service-tab__text {
+    @apply text-custom-orange;
+  }
+  &:hover .service-tab__icon {
+    @apply text-custom-orange;
   }
 
   &__icon {
@@ -15,6 +16,7 @@
     top: clamp(8px, 3.73824vw, 32px);
     right: clamp(8px, 3.73824vw, 32px);
     color: white;
+    transition: 0.3s all;
   }
 
   &__text {
@@ -28,6 +30,7 @@
     line-height: normal;
     bottom: clamp(14px, 6.541919999999999vw, 56px);
     left: clamp(8px, 3.73824vw, 32px);
+    transition: 0.3s all;
   }
 
   &__image {

@@ -1,4 +1,5 @@
 import { Gallery } from "@features/Gallery/ui";
+import { Button } from "@shared/ui/Button";
 import { Slide } from "react-awesome-reveal";
 
 export const HomeScreen = () => {
@@ -19,6 +20,12 @@ export const HomeScreen = () => {
         </p>
       </Slide>
       <Gallery />
+      <Button
+        text="Все проекты"
+        type="outline"
+        onClick={() => console.log("holla")}
+        marginTop="mt-8"
+      />
     </>
   );
 };

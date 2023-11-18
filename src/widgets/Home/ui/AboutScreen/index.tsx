@@ -1,5 +1,6 @@
 import { Feature } from "@shared/ui/Feature";
 import { Slide } from "react-awesome-reveal";
+import { Button } from "@shared/ui/Button";
 
 import Image from "@assets/about_image.webp";
 
@@ -51,6 +52,14 @@ export const AboutScreen = () => {
           глубокие знания отрасли с инновационным мышлением, чтобы предлагать
           продукты и услуги, выходящие за рамки стандартных предложений.
         </p>
+      </Slide>
+      <Slide direction="left" triggerOnce={true}>
+        <Button
+          text="Связаться нами"
+          marginTop="mt-8"
+          type="outline"
+          onClick={() => console.log("holla")}
+        />
       </Slide>
     </>
   );

@@ -1,7 +1,7 @@
 .button {
   width: clamp(155px, 72.4284vw, 620px);
   height: clamp(27.5px, 12.8502vw, 110px);
-  border-radius: 50px;
+  border-radius: clamp(25px, 11.681999999999999vw, 100px);
   cursor: pointer;
 }
 
@@ -25,4 +25,9 @@
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  transition: 0.3s all;
+  &:hover {
+    @apply bg-custom-orange;
+    @apply text-custom-white;
+  }
 }
