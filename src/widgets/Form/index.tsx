@@ -6,8 +6,7 @@ import { Slide } from "react-awesome-reveal";
 import "./styles.scss";
 
 export const Form = () => {
-  const { register, handleSubmit, errors, isSubmitting, isValid, onSubmit } =
-    useSendEmail();
+  const { register, handleSubmit, errors, onSubmit } = useSendEmail();
 
   return (
     <>

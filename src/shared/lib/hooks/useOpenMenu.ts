@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleMenu } from "@shared/lib/redux/menuSlice";
 
 export const useOpenMenu = (isOpen: boolean) => {
