@@ -19,4 +19,9 @@
     @apply text-custom-orange;
     @apply border-custom-orange;
   }
+
+  &--error {
+    border-bottom: 2px solid hsla(0, 100%, 50%, 0.8);
+    color: hsla(0, 100%, 50%, 0.8);
+  }
 }
