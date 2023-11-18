@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { AboutScreen } from "@widgets/Home/ui/AboutScreen";
 import { ServicesScreen } from "@widgets/Home/ui/ServicesScreen";
 import { PorfolioScreen } from "@widgets/Home/ui/PortfolioScreen";
+import { Form } from "@widgets/Form";
 
 export const HomePage = () => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
@@ -21,6 +22,7 @@ export const HomePage = () => {
         <AboutScreen />
         <ServicesScreen />
         <PorfolioScreen />
+        <Form />
       </div>
     </>
   );

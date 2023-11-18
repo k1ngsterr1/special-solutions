@@ -1,5 +1,8 @@
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 import { Input } from "@shared/ui/Input";
+import { Button } from "@shared/ui/Button";
+
+import "./styles.scss";
 
 export const Form = () => {
   const { register, handleSubmit, errors, isSubmitting, isValid, onSubmit } =
@@ -8,7 +11,7 @@ export const Form = () => {
   return (
     <>
       <h5 className="mt-12">Свяжитесь с нами</h5>
-      <p className="paragraph mt-8">
+      <p className="paragraph text-center mt-8">
         Компания <span className="orange">Special Solution </span> занимается
         разработкой передовых решений, способных удовлетворить самые изысканные
         и специфические запросы наших клиентов. Мы сочетаем глубокие знания
@@ -16,14 +19,14 @@ export const Form = () => {
         выходящие за рамки стандартных предложений.
       </p>
       <form
-        className="form flex flex-col items-center"
+        className="form flex flex-col items-center mt-8 mb-16"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="form__input mt-4">
           <Input
             {...register("full_name", { required: "Заполните ваше имя" })}
             type="text"
-            placeholder="Имя"
+            placeholder="Ваше Имя*"
             isError={Boolean(errors.full_name)}
           />
           {errors.full_name && (
@@ -32,20 +35,7 @@ export const Form = () => {
             </span>
           )}
         </div>
-        <div className="form__input mt-4">
-          <Input
-            {...register("full_name", { required: "Заполните ваше имя" })}
-            type="text"
-            placeholder="Имя"
-            isError={Boolean(errors.full_name)}
-          />
-          {errors.full_name && (
-            <span className="form__input--error">
-              {errors.full_name.message}
-            </span>
-          )}
-        </div>
-        <div className="form__input mt-4">
+        <div className="form__input mt-8">
           <Input
             {...register("phone_number", { required: "Заполните ваш телефон" })}
             type="text"
@@ -58,7 +48,7 @@ export const Form = () => {
             </span>
           )}
         </div>
-        <div className="form__input mt-4">
+        <div className="form__input  mt-8">
           <Input
             {...register("email", {
               required: "Заполните электронную почту",
@@ -68,13 +58,19 @@ export const Form = () => {
               },
             })}
             type="email"
-            placeholder="Email"
+            placeholder="Ваша почта*"
             isError={Boolean(errors.email)}
           />
           {errors.email && (
             <span className="form__input--error">{errors.email.message}</span>
           )}
         </div>
+        <Button
+          text="Отправить"
+          marginTop="mt-8"
+          type="full"
+          onClick={() => console.log("submit")}
+        />
       </form>
     </>
   );

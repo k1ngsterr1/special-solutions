@@ -9,11 +9,14 @@
   line-height: 137.4%;
   outline: none;
   border: none;
-  border-bottom: 2px solid $dark;
+  background: transparent;
+  border-bottom: 2px solid hsla(0, 0%, 20%, 0.5);
+  padding-left: 16px;
   transition: 0.3s all;
   &:active,
   &:focus {
-    color: $orange;
-    border-bottom: 2px solid $orange;
+    border-bottom: 2px solid;
+    @apply text-custom-orange;
+    @apply border-custom-orange;
   }
 }
