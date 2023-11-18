@@ -2,6 +2,7 @@ import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
 
 import portfolio01 from "@assets/portfolio01.webp";
+import { Button } from "@shared/ui/Button";
 
 export const PorfolioScreen = () => {
   return (
@@ -11,7 +12,7 @@ export const PorfolioScreen = () => {
       </Slide>
       <Slide direction="right" triggerOnce={true}>
         <p className="paragraph text-center mt-8">
-          Компания <span className="oange">Special Solution</span> занимается
+          Компания <span className="orange">Special Solution</span> занимается
           разработкой передовых решений, способных удовлетворить самые
           изысканные и специфические запросы наших клиентов. Мы сочетаем
           глубокие знания отрасли с инновационным мышлением, чтобы предлагать
@@ -40,6 +41,14 @@ export const PorfolioScreen = () => {
           subText="Интерьер"
           image={portfolio01}
           marginTop="mt-8"
+        />
+      </Slide>
+      <Slide direction="right" triggerOnce={true}>
+        <Button
+          text="Все проекты"
+          type="outline"
+          marginTop="mt-8"
+          onClick={() => console.log("holla")}
         />
       </Slide>
     </>
