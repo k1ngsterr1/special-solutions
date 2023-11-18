@@ -1,9 +1,8 @@
 import { Slide } from "react-awesome-reveal";
-
-import "./styles.scss";
 import { LinkButton } from "@shared/ui/Link";
 import { ContactLink } from "@shared/ui/ContactLink";
-import { Button } from "@shared/ui/Button";
+
+import "./styles.scss";
 
 export const Menu = () => {
   return (

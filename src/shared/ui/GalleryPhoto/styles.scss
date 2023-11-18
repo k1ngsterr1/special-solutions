@@ -6,7 +6,9 @@
   &__text-container {
     width: auto;
     height: auto;
-    border: 2px solid red;
+    position: absolute;
+    bottom: clamp(8px, 3.73824vw, 32px);
+    left: clamp(8px, 3.73824vw, 32px);
 
     &__text {
       text-align: center;

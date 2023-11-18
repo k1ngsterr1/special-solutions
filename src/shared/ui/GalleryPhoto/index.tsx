@@ -17,9 +17,9 @@ export const GalleryPhoto: React.FC<GalleryPhotoProps> = ({
 }) => {
   return (
     <div className="photo-container">
-      <div className="text-container flex flex-col items-end">
-        <span className="text-container__text">{text}</span>
-        <Link to={url} className="text-container__sub-text">
+      <div className="photo-container__text-container flex flex-col items-start">
+        <span className="photo-container__text-container__text">{text}</span>
+        <Link to={url} className="photo-container__text-container__sub-text">
           {subText}
         </Link>
       </div>

@@ -1,10 +1,9 @@
 import { Gallery } from "@features/Gallery/ui";
-import React from "react";
 import { Slide } from "react-awesome-reveal";
 
 export const HomeScreen = () => {
   return (
-    <main className="container">
+    <>
       <Slide direction="left">
         <h1 className="bigger text-custom-orange">Special Solutions</h1>
       </Slide>
@@ -20,6 +19,6 @@ export const HomeScreen = () => {
         </p>
       </Slide>
       <Gallery />
-    </main>
+    </>
   );
 };

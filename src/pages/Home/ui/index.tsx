@@ -3,6 +3,7 @@ import { Menu } from "@features/Menu/ui";
 import { HomeScreen } from "@widgets/Home";
 import { RootState } from "@shared/lib/redux/store";
 import { useSelector } from "react-redux";
+import { AboutScreen } from "@widgets/Home/ui/AboutScreen";
 
 export const HomePage = () => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
@@ -11,7 +12,12 @@ export const HomePage = () => {
     <>
       <Header />
       {isMenuOpen && <Menu />}
-      <HomeScreen />
+      <div className="container flex flex-col items-center">
+        <main className="w-full">
+          <HomeScreen />
+        </main>
+        <AboutScreen />
+      </div>
     </>
   );
 };

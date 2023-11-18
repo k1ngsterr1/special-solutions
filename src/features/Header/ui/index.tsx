@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useOpenMenu } from "@shared/lib/hooks/useOpenMenu";
 
 import logo from "@assets/logo.svg";
 
 import Hamburger from "hamburger-react";
-import { useDispatch } from "react-redux";
-import { toggleMenu } from "@shared/lib/redux/menuSlice";
 
 import "./styles.scss";
 
 export const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const dispatch = useDispatch();
+  const isMenuOpen = useSelector((state: any) => state.menu.isOpen);
+  const openMenu = useOpenMenu(isMenuOpen);
 
-  function openMenu() {
-    dispatch(toggleMenu());
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
-    setMenuOpen(!false);
-  }
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
