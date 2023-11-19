@@ -12,13 +12,13 @@ export const Header = () => {
   const isMenuOpen = useSelector((state: any) => state.menu.isOpen);
   const openMenu = useOpenMenu(isMenuOpen);
 
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+  // useEffect(() => {
+  //   document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isMenuOpen]);
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isMenuOpen]);
 
   return (
     <>

@@ -4,6 +4,7 @@ import { Button } from "@shared/ui/Button";
 import { Slide } from "react-awesome-reveal";
 
 import "./styles.scss";
+import { Selector } from "@shared/ui/Selector";
 
 export const Form = () => {
   const { register, handleSubmit, errors, onSubmit } = useSendEmail();
@@ -78,6 +79,9 @@ export const Form = () => {
               </span>
             )}
           </div>
+        </Slide>
+        <Slide direction="right" className="w-full">
+          <Selector />
         </Slide>
         <Slide
           direction="right"
