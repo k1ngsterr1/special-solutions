@@ -15,7 +15,7 @@ export const HomePage = () => {
     <>
       <Header />
       {isMenuOpen && <Menu />}
-      <div className="container flex flex-col items-center">
+      <div className="content-container flex flex-col items-center">
         <main className="w-full flex flex-col items-center">
           <HomeScreen />
         </main>

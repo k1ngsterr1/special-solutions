@@ -46,7 +46,7 @@ h5 {
   height: auto;
 }
 
-.container {
+.content-container {
   width: 90%;
   height: auto;
   display: flex;
@@ -65,4 +65,48 @@ h5 {
 }
 .orange {
   color: $orange;
+}
+
+@media screen and (min-width: 1024px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $dark;
+    font-family: Rubik;
+    font-size: clamp(30px, 3.1248vw, 120px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: left !important;
+  }
+
+  .bigger {
+    width: 100%;
+    font-size: clamp(30px, 3.1248vw, 120px);
+  }
+
+  .app-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .content-container {
+    width: 86.6% !important;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    @apply mt-40;
+  }
+  .paragraph {
+    color: $dark;
+    font-family: Inter;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+  }
 }

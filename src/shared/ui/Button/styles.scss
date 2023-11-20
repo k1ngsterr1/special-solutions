@@ -40,3 +40,52 @@
     @apply text-custom-white;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .button {
+    width: clamp(130px, 13.5408vw, 520px);
+    height: clamp(25.5px, 2.65608vw, 102px);
+    border-radius: clamp(25px, 11.681999999999999vw, 100px);
+    cursor: pointer;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .full {
+    @apply bg-custom-orange;
+    @apply text-custom-white;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s all;
+    cursor: pointer;
+    z-index: 200;
+    &:hover {
+      @apply bg-custom-black;
+    }
+  }
+
+  .outline {
+    background: transparent;
+    @apply text-custom-black;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    transition: 0.3s all;
+    z-index: 200;
+
+    &:hover {
+      @apply bg-custom-orange;
+      @apply text-custom-white;
+    }
+  }
+}
