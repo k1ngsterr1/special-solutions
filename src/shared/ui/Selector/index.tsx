@@ -30,6 +30,8 @@ export const Selector = () => {
         defaultValue={selectedOption}
         onChange={handleChange}
         options={options}
+        menuPortalTarget={document.body}
+        menuPosition={"fixed"}
         placeholder={"Выберите услугу"}
       />
     </>
