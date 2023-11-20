@@ -1,7 +1,7 @@
 import { Gallery } from "@features/Gallery/ui";
 import { Button } from "@shared/ui/Button";
-import { LinkButton } from "@shared/ui/Link";
 import { Slide } from "react-awesome-reveal";
+
 export const HomeScreen = () => {
   return (
     <>

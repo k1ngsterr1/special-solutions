@@ -1,8 +1,8 @@
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
+import { Button } from "@shared/ui/Button";
 
 import portfolio01 from "@assets/portfolio01.webp";
-import { Button } from "@shared/ui/Button";
 
 export const PorfolioScreen = () => {
   return (
@@ -56,47 +56,61 @@ export const PorfolioScreen = () => {
       <div className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden mt-24">
         <div className="flex w-full justify-between items-center ">
           <div className="flex flex-col justify-center w-[90%]">
-            <h4>Портфолио</h4>
-            <p className="paragraph mt-8 w-[60%]">
-              Компания <span className="orange">Special Solution</span>{" "}
-              занимается разработкой передовых решений, способных удовлетворить
-              самые изысканные и специфические запросы наших клиентов. Мы
-              сочетаем глубокие знания отрасли с инновационным мышлением, чтобы
-              предлагать продукты и услуги, выходящие за рамки стандартных
-              предложений.
-            </p>
+            <Slide direction="left" triggerOnce={true}>
+              <h4>Портфолио</h4>
+            </Slide>
+            <Slide direction="left" triggerOnce={true}>
+              <p className="paragraph mt-8 w-[60%]">
+                Компания <span className="orange">Special Solution</span>{" "}
+                занимается разработкой передовых решений, способных
+                удовлетворить самые изысканные и специфические запросы наших
+                клиентов. Мы сочетаем глубокие знания отрасли с инновационным
+                мышлением, чтобы предлагать продукты и услуги, выходящие за
+                рамки стандартных предложений.
+              </p>
+            </Slide>
           </div>
-          <Button
-            text="Все проекты"
-            onClick={() => console.log("holla")}
-            type="outline"
-          />
+          <Slide direction="right" triggerOnce={true}>
+            <Button
+              text="Все проекты"
+              onClick={() => console.log("holla")}
+              type="outline"
+            />
+          </Slide>
         </div>
         <div className="w-full flex justify-between items-center mt-8">
-          <PortfolioTab
-            text="Интерьер Офиса"
-            subText="Интерьер"
-            image={portfolio01}
-            marginTop="mt-8"
-          />
-          <PortfolioTab
-            text="Интерьер Офиса"
-            subText="Интерьер"
-            image={portfolio01}
-            marginTop="mt-8 ml-8"
-          />
-          <PortfolioTab
-            text="Интерьер Офиса"
-            subText="Интерьер"
-            image={portfolio01}
-            marginTop="mt-8 ml-8"
-          />
-          <PortfolioTab
-            text="Интерьер Офиса"
-            subText="Интерьер"
-            image={portfolio01}
-            marginTop="mt-8 ml-8"
-          />
+          <Slide className="w-full" direction="up" triggerOnce={true}>
+            <PortfolioTab
+              text="Интерьер Офиса"
+              subText="Интерьер"
+              image={portfolio01}
+              marginTop="mt-8"
+            />
+          </Slide>
+          <Slide className="w-full" direction="up" triggerOnce={true}>
+            <PortfolioTab
+              text="Интерьер Офиса"
+              subText="Интерьер"
+              image={portfolio01}
+              marginTop="mt-8 ml-8"
+            />
+          </Slide>
+          <Slide className="w-full ml-8" direction="up" triggerOnce={true}>
+            <PortfolioTab
+              text="Интерьер Офиса"
+              subText="Интерьер"
+              image={portfolio01}
+              marginTop="mt-8 ml-8"
+            />
+          </Slide>
+          <Slide className="w-full ml-8" direction="up" triggerOnce={true}>
+            <PortfolioTab
+              text="Интерьер Офиса"
+              subText="Интерьер"
+              image={portfolio01}
+              marginTop="mt-8 ml-8"
+            />
+          </Slide>
         </div>
       </div>
     </>
