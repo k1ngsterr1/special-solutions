@@ -61,38 +61,56 @@ export const ServicesScreen = () => {
       </section>
       <section className="pc-screen w-full flex flex-col items-end max-[1024px]:hidden mt-28">
         <div className="w-full flex justify-between  items-center">
-          <LinkButton text="Связаться с нами" to="contacts" type="outline" />
+          <Slide direction="left" triggerOnce={true}>
+            <LinkButton text="Связаться с нами" to="contacts" type="outline" />
+          </Slide>
           <div className="w-[70%] flex flex-col items-end">
-            <h3>Услугии</h3>
-            <p className=" paragraph text-right mt-8 w-[70%]">
-              Наши услуги охватывают широкий спектр современных решений для
-              бизнеса и частных клиентов. Мы предлагаем высококлассные
-              консультации, разработку на заказ, полную техническую поддержку и
-              управление проектами.
-            </p>
+            <Slide direction="right" triggerOnce={true}>
+              <h3>Услугии</h3>
+            </Slide>
+            <Slide
+              direction="right"
+              className="w-full flex justify-end"
+              triggerOnce={true}
+            >
+              <p className=" paragraph text-right mt-8 w-[70%]">
+                Наши услуги охватывают широкий спектр современных решений для
+                бизнеса и частных клиентов. Мы предлагаем высококлассные
+                консультации, разработку на заказ, полную техническую поддержку
+                и управление проектами.
+              </p>
+            </Slide>
           </div>
         </div>
         <div className="w-full flex items-centes justify-between mt-16">
-          <ServiceTab
-            text="Облицовка стен стеклом"
-            img={service01}
-            marginTop="mt-8"
-          />
-          <ServiceTab
-            text="Облицовка стен стеклом"
-            img={service02}
-            marginTop="mt-8"
-          />
-          <ServiceTab
-            text="Облицовка стен стеклом"
-            img={service03}
-            marginTop="mt-8"
-          />
-          <ServiceTab
-            text="Облицовка стен стеклом"
-            img={service04}
-            marginTop="mt-8"
-          />
+          <Slide direction="up" triggerOnce={true}>
+            <ServiceTab
+              text="Облицовка стен стеклом"
+              img={service01}
+              marginTop="mt-8"
+            />
+          </Slide>
+          <Slide direction="up" triggerOnce={true} delay={200}>
+            <ServiceTab
+              text="Облицовка стен стеклом"
+              img={service02}
+              marginTop="mt-8"
+            />
+          </Slide>
+          <Slide direction="up" triggerOnce={true} delay={300}>
+            <ServiceTab
+              text="Облицовка стен стеклом"
+              img={service03}
+              marginTop="mt-8"
+            />
+          </Slide>
+          <Slide direction="up" triggerOnce={true} delay={400}>
+            <ServiceTab
+              text="Облицовка стен стеклом"
+              img={service04}
+              marginTop="mt-8"
+            />
+          </Slide>
         </div>
       </section>
     </>

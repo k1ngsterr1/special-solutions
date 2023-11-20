@@ -64,37 +64,57 @@ export const AboutScreen = () => {
         </Slide>
       </section>
       <section className="pc-screen w-full max-[1024px]:hidden mt-24">
-        <h2>О компании</h2>
-        <p className="paragraph mt-8 w-[60%]">
-          Компания <span className="orange">Special Solution</span> занимается
-          разработкой передовых решений, способных удовлетворить самые
-          изысканные и специфические запросы наших клиентов. Мы сочетаем
-          глубокие знания отрасли с инновационным мышлением, чтобы предлагать
-          продукты и услуги, выходящие за рамки стандартных предложений.
-        </p>
+        <Slide direction="left" triggerOnce={true}>
+          <h2>О компании</h2>
+        </Slide>
+        <Slide direction="right" triggerOnce={true}>
+          <p className="paragraph mt-8 w-[60%]">
+            Компания <span className="orange">Special Solution</span> занимается
+            разработкой передовых решений, способных удовлетворить самые
+            изысканные и специфические запросы наших клиентов. Мы сочетаем
+            глубокие знания отрасли с инновационным мышлением, чтобы предлагать
+            продукты и услуги, выходящие за рамки стандартных предложений.
+          </p>
+        </Slide>
         <div className="about-content w-full flex justify-between mt-12">
-          <img
-            src={Image}
-            className="about-content__image flex flex-col"
-            alt="about-image"
-          />
-          <div className="about-content__text-container flex flex-col justify-between items-start ml-28">
-            <Feature number="01" text="Архитектурное  Проектирование" />
-            <Feature number="02" text="Строительство" marginTop="mt-4" />
-            <Feature number="03" text="Фасадное остекление" marginTop="mt-4" />
-            <Feature
-              number="04"
-              text="Изготовление и монтаж офисных перегородок"
-              marginTop="mt-4"
+          <Slide direction="left" triggerOnce={true} className="w-full">
+            <img
+              src={Image}
+              className="about-content__image flex flex-col"
+              alt="about-image"
             />
-            <p className="paragraph">
-              Компания <span className="orange">Special Solution</span>{" "}
-              занимается разработкой передовых решений, способных удовлетворить
-              самые изысканные и специфические запросы наших клиентов. Мы
-              сочетаем глубокие знания отрасли с инновационным мышлением, чтобы
-              предлагать продукты и услуги, выходящие за рамки стандартных
-              предложений.
-            </p>
+          </Slide>
+          <div className="about-content__text-container flex flex-col justify-between items-start ml-28">
+            <Slide direction="right" triggerOnce={true} delay={100}>
+              <Feature number="01" text="Архитектурное  Проектирование" />
+            </Slide>
+            <Slide direction="right" triggerOnce={true} delay={200}>
+              <Feature number="02" text="Строительство" marginTop="mt-4" />
+            </Slide>
+            <Slide direction="right" triggerOnce={true} delay={300}>
+              <Feature
+                number="03"
+                text="Фасадное остекление"
+                marginTop="mt-4"
+              />
+            </Slide>
+            <Slide direction="right" triggerOnce={true} delay={400}>
+              <Feature
+                number="04"
+                text="Изготовление и монтаж офисных перегородок"
+                marginTop="mt-4"
+              />
+            </Slide>
+            <Slide direction="right" triggerOnce={true} delay={500}>
+              <p className="paragraph">
+                Компания <span className="orange">Special Solution</span>{" "}
+                занимается разработкой передовых решений, способных
+                удовлетворить самые изысканные и специфические запросы наших
+                клиентов. Мы сочетаем глубокие знания отрасли с инновационным
+                мышлением, чтобы предлагать продукты и услуги, выходящие за
+                рамки стандартных предложений.
+              </p>
+            </Slide>
           </div>
         </div>
       </section>

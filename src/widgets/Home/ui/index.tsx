@@ -29,22 +29,30 @@ export const HomeScreen = () => {
         />
       </div>
       <div className="pc-screen w-full max-[1024px]:hidden">
-        <h1 className="w-[60%]">
-          Special Solutions - Ваш Партнер в Строительстве
-        </h1>
-        <p className="paragraph w-[55%] mt-8">
-          <span className="orange">Special Solutions</span> представляет
-          портфолио передовых строительных работ. Мы стремимся к инновациям в
-          каждом проекте, создавая функциональные и эстетически привлекательные
-          объекты для наших клиентов.
-        </p>
-        <Gallery />
-        <Button
-          text="Все проекты"
-          onClick={() => console.log("All Projects")}
-          marginTop="mt-8"
-          type="outline"
-        />
+        <Slide direction="left" triggerOnce={true}>
+          <h1 className="w-[60%]">
+            Special Solutions - Ваш Партнер в Строительстве
+          </h1>
+        </Slide>
+        <Slide direction="right" triggerOnce={true} delay={100}>
+          <p className="paragraph w-[55%] mt-8">
+            <span className="orange">Special Solutions</span> представляет
+            портфолио передовых строительных работ. Мы стремимся к инновациям в
+            каждом проекте, создавая функциональные и эстетически
+            привлекательные объекты для наших клиентов.
+          </p>
+        </Slide>
+        <Slide direction="left" delay={200}>
+          <Gallery />
+        </Slide>
+        <Slide direction="right" delay={200}>
+          <Button
+            text="Все проекты"
+            onClick={() => console.log("All Projects")}
+            marginTop="mt-8"
+            type="outline"
+          />
+        </Slide>
       </div>
     </>
   );
