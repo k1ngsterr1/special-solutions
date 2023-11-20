@@ -7,25 +7,30 @@ type OptionType = { value: string; label: string };
 type ValueType = SingleValue<OptionType>;
 
 export const Selector = () => {
-  const [selectedOption, setSelectedOption] = useState<ValueType>(null);
+  const options: OptionType[] = [
+    { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
+    { value: "Дизайн Офиса", label: "Дизайн Офиса" },
+    { value: "Утепление Помещения", label: "Утепление Помещения" },
+    { value: "Утепление Помещения", label: "Утепление Помещения" },
+    { value: "Утепление Помещения", label: "Утепление Помещения" },
+    { value: "Утепление Помещения", label: "Утепление Помещения" },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState<ValueType>(options[0]);
 
   const handleChange = (newValue: ValueType) => {
     setSelectedOption(newValue);
   };
 
-  const options: OptionType[] = [
-    { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
-    { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
-  ];
-
   return (
     <>
       <Select
-        classNamePrefix={"react-select"}
+        classNamePrefix="react-select"
         className="react-select-container mt-8"
         defaultValue={selectedOption}
         onChange={handleChange}
         options={options}
+        placeholder={"Выберите услугу"}
       />
     </>
   );

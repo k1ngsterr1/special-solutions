@@ -1,0 +1,90 @@
+.button-link {
+  width: clamp(155px, 72.4284vw, 620px);
+  height: clamp(27.5px, 12.8502vw, 110px);
+  border-radius: clamp(25px, 11.681999999999999vw, 100px);
+  cursor: pointer;
+  z-index: -5;
+}
+
+.full-link {
+  @apply bg-custom-orange;
+  @apply text-custom-white;
+  text-align: center;
+  font-family: Inter;
+  font-size: clamp(10px, 4.6728vw, 40px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.3s all;
+  z-index: -5;
+
+  &:hover {
+    @apply bg-custom-black;
+  }
+}
+
+.outline-link {
+  background: transparent;
+  @apply text-custom-black;
+  text-align: center;
+  font-family: Inter;
+  font-size: clamp(10px, 4.6728vw, 40px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: 0.3s all;
+  z-index: -5;
+
+  &:hover {
+    @apply bg-custom-orange;
+    @apply text-custom-white;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .button-link {
+    width: clamp(130px, 13.5408vw, 520px);
+    height: clamp(25.5px, 2.65608vw, 102px);
+    border-radius: clamp(25px, 11.681999999999999vw, 100px);
+    cursor: pointer;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .full-link {
+    @apply bg-custom-orange;
+    @apply text-custom-white;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s all;
+    cursor: pointer;
+    z-index: 200;
+    &:hover {
+      @apply bg-custom-black;
+    }
+  }
+
+  .outline-link {
+    background: transparent;
+    @apply text-custom-black;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    transition: 0.3s all;
+    z-index: 200;
+
+    &:hover {
+      @apply bg-custom-orange;
+      @apply text-custom-white;
+    }
+  }
+}

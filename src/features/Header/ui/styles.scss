@@ -1,4 +1,4 @@
-.header {
+.header-mob {
   width: 90%;
   height: auto;
   margin: auto;
@@ -6,5 +6,47 @@
 
   &__logo {
     width: clamp(100px, 46.727999999999994vw, 400px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    @apply mt-16;
+    @apply bg-custom-white;
+    top: 0;
+    z-index: 100;
+
+    &__content-container {
+      width: 90%;
+      height: auto;
+
+      &__logo {
+        width: clamp(156px, 16.24896vw, 624px);
+        height: clamp(16px, 1.66656vw, 64px);
+      }
+
+      &__links {
+        width: auto;
+        height: auto;
+
+        &__link {
+          font-family: Inter;
+          font-size: clamp(10px, 1.0416vw, 40px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          @apply text-custom-black;
+          cursor: pointer;
+          transition: 0.3s all;
+          &:hover {
+            @apply text-custom-orange;
+          }
+        }
+      }
+    }
   }
 }
