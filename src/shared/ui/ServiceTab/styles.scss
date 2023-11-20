@@ -38,3 +38,46 @@
     height: clamp(252.5px, 117.98819999999999vw, 1010px);
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .service-tab {
+    position: relative;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    &:hover .service-tab__text {
+      @apply text-custom-orange;
+    }
+    &:hover .service-tab__icon {
+      @apply text-custom-orange;
+    }
+
+    &__icon {
+      font-size: clamp(16px, 1.66656vw, 64px);
+      position: absolute;
+      top: clamp(16px, 1.66656vw, 64px);
+      right: clamp(16px, 1.66656vw, 64px);
+      color: white;
+      transition: 0.3s all;
+    }
+
+    &__text {
+      width: 60%;
+      position: absolute;
+      color: #fff;
+      font-family: Rubik;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      bottom: clamp(16px, 1.66656vw, 64px);
+      left: clamp(16px, 1.66656vw, 64px);
+      transition: 0.3s all;
+    }
+
+    &__image {
+      width: 100%;
+      height: clamp(252.5px, 26.3004vw, 1010px);
+    }
+  }
+}

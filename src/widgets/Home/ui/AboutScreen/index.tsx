@@ -73,14 +73,19 @@ export const AboutScreen = () => {
           продукты и услуги, выходящие за рамки стандартных предложений.
         </p>
         <div className="about-content w-full flex justify-between mt-12">
-          <img src={Image} className="about-content__image" alt="about-image" />
-          <div className="about-content__text-container flex flex-col items-start">
+          <img
+            src={Image}
+            className="about-content__image flex flex-col"
+            alt="about-image"
+          />
+          <div className="about-content__text-container flex flex-col justify-between items-start ml-28">
             <Feature number="01" text="Архитектурное  Проектирование" />
-            <Feature number="02" text="Строительство" />
-            <Feature number="03" text="Фасадное остекление" />
+            <Feature number="02" text="Строительство" marginTop="mt-4" />
+            <Feature number="03" text="Фасадное остекление" marginTop="mt-4" />
             <Feature
               number="04"
               text="Изготовление и монтаж офисных перегородок"
+              marginTop="mt-4"
             />
             <p className="paragraph">
               Компания <span className="orange">Special Solution</span>{" "}
