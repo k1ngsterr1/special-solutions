@@ -47,7 +47,7 @@
     height: clamp(25.5px, 2.65608vw, 102px);
     border-radius: clamp(25px, 11.681999999999999vw, 100px);
     cursor: pointer;
-    z-index: 200;
+    z-index: 50;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@
     line-height: normal;
     transition: 0.3s all;
     cursor: pointer;
-    z-index: 200;
+    z-index: 50;
     &:hover {
       @apply bg-custom-black;
     }
@@ -81,7 +81,7 @@
     font-weight: 300;
     line-height: normal;
     transition: 0.3s all;
-    z-index: 200;
+    z-index: 50;
 
     &:hover {
       @apply bg-custom-orange;
