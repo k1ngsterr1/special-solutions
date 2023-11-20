@@ -16,11 +16,11 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header-mob flex items-center justify-between min-[1024px]:hidden">
+      <header className="header-mob flex items-center justify-between min-[1025px]:hidden">
         <img src={logo} alt="logotype" className="header-mob__logo" />
         <Hamburger color="#FF6600" onToggle={openMenu} />
       </header>
-      <header className="header flex items-center max-[640px]:hidden">
+      <header className="header flex items-center justify-center max-[1024px]:hidden">
         <div className="header__content-container flex justify-between items-center">
           <img
             src={logo}
@@ -50,7 +50,7 @@ export const Header = () => {
               to="contacts"
               className="header__content-container__links__link"
             >
-              Портфолио
+              Контакты
             </Link>
           </nav>
           <LinkButton text="Связаться с нами" type="full-link" to="contacts" />
