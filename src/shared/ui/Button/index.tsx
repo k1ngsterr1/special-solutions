@@ -3,7 +3,7 @@ import "./styles.scss";
 interface ButtonProps {
   type: string;
   text: string;
-  marginTop: string;
+  marginTop?: string;
   onClick: () => void;
 }
 

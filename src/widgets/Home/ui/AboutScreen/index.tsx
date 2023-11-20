@@ -63,7 +63,7 @@ export const AboutScreen = () => {
           />
         </Slide>
       </section>
-      <section className="pc-screen w-full max-[1024px]:hidden">
+      <section className="pc-screen w-full max-[1024px]:hidden mt-24">
         <h2>О компании</h2>
         <p className="paragraph mt-8 w-[60%]">
           Компания <span className="orange">Special Solution</span> занимается

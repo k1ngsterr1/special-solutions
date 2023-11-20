@@ -59,3 +59,67 @@
     height: 100%;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .portfolio-tab {
+    width: 100% !important;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+
+    &:hover .portfolio-tab__text-container__text {
+      @apply text-custom-orange;
+    }
+
+    &:hover .portfolio-tab__text-container__sub-text {
+      @apply text-custom-white;
+    }
+
+    &:hover .portfolio-tab__icon {
+      @apply text-custom-orange;
+    }
+
+    &__icon {
+      position: absolute;
+      font-size: clamp(16px, 1.66656vw, 64px);
+      top: clamp(16px, 1.66656vw, 64px);
+      right: clamp(16px, 1.66656vw, 64px);
+      @apply text-custom-white;
+      transition: 0.3s all;
+    }
+
+    &__text-container {
+      width: auto;
+      height: auto;
+      position: absolute;
+      bottom: clamp(16px, 1.66656vw, 64px);
+      left: clamp(16px, 1.66656vw, 64px);
+
+      &__text {
+        color: white;
+        font-family: Rubik;
+        font-size: clamp(12px, 1.24992vw, 48px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.3s all;
+      }
+
+      &__sub-text {
+        @apply text-custom-orange;
+        font-family: Inter;
+        font-size: clamp(8px, 0.83328vw, 32px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        transition: 0.3s all;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
