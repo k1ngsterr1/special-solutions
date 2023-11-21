@@ -2,12 +2,11 @@ import { useSelector } from "react-redux";
 import { useOpenMenu } from "@shared/lib/hooks/useOpenMenu";
 
 import logo from "@assets/logo.svg";
-
 import Hamburger from "hamburger-react";
+import { Link as ScrollLink } from "react-scroll";
+import { LinkButton } from "@shared/ui/LinkButton";
 
 import "./styles.scss";
-import { Link } from "react-scroll";
-import { LinkButton } from "@shared/ui/LinkButton";
 
 export const Header = () => {
   const isMenuOpen = useSelector((state: any) => state.menu.isOpen);
@@ -27,30 +26,41 @@ export const Header = () => {
             className="header__content-container__logo"
           />
           <nav className="header__content-container__links flex items-center justify-between">
-            <Link to="main" className="header__content-container__links__link">
+            <ScrollLink
+              to="main"
+              smooth
+              className="header__content-container__links__link"
+            >
               Главная
-            </Link>
-            <Link to="about" className="header__content-container__links__link">
+            </ScrollLink>
+            <ScrollLink
+              to="about"
+              smooth
+              className="header__content-container__links__link"
+            >
               О компании
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               to="services"
+              smooth
               className="header__content-container__links__link"
             >
               Услуги
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               to="portfolio"
+              smooth
               className="header__content-container__links__link"
             >
               Портфолио
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               to="contacts"
+              smooth
               className="header__content-container__links__link"
             >
               Контакты
-            </Link>
+            </ScrollLink>
           </nav>
           <LinkButton text="Связаться с нами" type="full-link" to="contacts" />
         </div>

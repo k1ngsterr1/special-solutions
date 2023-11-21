@@ -9,7 +9,10 @@ import "./styles.scss";
 export const AboutScreen = () => {
   return (
     <>
-      <section className="mobile-screen w-full flex flex-col items-center min-[1024px]:hidden">
+      <section
+        className="mobile-screen w-full flex flex-col items-center min-[1024px]:hidden"
+        id="about-mob"
+      >
         <Slide direction="left" triggerOnce={true}>
           <h2 className="mt-12">О компании</h2>
         </Slide>
@@ -63,7 +66,10 @@ export const AboutScreen = () => {
           />
         </Slide>
       </section>
-      <section className="pc-screen w-full max-[1024px]:hidden mt-24">
+      <section
+        className="pc-screen w-full max-[1024px]:hidden mt-24"
+        id="about"
+      >
         <Slide direction="left" triggerOnce={true}>
           <h2>О компании</h2>
         </Slide>

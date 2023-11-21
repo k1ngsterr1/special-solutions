@@ -12,7 +12,10 @@ import { LinkButton } from "@shared/ui/LinkButton";
 export const ServicesScreen = () => {
   return (
     <>
-      <section className="mobile-container w-full flex flex-col items-center min-[1024px]:hidden">
+      <section
+        className="mobile-container w-full flex flex-col items-center min-[1024px]:hidden"
+        id="services-mob"
+      >
         <Slide direction="right" triggerOnce={true}>
           <h3 className="mt-12">Наши Услуги</h3>
         </Slide>
@@ -59,10 +62,13 @@ export const ServicesScreen = () => {
           onClick={() => console.log("lol")}
         />
       </section>
-      <section className="pc-screen w-full flex flex-col items-end max-[1024px]:hidden mt-28">
+      <section
+        className="pc-screen w-full flex flex-col items-end max-[1024px]:hidden mt-28"
+        id="services"
+      >
         <div className="w-full flex justify-between  items-center">
           <Slide direction="left" triggerOnce={true}>
-            <LinkButton text="Связаться с нами" to="contacts" type="outline" />
+            <LinkButton text="Все Услуги" type="outline" to="" />
           </Slide>
           <div className="w-[70%] flex flex-col items-end">
             <Slide direction="right" triggerOnce={true}>

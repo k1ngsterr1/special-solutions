@@ -5,7 +5,10 @@ import { Slide } from "react-awesome-reveal";
 export const HomeScreen = () => {
   return (
     <>
-      <div className="mobile-screen flex flex-col items-center w-full min-[1024px]:hidden">
+      <div
+        className="mobile-screen flex flex-col items-center w-full min-[1024px]:hidden"
+        id="main-mob"
+      >
         <Slide direction="left">
           <h1 className="bigger text-custom-orange">Special Solutions</h1>
         </Slide>
@@ -28,7 +31,7 @@ export const HomeScreen = () => {
           marginTop="mt-8"
         />
       </div>
-      <div className="pc-screen w-full max-[1024px]:hidden">
+      <div className="pc-screen w-full max-[1024px]:hidden" id="main">
         <Slide direction="left" triggerOnce={true}>
           <h1 className="w-[60%]">
             Special Solutions - Ваш Партнер в Строительстве

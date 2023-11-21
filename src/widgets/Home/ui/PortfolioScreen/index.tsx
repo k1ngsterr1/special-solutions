@@ -1,3 +1,4 @@
+import React from "react";
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "@shared/ui/Button";
@@ -7,7 +8,10 @@ import portfolio01 from "@assets/portfolio01.webp";
 export const PorfolioScreen = () => {
   return (
     <>
-      <div className="mobile-screen flex flex-col items-center w-full min-[1024px]:hidden">
+      <div
+        className="mobile-screen flex flex-col items-center w-full min-[1024px]:hidden"
+        id="portfolio-mob"
+      >
         <Slide direction="left" triggerOnce={true}>
           <h4 className="mt-12">Портфолио</h4>
         </Slide>
@@ -53,7 +57,10 @@ export const PorfolioScreen = () => {
           />
         </Slide>
       </div>
-      <div className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden mt-24">
+      <div
+        className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden mt-24"
+        id="portfolio"
+      >
         <div className="flex w-full justify-between items-center ">
           <div className="flex flex-col justify-center w-[90%]">
             <Slide direction="left" triggerOnce={true}>

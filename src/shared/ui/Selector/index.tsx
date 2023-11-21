@@ -31,6 +31,7 @@ export const Selector = () => {
         onChange={handleChange}
         options={options}
         menuPortalTarget={document.body}
+        required
         menuPosition={"fixed"}
         placeholder={"Выберите услугу"}
       />

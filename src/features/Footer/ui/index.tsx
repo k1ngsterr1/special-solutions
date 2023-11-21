@@ -19,35 +19,35 @@ export const Footer = () => {
         <nav className="footer__footer-mob__nav flex flex-col items-center">
           <Link
             className="footer__footer-mob__nav__link mt-8"
-            to="main"
+            to="main-mob"
             smooth={true}
           >
             Главная
           </Link>
           <Link
             className="footer__footer-mob__nav__link mt-4"
-            to="about"
+            to="about-mob"
             smooth={true}
           >
             О компании
           </Link>
           <Link
             className="footer__footer-mob__nav__link mt-4"
-            to="services"
+            to="services-mob"
             smooth={true}
           >
             Услуги
           </Link>
           <Link
             className="footer__footer-mob__nav__link mt-4"
-            to="portfolio"
+            to="portfolio-mob"
             smooth={true}
           >
             Портфолио
           </Link>
           <Link
             className="footer__footer-mob__nav__link mt-4"
-            to="contacts"
+            to="contacts-mob"
             smooth={true}
           >
             Контакты
@@ -72,8 +72,8 @@ export const Footer = () => {
           onClick={SparkRedirect}
         />
       </div>
-      <div className="footer__footer-pc flex flex-col items-center">
-        <nav className="footer__footer-pc__nav w-full flex items-center justify-between">
+      <div className="footer__footer-pc flex flex-col items-center max-[1024px]:hidden">
+        <nav className="footer__footer-pc__nav w-full flex items-center justify-between max-[1024px]:hidden">
           <img className="footer__footer-pc__logo" src={logo} alt="logo" />
           <Link
             className="footer__footer-pc__nav__link"

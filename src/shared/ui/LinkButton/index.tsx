@@ -16,7 +16,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
   marginTop,
 }) => {
   return (
-    <Link to={to} className={`button-link ${type} ${marginTop}`}>
+    <Link to={to} className={`button-link ${type} ${marginTop}`} smooth>
       {text}
     </Link>
   );
