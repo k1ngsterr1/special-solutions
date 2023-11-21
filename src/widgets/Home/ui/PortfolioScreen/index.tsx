@@ -1,4 +1,3 @@
-import React from "react";
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "@shared/ui/Button";
