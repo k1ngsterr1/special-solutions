@@ -1,9 +1,29 @@
 .footer {
   width: 100%;
   height: auto;
-  @apply bg-custom-orange;
 
-  &__nav {
+  &__footer-mob {
     width: auto;
+    height: auto;
+
+    &__nav {
+      width: auto;
+      height: auto;
+
+      &__link {
+        font-size: clamp(12.5px, 5.840999999999999vw, 50px);
+        cursor: pointer;
+        @apply text-custom-black;
+        transition: 0.3s all;
+        &:hover {
+          @apply text-custom-orange;
+        }
+      }
+
+      &__phone-link {
+        font-size: 20px;
+        @apply text-custom-orange;
+      }
+    }
   }
 }

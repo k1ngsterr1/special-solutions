@@ -7,6 +7,7 @@ import { AboutScreen } from "@widgets/Home/ui/AboutScreen";
 import { ServicesScreen } from "@widgets/Home/ui/ServicesScreen";
 import { PorfolioScreen } from "@widgets/Home/ui/PortfolioScreen";
 import { Form } from "@widgets/Form";
+import { Footer } from "@features/Footer/ui";
 
 export const HomePage = () => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
@@ -23,6 +24,7 @@ export const HomePage = () => {
         <ServicesScreen />
         <PorfolioScreen />
         <Form />
+        <Footer />
       </div>
     </>
   );
