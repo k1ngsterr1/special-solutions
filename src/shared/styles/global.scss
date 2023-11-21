@@ -16,6 +16,10 @@ $light_gray: hsla(0, 0%, 95%, 1);
   box-sizing: border-box;
 }
 
+#root {
+  overflow-x: hidden !important;
+}
+
 body {
   width: 100%;
   height: auto;
