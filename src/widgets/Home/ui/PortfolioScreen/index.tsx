@@ -87,7 +87,12 @@ export const PorfolioScreen = () => {
               marginTop="mt-8"
             />
           </Slide>
-          <Slide className="w-full" direction="up" triggerOnce={true}>
+          <Slide
+            className="w-full"
+            delay={200}
+            direction="up"
+            triggerOnce={true}
+          >
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
@@ -95,7 +100,12 @@ export const PorfolioScreen = () => {
               marginTop="mt-8 ml-8"
             />
           </Slide>
-          <Slide className="w-full ml-8" direction="up" triggerOnce={true}>
+          <Slide
+            className="w-full ml-8"
+            delay={300}
+            direction="up"
+            triggerOnce={true}
+          >
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
@@ -103,7 +113,12 @@ export const PorfolioScreen = () => {
               marginTop="mt-8 ml-8"
             />
           </Slide>
-          <Slide className="w-full ml-8" direction="up" triggerOnce={true}>
+          <Slide
+            className="w-full ml-8"
+            delay={400}
+            direction="up"
+            triggerOnce={true}
+          >
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"

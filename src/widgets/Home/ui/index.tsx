@@ -42,10 +42,10 @@ export const HomeScreen = () => {
             привлекательные объекты для наших клиентов.
           </p>
         </Slide>
-        <Slide direction="left" delay={200}>
+        <Slide direction="left" delay={200} triggerOnce={true}>
           <Gallery />
         </Slide>
-        <Slide direction="right" delay={200}>
+        <Slide direction="right" delay={200} triggerOnce={true}>
           <Button
             text="Все проекты"
             onClick={() => console.log("All Projects")}

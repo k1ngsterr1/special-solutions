@@ -1,0 +1,9 @@
+.footer {
+  width: 100%;
+  height: auto;
+  @apply bg-custom-orange;
+
+  &__nav {
+    width: auto;
+  }
+}
