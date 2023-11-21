@@ -66,7 +66,7 @@ export const ServicesScreen = () => {
           </Slide>
           <div className="w-[70%] flex flex-col items-end">
             <Slide direction="right" triggerOnce={true}>
-              <h3>Услугии</h3>
+              <h3>Услуги</h3>
             </Slide>
             <Slide
               direction="right"

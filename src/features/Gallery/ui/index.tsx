@@ -44,7 +44,7 @@ export const Gallery = () => {
           subText="Интерьер"
           url=""
           img={gallery01}
-        />{" "}
+        />
       </SwiperSlide>
       <SwiperSlide className="swiper__slide">
         <GalleryPhoto

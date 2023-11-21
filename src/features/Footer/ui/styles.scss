@@ -29,5 +29,32 @@
         @apply text-custom-orange;
       }
     }
+
+    &__spark-logo {
+      width: clamp(75px, 35.046vw, 300px);
+    }
+  }
+
+  &__footer-pc {
+    width: 100%;
+    height: auto;
+
+    &__nav {
+      height: auto;
+      &__link {
+        font-size: 20px;
+        cursor: pointer;
+        @apply text-custom-black;
+        transition: 0.3s all;
+        &:hover {
+          @apply text-custom-orange;
+        }
+      }
+    }
+
+    &__spark-logo {
+      width: clamp(75px, 7.812vw, 300px);
+      cursor: pointer;
+    }
   }
 }
