@@ -13,7 +13,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className="footer flex flex-col">
+    <footer className="footer flex flex-col mb-10">
       <div className="footer__footer-mob flex flex-col items-center mt-16 min-[1024px]:hidden">
         <img className="footer__footer-mob__logo" src={logo} alt="logo" />
         <nav className="footer__footer-mob__nav flex flex-col items-center">

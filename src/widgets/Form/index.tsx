@@ -12,7 +12,7 @@ export const Form = () => {
   return (
     <>
       <div
-        className="mobile-screen flex flex-col items-center w-full min-[1024px]:hidden"
+        className="mobile-screen  flex flex-col items-center w-full min-[1024px]:hidden"
         id="contacts-mob"
       >
         <Slide direction="left">
