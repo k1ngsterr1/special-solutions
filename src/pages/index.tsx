@@ -9,6 +9,7 @@ import { ROUTE_CONSTANTS } from "@shared/config/routes";
 // Pages
 import { HomePage } from "./Home";
 import { ServicePage } from "./Services";
+import { ServiceDetails } from "./Services/ui/ServiceDetails";
 
 export const MyRoutes: FC = () => {
   function ScrollToTop() {
@@ -25,8 +26,13 @@ export const MyRoutes: FC = () => {
     <Router>
       <ScrollToTop />
       <Routes>
+        <Route></Route>
         <Route path={ROUTE_CONSTANTS.HOME} element={<HomePage />} />
         <Route path={ROUTE_CONSTANTS.SERVICES} element={<ServicePage />} />
+        <Route
+          path={ROUTE_CONSTANTS.SERVICE_DETAILS}
+          element={<ServiceDetails {...content} />}
+        />
       </Routes>
     </Router>
   );

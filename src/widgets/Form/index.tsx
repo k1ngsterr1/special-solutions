@@ -15,10 +15,10 @@ export const Form = () => {
         className="mobile-screen  flex flex-col items-center w-full min-[1024px]:hidden"
         id="contacts-mob"
       >
-        <Slide direction="left">
+        <Slide direction="left" triggerOnce>
           <h5 className="mt-12">Свяжитесь с нами</h5>
         </Slide>
-        <Slide direction="right">
+        <Slide direction="right" triggerOnce>
           <p className="paragraph text-center mt-8">
             Компания <span className="orange">Special Solution </span>{" "}
             занимается разработкой передовых решений, способных удовлетворить
@@ -31,7 +31,7 @@ export const Form = () => {
           className="form flex flex-col items-center mt-8 mb-16"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <Slide direction="left" className="w-full">
+          <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input mt-4">
               <Input
                 {...register("full_name", { required: "Заполните ваше имя" })}
@@ -46,7 +46,7 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="right" className="w-full">
+          <Slide direction="right" className="w-full" triggerOnce>
             <div className="form__input mt-8">
               <Input
                 {...register("phone_number", {
@@ -63,7 +63,7 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="left" className="w-full">
+          <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input  mt-8">
               <Input
                 {...register("email", {
@@ -84,7 +84,7 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="right" className="w-full">
+          <Slide direction="right" className="w-full" triggerOnce>
             <Selector />
           </Slide>
           <Slide
@@ -116,7 +116,7 @@ export const Form = () => {
           className="form flex flex-col items-center mt-8 mb-16"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <Slide direction="left" className="w-full">
+          <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input flex flex-col justify-center items-center mt-4">
               <Input
                 {...register("full_name", { required: "Заполните ваше имя" })}
@@ -131,7 +131,7 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="right" className="w-full">
+          <Slide direction="right" className="w-full" triggerOnce>
             <div className="form__input flex flex-col items-center justify-center mt-8">
               <Input
                 {...register("phone_number", {
@@ -148,7 +148,7 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="left" className="w-full">
+          <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input flex flex-col items-center justify-center mt-8">
               <Input
                 {...register("email", {
@@ -169,12 +169,13 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="right" className="w-[60%]">
+          <Slide direction="right" className="w-[60%]" triggerOnce>
             <Selector />
           </Slide>
           <Slide
             direction="right"
             className="w-full flex items-center justify-center"
+            triggerOnce
           >
             <Button
               text="Отправить"
