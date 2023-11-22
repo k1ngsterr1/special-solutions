@@ -52,7 +52,9 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
           <h1>{title}</h1>
         </Slide>
         <Slide direction="right" triggerOnce>
-          <p className="paragraph mt-8 mb-8 text-center ">{description}</p>
+          <p className="paragraph w-[50%] m-auto mt-8 mb-8 text-center ">
+            {description}
+          </p>
         </Slide>
         <Gallery
           image={image}
