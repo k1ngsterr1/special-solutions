@@ -1,52 +1,46 @@
-import { useState } from "react";
+// Selector.tsx
+import React from "react";
 import Select, { SingleValue } from "react-select";
-
-import "./styles.scss";
+import { useSelectOption } from "@shared/lib/hooks/useSelectOption"; // Adjust the import path as necessary
 
 type OptionType = { value: string; label: string };
-type ValueType = SingleValue<OptionType>;
 
-export const Selector = () => {
-  const options: OptionType[] = [
-    { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
-    { value: "Дизайн Офиса", label: "Дизайн Офиса" },
-    { value: "Утепление Помещения", label: "Утепление Помещения" },
-  ];
+interface SelectorProps {
+  options: OptionType[];
+  onChange: (newValue: SingleValue<OptionType>) => void; // Adjust the type to match react-select's expectation
+  defaultValue?: OptionType; // defaultValue should be optional to match react-select's API
+  styles?: any; // Define proper type for your styles if needed
+  placeholder?: string;
+}
 
-  const style = {
-    // Disable Border
-    control: (base: any) => ({
-      ...base,
-      border: 0,
-      boxShadow: "none",
-    }),
-    // Add New Background Color For Selected Option
-    option: (provided: any, state: any) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? "hsla(24, 100%, 50%, 1)" : "white",
-    }),
+export const Selector: React.FC<SelectorProps> = ({
+  options,
+  onChange,
+  defaultValue,
+  styles,
+  placeholder,
+}) => {
+  // Use the custom hook to manage the selected option state
+  const { selectedOption, handleChange } = useSelectOption(defaultValue);
+
+  // Wrap the onChange callback to provide the correct type
+  const handleSelectChange = (newValue: SingleValue<OptionType>) => {
+    handleChange(newValue); // Call the hook's handleChange function
+    onChange(newValue); // Call the passed onChange prop function
   };
 
-  const [selectedOption, setSelectedOption] = useState<ValueType>(options[0]);
-
-  const handleChange = (newValue: ValueType) => {
-    setSelectedOption(newValue);
-  };
-
+  // Use the selectedOption from the hook as the value prop for the Select component
   return (
-    <>
-      <Select
-        classNamePrefix="react-select"
-        className="react-select-container mt-8"
-        defaultValue={selectedOption}
-        onChange={handleChange}
-        options={options}
-        menuPortalTarget={document.body}
-        required
-        styles={style}
-        menuPosition={"fixed"}
-        placeholder={"Выберите услугу"}
-      />
-    </>
+    <Select
+      classNamePrefix="react-select"
+      className="react-select-container mt-8"
+      value={selectedOption}
+      onChange={handleSelectChange}
+      options={options}
+      menuPortalTarget={document.body}
+      styles={styles}
+      menuPosition={"fixed"}
+      placeholder={placeholder}
+    />
   );
 };
