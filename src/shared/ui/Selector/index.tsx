@@ -11,10 +11,21 @@ export const Selector = () => {
     { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
     { value: "Дизайн Офиса", label: "Дизайн Офиса" },
     { value: "Утепление Помещения", label: "Утепление Помещения" },
-    { value: "Утепление Помещения", label: "Утепление Помещения" },
-    { value: "Утепление Помещения", label: "Утепление Помещения" },
-    { value: "Утепление Помещения", label: "Утепление Помещения" },
   ];
+
+  const style = {
+    // Disable Border
+    control: (base: any) => ({
+      ...base,
+      border: 0,
+      boxShadow: "none",
+    }),
+    // Add New Background Color For Selected Option
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? "hsla(24, 100%, 50%, 1)" : "white",
+    }),
+  };
 
   const [selectedOption, setSelectedOption] = useState<ValueType>(options[0]);
 
@@ -32,6 +43,7 @@ export const Selector = () => {
         options={options}
         menuPortalTarget={document.body}
         required
+        styles={style}
         menuPosition={"fixed"}
         placeholder={"Выберите услугу"}
       />

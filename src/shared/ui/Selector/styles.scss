@@ -1,10 +1,16 @@
 .react-select {
   background: transparent !important;
+  outline: none !important;
 
   &__control {
     background: transparent !important;
     border: none !important;
     border-bottom: 2px solid hsla(0, 0%, 20%, 0.5) !important;
+
+    &--menu-is-open {
+      border: none !important;
+      outline: none !important;
+    }
   }
   &__placeholder {
     font-family: Inter;

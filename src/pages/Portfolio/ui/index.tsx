@@ -1,10 +1,11 @@
 import { Header } from "@features/Header/ui";
-import React from "react";
+import { PortfolioList } from "@widgets/Portfolio/ui";
 
 export const PorfolioPage = () => {
   return (
     <>
       <Header />
+      <PortfolioList />
     </>
   );
 };
