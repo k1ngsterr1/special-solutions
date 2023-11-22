@@ -3,6 +3,8 @@ import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@shared/ui/Button";
 
+import { useEffect } from "react";
+
 // Assets
 import service01 from "@assets/service_01.webp";
 import service02 from "@assets/service_02.webp";
@@ -15,6 +17,12 @@ export const ServicesScreen = () => {
   function navigateServices() {
     navigate("/services");
   }
+
+  useEffect(() => {
+    console.log("Service Details");
+
+    return () => {};
+  }, []);
 
   return (
     <>
