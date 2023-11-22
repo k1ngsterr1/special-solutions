@@ -1,16 +1,23 @@
 import { useSelector } from "react-redux";
 import { useOpenMenu } from "@shared/lib/hooks/useOpenMenu";
+import { Link as ScrollLink } from "react-scroll";
+import { LinkButton } from "@shared/ui/LinkButton";
+import { useNavigate } from "react-router-dom";
 
 import logo from "@assets/logo.svg";
 import Hamburger from "hamburger-react";
-import { Link as ScrollLink } from "react-scroll";
-import { LinkButton } from "@shared/ui/LinkButton";
 
 import "./styles.scss";
 
 export const Header = () => {
   const isMenuOpen = useSelector((state: any) => state.menu.isOpen);
   const openMenu = useOpenMenu(isMenuOpen);
+
+  const navigate = useNavigate();
+
+  function navigateToMain() {
+    navigate("/");
+  }
 
   return (
     <>
@@ -23,12 +30,14 @@ export const Header = () => {
           <img
             src={logo}
             alt="logotype"
+            onClick={navigateToMain}
             className="header__content-container__logo"
           />
           <nav className="header__content-container__links flex items-center justify-between">
             <ScrollLink
               to="main"
               smooth
+              onClick={navigateToMain}
               className="header__content-container__links__link"
             >
               Главная
@@ -36,6 +45,7 @@ export const Header = () => {
             <ScrollLink
               to="about"
               smooth
+              onClick={navigateToMain}
               className="header__content-container__links__link"
             >
               О компании
@@ -43,6 +53,7 @@ export const Header = () => {
             <ScrollLink
               to="services"
               smooth
+              onClick={navigateToMain}
               className="header__content-container__links__link"
             >
               Услуги
@@ -50,6 +61,7 @@ export const Header = () => {
             <ScrollLink
               to="portfolio"
               smooth
+              onClick={navigateToMain}
               className="header__content-container__links__link"
             >
               Портфолио
@@ -57,6 +69,7 @@ export const Header = () => {
             <ScrollLink
               to="contacts"
               smooth
+              onClick={navigateToMain}
               className="header__content-container__links__link"
             >
               Контакты
