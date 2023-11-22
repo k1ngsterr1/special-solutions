@@ -2,6 +2,9 @@ import { Gallery } from "@features/Gallery/ui";
 import { Button } from "@shared/ui/Button";
 import { Slide } from "react-awesome-reveal";
 
+// Assets
+import gallery01 from "@assets/design_gallery_01.webp";
+
 export const HomeScreen = () => {
   return (
     <>
@@ -23,7 +26,12 @@ export const HomeScreen = () => {
             привлекательные объекты для наших клиентов.
           </p>
         </Slide>
-        <Gallery />
+        <Gallery
+          image={gallery01}
+          image2={gallery01}
+          image3={gallery01}
+          image4={gallery01}
+        />
         <Button
           text="Все проекты"
           type="outline"
@@ -46,7 +54,12 @@ export const HomeScreen = () => {
           </p>
         </Slide>
         <Slide direction="left" delay={200} triggerOnce={true}>
-          <Gallery />
+          <Gallery
+            image={gallery01}
+            image2={gallery01}
+            image3={gallery01}
+            image4={gallery01}
+          />
         </Slide>
         <Slide direction="right" delay={200} triggerOnce={true}>
           <Button

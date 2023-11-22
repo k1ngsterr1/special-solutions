@@ -2,36 +2,66 @@ import React from "react";
 import { Header } from "@features/Header/ui";
 import { Slide } from "react-awesome-reveal";
 import { Gallery } from "@features/Gallery/ui";
-
-import gallery01 from "@assets/design_gallery_01.webp";
+import { RootState } from "@shared/lib/redux/store";
+import { Menu } from "@features/Menu/ui";
+import { useSelector } from "react-redux";
+import { Form } from "@widgets/Form";
+import { Footer } from "@features/Footer/ui";
 
 interface ServiceDetailsProps {
   title: string;
   description: string;
   image: string;
+  image2: string;
+  image3: string;
+  image4: string;
 }
 
 export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   title,
   description,
   image,
+  image2,
+  image3,
+  image4,
 }) => {
+  const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
+
   return (
     <>
       <Header />
+      {isMenuOpen && <Menu />}
       <main className="content-container min-[1024px]:hidden">
         <Slide direction="left" triggerOnce>
           <h1>{title}</h1>
         </Slide>
         <Slide direction="right" triggerOnce>
-          <p>{description}</p>
+          <p className="paragraph mt-8 mb-8 text-center">{description}</p>
         </Slide>
         <Gallery
-          image={gallery01}
-          image2={gallery01}
-          image3={gallery01}
-          image4={gallery01}
+          image={image}
+          image2={image2}
+          image3={image3}
+          image4={image4}
         />
+        <Form />
+        <Footer />
+      </main>
+      <main className="content-container max-[1024px]:hidden">
+        <Slide direction="left" triggerOnce>
+          <h1>{title}</h1>
+        </Slide>
+        <Slide direction="right" triggerOnce>
+          <p className="paragraph mt-8 mb-8 text-center ">{description}</p>
+        </Slide>
+        <Gallery
+          image={image}
+          image2={image2}
+          image3={image3}
+          image4={image4}
+        />
+        <Form />
+        <Footer />
       </main>
     </>
   );
