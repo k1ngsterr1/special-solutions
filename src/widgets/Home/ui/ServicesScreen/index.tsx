@@ -7,9 +7,15 @@ import service02 from "@assets/service_02.webp";
 import service03 from "@assets/service_03.webp";
 import service04 from "@assets/service_04.webp";
 import { Button } from "@shared/ui/Button";
-import { LinkButton } from "@shared/ui/LinkButton";
+import { useNavigate } from "react-router-dom";
 
 export const ServicesScreen = () => {
+  const navigate = useNavigate();
+
+  function navigateServices() {
+    navigate("/services");
+  }
+
   return (
     <>
       <section
@@ -59,7 +65,7 @@ export const ServicesScreen = () => {
           text="Все услуги"
           type="outline"
           marginTop="mt-8"
-          onClick={() => console.log("lol")}
+          onClick={navigateServices}
         />
       </section>
       <section
@@ -68,7 +74,11 @@ export const ServicesScreen = () => {
       >
         <div className="w-full flex justify-between  items-center">
           <Slide direction="left" triggerOnce={true}>
-            <LinkButton text="Все Услуги" type="outline" to="" />
+            <Button
+              text="Все Услуги"
+              type="outline"
+              onClick={navigateServices}
+            />
           </Slide>
           <div className="w-[70%] flex flex-col items-end">
             <Slide direction="right" triggerOnce={true}>
