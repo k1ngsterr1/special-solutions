@@ -7,10 +7,10 @@ export const ServicesList = () => {
   return (
     <>
       <main className="content-container min-[1024px]:hidden">
-        <Slide direction="left">
+        <Slide direction="left" triggerOnce>
           <h1>Наши услуги</h1>
         </Slide>
-        <Slide direction="right">
+        <Slide direction="right" triggerOnce>
           <p className="paragraph text-center mt-4">
             Наши услуги охватывают широкий спектр современных решений для
             бизнеса и частных клиентов. Мы предлагаем высококлассные
@@ -18,35 +18,35 @@ export const ServicesList = () => {
             управление проектами.
           </p>
         </Slide>
-        <Slide direction="left">
+        <Slide direction="left" triggerOnce>
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
             marginTop="mt-16"
           />
         </Slide>
-        <Slide direction="right">
+        <Slide direction="right" triggerOnce>
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
             marginTop="mt-16"
           />{" "}
         </Slide>
-        <Slide direction="left">
+        <Slide direction="left" triggerOnce>
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
             marginTop="mt-16"
           />{" "}
         </Slide>
-        <Slide direction="right">
+        <Slide direction="right" triggerOnce>
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
             marginTop="mt-16"
           />{" "}
         </Slide>
-        <Slide direction="left">
+        <Slide direction="left" triggerOnce>
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
@@ -55,11 +55,11 @@ export const ServicesList = () => {
         </Slide>
       </main>
       <main className="content-container max-[1024px]:hidden">
-        <Slide direction="left">
+        <Slide direction="left" triggerOnce>
           <h1>Наши услуги</h1>
         </Slide>
-        <Slide direction="right">
-          <p className="paragraph mt-8  w-[70%] m-auto">
+        <Slide direction="right" triggerOnce>
+          <p className="paragraph mt-8 text-center w-[70%] m-auto">
             Наши услуги охватывают широкий спектр современных решений для
             бизнеса и частных клиентов. Мы предлагаем высококлассные
             консультации, разработку на заказ, полную техническую поддержку и
@@ -67,28 +67,28 @@ export const ServicesList = () => {
           </p>
         </Slide>
         <div className="w-full mt-16 flex items-center justify-between">
-          <Slide direction="up" duration={500}>
+          <Slide direction="up" duration={500} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
               marginTop="ml-4"
             />
           </Slide>
-          <Slide direction="up" duration={600}>
+          <Slide direction="up" duration={600} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
               marginTop="ml-4"
             />{" "}
           </Slide>
-          <Slide direction="up" duration={700}>
+          <Slide direction="up" duration={700} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
               marginTop="ml-4"
             />{" "}
           </Slide>
-          <Slide direction="up" duration={800}>
+          <Slide direction="up" duration={800} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
@@ -97,28 +97,28 @@ export const ServicesList = () => {
           </Slide>
         </div>
         <div className="w-full mt-16 flex items-center justify-between">
-          <Slide direction="up" duration={500}>
+          <Slide direction="up" duration={500} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
               marginTop="ml-4"
             />
           </Slide>
-          <Slide direction="up" duration={600}>
+          <Slide direction="up" duration={600} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
               marginTop="ml-4"
             />{" "}
           </Slide>
-          <Slide direction="up" duration={700}>
+          <Slide direction="up" duration={700} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
               marginTop="ml-4"
             />{" "}
           </Slide>
-          <Slide direction="up" duration={800}>
+          <Slide direction="up" duration={800} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}

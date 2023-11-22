@@ -34,7 +34,6 @@ export const MyRoutes: FC = () => {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route></Route>
         <Route path={ROUTE_CONSTANTS.HOME} element={<HomePage />} />
         <Route path={ROUTE_CONSTANTS.SERVICES} element={<ServicePage />} />
         {Object.entries(serviceContent).map(([serviceType, content]) => (

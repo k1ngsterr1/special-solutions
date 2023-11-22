@@ -27,7 +27,11 @@ export const Header = () => {
   return (
     <>
       <header className="header-mob flex items-center justify-between min-[1025px]:hidden">
-        <img src={logo} alt="logotype" className="header-mob__logo" />
+        <img
+          src={logo}
+          alt="logotype"
+          className="header-mob__logo cursor-pointer"
+        />
         <Hamburger color="#FF6600" onToggle={openMenu} />
       </header>
       <header className="header flex items-center justify-center max-[1024px]:hidden">
@@ -36,7 +40,7 @@ export const Header = () => {
             src={logo}
             alt="logotype"
             onClick={scrollToTop}
-            className="header__content-container__logo"
+            className="header__content-container__logo cursor-pointer"
           />
           <nav className="header__content-container__links flex items-center justify-between">
             <ScrollLink

@@ -1,8 +1,9 @@
-// src/features/serviceDetails/ServiceDetails.tsx
 import React from "react";
-import { useParams } from "react-router-dom";
-import { serviceContent } from "@shared/lib/data/serviceContent";
 import { Header } from "@features/Header/ui";
+import { Slide } from "react-awesome-reveal";
+import { Gallery } from "@features/Gallery/ui";
+
+import gallery01 from "@assets/design_gallery_01.webp";
 
 interface ServiceDetailsProps {
   title: string;
@@ -15,21 +16,23 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   description,
   image,
 }) => {
-  const { serviceType } = useParams<{ serviceType?: string }>();
-
-  if (!serviceType || !serviceContent[serviceType]) {
-    return <div>Service not found</div>;
-  }
-
-  //   const service = serviceContent[serviceType];
   return (
     <>
       <Header />
-      <div>
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <img src={image} alt={title} />
-      </div>
+      <main className="content-container min-[1024px]:hidden">
+        <Slide direction="left" triggerOnce>
+          <h1>{title}</h1>
+        </Slide>
+        <Slide direction="right" triggerOnce>
+          <p>{description}</p>
+        </Slide>
+        <Gallery
+          image={gallery01}
+          image2={gallery01}
+          image3={gallery01}
+          image4={gallery01}
+        />
+      </main>
     </>
   );
 };
