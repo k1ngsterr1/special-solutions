@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 import logo from "@assets/logo.svg";
 import spark_logo from "@assets/spark_logo.svg";
@@ -8,8 +9,19 @@ import spark_logo from "@assets/spark_logo.svg";
 import "./styles.scss";
 
 export const Footer = () => {
+  const navigate = useNavigate();
+
   function SparkRedirect() {
     window.open("https://sparkstudio.kz/", "_blank");
+  }
+
+  function scrollToTop() {
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
+    navigate("/");
+  }
+
+  function navigateToMain() {
+    navigate("/");
   }
 
   return (
@@ -21,6 +33,7 @@ export const Footer = () => {
             className="footer__footer-mob__nav__link mt-8"
             to="main-mob"
             smooth={true}
+            onClick={navigateToMain}
           >
             Главная
           </Link>
@@ -28,6 +41,7 @@ export const Footer = () => {
             className="footer__footer-mob__nav__link mt-4"
             to="about-mob"
             smooth={true}
+            onClick={navigateToMain}
           >
             О компании
           </Link>
@@ -35,6 +49,7 @@ export const Footer = () => {
             className="footer__footer-mob__nav__link mt-4"
             to="services-mob"
             smooth={true}
+            onClick={navigateToMain}
           >
             Услуги
           </Link>
@@ -42,6 +57,7 @@ export const Footer = () => {
             className="footer__footer-mob__nav__link mt-4"
             to="portfolio-mob"
             smooth={true}
+            onClick={navigateToMain}
           >
             Портфолио
           </Link>
@@ -49,6 +65,7 @@ export const Footer = () => {
             className="footer__footer-mob__nav__link mt-4"
             to="contacts-mob"
             smooth={true}
+            onClick={navigateToMain}
           >
             Контакты
           </Link>
@@ -74,11 +91,17 @@ export const Footer = () => {
       </div>
       <div className="footer__footer-pc flex flex-col items-center max-[1024px]:hidden">
         <nav className="footer__footer-pc__nav w-full flex items-center justify-between max-[1024px]:hidden">
-          <img className="footer__footer-pc__logo" src={logo} alt="logo" />
+          <img
+            className="footer__footer-pc__logo"
+            src={logo}
+            onClick={scrollToTop}
+            alt="logo"
+          />
           <Link
             className="footer__footer-pc__nav__link"
             to="main"
             smooth={true}
+            onClick={navigateToMain}
           >
             Главная
           </Link>
@@ -86,6 +109,7 @@ export const Footer = () => {
             className="footer__footer-pc__nav__link"
             to="about"
             smooth={true}
+            onClick={navigateToMain}
           >
             О компании
           </Link>
@@ -93,6 +117,7 @@ export const Footer = () => {
             className="footer__footer-pc__nav__link"
             to="services"
             smooth={true}
+            onClick={navigateToMain}
           >
             Услуги
           </Link>
@@ -100,6 +125,7 @@ export const Footer = () => {
             className="footer__footer-pc__nav__link"
             to="portfolio"
             smooth={true}
+            onClick={navigateToMain}
           >
             Портфолио
           </Link>
@@ -107,6 +133,7 @@ export const Footer = () => {
             className="footer__footer-pc__nav__link"
             to="contacts"
             smooth={true}
+            onClick={navigateToMain}
           >
             Контакты
           </Link>

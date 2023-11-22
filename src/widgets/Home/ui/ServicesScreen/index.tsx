@@ -1,13 +1,13 @@
 import { ServiceTab } from "@shared/ui/ServiceTab";
 import { Slide } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@shared/ui/Button";
 
 // Assets
 import service01 from "@assets/service_01.webp";
 import service02 from "@assets/service_02.webp";
 import service03 from "@assets/service_03.webp";
 import service04 from "@assets/service_04.webp";
-import { Button } from "@shared/ui/Button";
-import { useNavigate } from "react-router-dom";
 
 export const ServicesScreen = () => {
   const navigate = useNavigate();

@@ -15,6 +15,11 @@ export const Header = () => {
 
   const navigate = useNavigate();
 
+  function scrollToTop() {
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
+    navigate("/");
+  }
+
   function navigateToMain() {
     navigate("/");
   }
@@ -30,7 +35,7 @@ export const Header = () => {
           <img
             src={logo}
             alt="logotype"
-            onClick={navigateToMain}
+            onClick={scrollToTop}
             className="header__content-container__logo"
           />
           <nav className="header__content-container__links flex items-center justify-between">
