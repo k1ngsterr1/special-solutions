@@ -1,13 +1,19 @@
 import { useState } from "react";
-type OptionType = { value: string; label: string };
-type ValueType = OptionType | null;
 
-export const useSelectOption = (initialValue: ValueType) => {
-  const [selectedOption, setSelectedOption] = useState<ValueType>(initialValue);
+export type OptionType = { value: string; label: string };
 
-  const handleChange = (newValue: ValueType) => {
-    setSelectedOption(newValue);
+export const useSelectOption = (initialValue?: OptionType) => {
+  const [selectedOption, setSelectedOption] = useState<OptionType | undefined>(
+    initialValue
+  );
+
+  const handleSelectChange = (option: OptionType | null) => {
+    setSelectedOption(option ?? undefined);
+    console.log(selectedOption?.value);
   };
 
-  return { selectedOption, handleChange };
+  return {
+    selectedOption,
+    handleSelectChange, // Correct function name
+  };
 };

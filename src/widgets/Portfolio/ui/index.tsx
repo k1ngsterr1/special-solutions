@@ -1,9 +1,15 @@
-import { useState } from "react";
-import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Selector } from "@shared/ui/Selector";
+import { useSelectOption, OptionType } from "@shared/lib/hooks/useSelectOption"; // Ensure the path is correct
 
 export const PortfolioList = () => {
-  const [selectedOption, setSelectedOption] = useState("");
+  const { selectedOption, handleSelectChange } = useSelectOption(); //
+
+  // Define the options for the Selector component
+  const options: OptionType[] = [
+    { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
+    { value: "Дизайн Офиса", label: "Дизайн Офиса" },
+    { value: "Утепление Офиса", label: "Утепление Офиса" },
+  ];
 
   return (
     <>
@@ -16,7 +22,11 @@ export const PortfolioList = () => {
           мышлением, чтобы предлагать продукты и услуги, выходящие за рамки
           стандартных предложений.
         </p>
-        <Selector />
+        <Selector
+          options={options}
+          onChange={handleSelectChange} // Use the correct function name
+          defaultValue={selectedOption}
+        />
       </main>
       <main className="content-container max-[1024px]:hidden">
         <h1>Наше портфолио</h1>
@@ -27,6 +37,19 @@ export const PortfolioList = () => {
           мышлением, чтобы предлагать продукты и услуги, выходящие за рамки
           стандартных предложений.
         </p>
+        <Selector
+          options={options}
+          onChange={handleSelectChange} // Use the correct function name
+          defaultValue={selectedOption}
+          If
+          you
+          want
+          to
+          set
+          a
+          default
+          value
+        />
       </main>
     </>
   );

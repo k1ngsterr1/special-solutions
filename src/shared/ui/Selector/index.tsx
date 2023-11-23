@@ -3,13 +3,14 @@ import React from "react";
 import Select, { SingleValue } from "react-select";
 import { useSelectOption } from "@shared/lib/hooks/useSelectOption"; // Adjust the import path as necessary
 
+import "./styles.scss";
+
 type OptionType = { value: string; label: string };
 
 interface SelectorProps {
   options: OptionType[];
-  onChange: (newValue: SingleValue<OptionType>) => void; // Adjust the type to match react-select's expectation
-  defaultValue?: OptionType; // defaultValue should be optional to match react-select's API
-  styles?: any; // Define proper type for your styles if needed
+  onChange: (newValue: SingleValue<OptionType>) => void;
+  defaultValue?: OptionType;
   placeholder?: string;
 }
 
@@ -17,30 +18,33 @@ export const Selector: React.FC<SelectorProps> = ({
   options,
   onChange,
   defaultValue,
-  styles,
-  placeholder,
 }) => {
-  // Use the custom hook to manage the selected option state
-  const { selectedOption, handleChange } = useSelectOption(defaultValue);
+  const { selectedOption, handleSelectChange } = useSelectOption(defaultValue); // Correct function name used
 
-  // Wrap the onChange callback to provide the correct type
-  const handleSelectChange = (newValue: SingleValue<OptionType>) => {
-    handleChange(newValue); // Call the hook's handleChange function
-    onChange(newValue); // Call the passed onChange prop function
+  const style = {
+    control: (base: any) => ({
+      ...base,
+      border: 0,
+      boxShadow: "none",
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? "hsla(24, 100%, 50%, 1)" : "white",
+    }),
   };
 
-  // Use the selectedOption from the hook as the value prop for the Select component
   return (
     <Select
       classNamePrefix="react-select"
       className="react-select-container mt-8"
       value={selectedOption}
-      onChange={handleSelectChange}
+      defaultValue={defaultValue}
+      onChange={(newValue) => handleSelectChange(newValue as OptionType)} // Cast newValue to OptionType
       options={options}
       menuPortalTarget={document.body}
-      styles={styles}
+      styles={style}
       menuPosition={"fixed"}
-      placeholder={placeholder}
+      placeholder="Выберите категорию"
     />
   );
 };
