@@ -1,15 +1,31 @@
+import { useState, useEffect } from "react";
 import { Selector } from "@shared/ui/Selector";
-import { useSelectOption, OptionType } from "@shared/lib/hooks/useSelectOption"; // Ensure the path is correct
+
+type OptionType = { value: string; label: string };
 
 export const PortfolioList = () => {
-  const { selectedOption, handleSelectChange } = useSelectOption(); //
+  const [selectedValue, setSelectedValue] = useState("");
 
-  // Define the options for the Selector component
   const options: OptionType[] = [
     { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
     { value: "Дизайн Офиса", label: "Дизайн Офиса" },
     { value: "Утепление Офиса", label: "Утепление Офиса" },
   ];
+
+  const handleChange = (selectedOption: OptionType | null) => {
+    if (selectedOption && "value" in selectedOption) {
+      setSelectedValue(selectedOption.value);
+    } else {
+      setSelectedValue("");
+    }
+  };
+
+  useEffect(() => {
+    console.log("Updated selectedOption:", selectedValue);
+  }, [selectedValue]);
+
+  const selectedOptionObject =
+    options.find((option) => option.value === selectedValue) || null;
 
   return (
     <>
@@ -23,10 +39,16 @@ export const PortfolioList = () => {
           стандартных предложений.
         </p>
         <Selector
+          key={selectedValue}
           options={options}
-          onChange={handleSelectChange} // Use the correct function name
-          defaultValue={selectedOption}
+          selectedOption={selectedOptionObject}
+          onChange={handleChange}
         />
+        {selectedValue == "Дизайн Интерьера" ? (
+          <span>хуй</span>
+        ) : (
+          <span>пизда</span>
+        )}
       </main>
       <main className="content-container max-[1024px]:hidden">
         <h1>Наше портфолио</h1>
@@ -38,18 +60,12 @@ export const PortfolioList = () => {
           стандартных предложений.
         </p>
         <Selector
+          key={selectedValue}
           options={options}
-          onChange={handleSelectChange} // Use the correct function name
-          defaultValue={selectedOption}
-          If
-          you
-          want
-          to
-          set
-          a
-          default
-          value
+          selectedOption={selectedOptionObject}
+          onChange={handleChange}
         />
+        {selectedValue === "Дизайн Интерьера" ? <span>хуй</span> : null}
       </main>
     </>
   );

@@ -1,10 +1,5 @@
 import { FC } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useRoutes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
