@@ -1,4 +1,3 @@
-// Selector.tsx
 import React from "react";
 import Select, { SingleValue } from "react-select";
 
@@ -16,8 +15,8 @@ interface SelectorProps {
 export const Selector: React.FC<SelectorProps> = ({
   options,
   selectedOption,
-  onChange, // Add the onChange prop
-  placeholder = "Выберите категорию", // Default value for placeholder
+  onChange,
+  placeholder = "Выберите категорию",
 }) => {
   const style = {
     control: (base: any) => ({
@@ -31,11 +30,14 @@ export const Selector: React.FC<SelectorProps> = ({
     }),
   };
 
+  const defaultValue = { value: "Дизайн Интерьера", label: "Дизайн Интерьера" };
+
   return (
     <Select
       classNamePrefix="react-select"
       className="react-select-container mt-8"
       value={selectedOption}
+      defaultValue={defaultValue}
       onChange={onChange}
       options={options}
       menuPortalTarget={document.body}

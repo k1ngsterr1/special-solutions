@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Selector } from "@shared/ui/Selector";
-import { Slide } from "react-awesome-reveal";
-import { Footer } from "@features/Footer/ui";
 
 import portfolio01 from "@assets/portfolio01.webp";
+import { InteriorDesign } from "@features/PortfolioObjects/InteriorDesign";
 
 type OptionType = { value: string; label: string };
 
@@ -24,10 +23,6 @@ export const PortfolioList = () => {
       setSelectedValue("");
     }
   };
-
-  useEffect(() => {
-    console.log("Updated selectedOption:", selectedValue);
-  }, [selectedValue]);
 
   const selectedOptionObject =
     options.find((option) => option.value === selectedValue) || null;
@@ -103,106 +98,25 @@ export const PortfolioList = () => {
         />
         {selectedValue == "Дизайн Интерьера" ? (
           <>
-            <div className="w-full flex justify-between items-center mt-8">
-              <Slide className="w-full" direction="up" triggerOnce={true}>
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8"
-                />
-              </Slide>
-              <Slide
-                className="w-full"
-                delay={200}
-                direction="up"
-                triggerOnce={true}
-              >
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8 ml-8"
-                />
-              </Slide>
-              <Slide
-                className="w-full ml-8"
-                delay={300}
-                direction="up"
-                triggerOnce={true}
-              >
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8 ml-8"
-                />
-              </Slide>
-              <Slide
-                className="w-full ml-8"
-                delay={400}
-                direction="up"
-                triggerOnce={true}
-              >
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8 ml-8"
-                />
-              </Slide>
-            </div>
-            <div className="w-full flex justify-between items-center mt-8">
-              <Slide className="w-full" direction="up" triggerOnce={true}>
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8"
-                />
-              </Slide>
-              <Slide
-                className="w-full"
-                delay={200}
-                direction="up"
-                triggerOnce={true}
-              >
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8 ml-8"
-                />
-              </Slide>
-              <Slide
-                className="w-full ml-8"
-                delay={300}
-                direction="up"
-                triggerOnce={true}
-              >
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8 ml-8"
-                />
-              </Slide>
-              <Slide
-                className="w-full ml-8"
-                delay={400}
-                direction="up"
-                triggerOnce={true}
-              >
-                <PortfolioTab
-                  text="Интерьер Офиса"
-                  subText="Интерьер"
-                  image={portfolio01}
-                  marginTop="mt-8 ml-8"
-                />
-              </Slide>
-            </div>
+            <InteriorDesign />
           </>
-        ) : null}
+        ) : (
+          <InteriorDesign />
+        )}
+        {selectedValue == "Дизайн Офиса" ? (
+          <>
+            <InteriorDesign />
+          </>
+        ) : (
+          <InteriorDesign />
+        )}
+        {selectedValue == "Утепление Офиса" ? (
+          <>
+            <InteriorDesign />
+          </>
+        ) : (
+          <InteriorDesign />
+        )}
       </main>
     </>
   );

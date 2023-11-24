@@ -24,8 +24,8 @@ export const HomePage = () => {
         <ServicesScreen />
         <PorfolioScreen />
         <Form />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

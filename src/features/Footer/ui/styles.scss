@@ -1,8 +1,10 @@
 .footer {
   width: 100%;
   height: auto;
+  margin: auto;
 
   &__footer-mob {
+    width: 90%;
     width: auto;
     height: auto;
 
@@ -36,8 +38,10 @@
   }
 
   &__footer-pc {
-    width: 100%;
+    width: 86.6%;
     height: auto;
+    margin: auto;
+    margin-top: clamp(64px, 6.66624vw, 256px) !important;
 
     &__nav {
       height: auto;
