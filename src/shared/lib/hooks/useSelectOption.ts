@@ -14,6 +14,6 @@ export const useSelectOption = (initialValue?: OptionType) => {
 
   return {
     selectedOption,
-    handleSelectChange, // Correct function name
+    handleSelectChange, 
   };
 };
