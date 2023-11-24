@@ -45,7 +45,6 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
           image4={image4}
         />
         <Form />
-        <Footer />
       </main>
       <main className="content-container max-[1024px]:hidden">
         <Slide direction="left" triggerOnce>
@@ -63,8 +62,8 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
           image4={image4}
         />
         <Form />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };
