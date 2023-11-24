@@ -101,6 +101,11 @@ export const PortfolioList = () => {
           selectedOption={selectedOptionObject}
           onChange={handleChange}
         />
+        {selectedValue == "" || null || undefined ? (
+          <>
+            <InteriorDesign />
+          </>
+        ) : null}
         {selectedValue == "Дизайн Интерьера" ? (
           <>
             <InteriorDesign />
