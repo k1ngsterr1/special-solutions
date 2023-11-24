@@ -1,9 +1,16 @@
 import { ServiceTab } from "@shared/ui/ServiceTab";
 import { Slide } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
 
 import service02 from "@assets/service_02.webp";
 
 export const ServicesList = () => {
+  const navigate = useNavigate();
+
+  function navigateServiceCase() {
+    navigate("/services/design");
+  }
+
   return (
     <>
       <main className="content-container min-[1024px]:hidden">
@@ -22,6 +29,7 @@ export const ServicesList = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
+            onClick={navigateServiceCase}
             marginTop="mt-16"
           />
         </Slide>
@@ -29,6 +37,7 @@ export const ServicesList = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
+            onClick={navigateServiceCase}
             marginTop="mt-16"
           />{" "}
         </Slide>
@@ -36,6 +45,7 @@ export const ServicesList = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
+            onClick={navigateServiceCase}
             marginTop="mt-16"
           />{" "}
         </Slide>
@@ -43,6 +53,7 @@ export const ServicesList = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
+            onClick={navigateServiceCase}
             marginTop="mt-16"
           />{" "}
         </Slide>
@@ -50,6 +61,7 @@ export const ServicesList = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
+            onClick={navigateServiceCase}
             marginTop="mt-16"
           />
         </Slide>
@@ -71,6 +83,7 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />
           </Slide>
@@ -78,13 +91,15 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
-            />{" "}
+            />
           </Slide>
           <Slide direction="up" duration={700} triggerOnce>
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />{" "}
           </Slide>
@@ -92,6 +107,7 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />{" "}
           </Slide>
@@ -101,6 +117,7 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />
           </Slide>
@@ -108,6 +125,7 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />{" "}
           </Slide>
@@ -115,6 +133,7 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />{" "}
           </Slide>
@@ -122,6 +141,7 @@ export const ServicesList = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="ml-4"
             />{" "}
           </Slide>
