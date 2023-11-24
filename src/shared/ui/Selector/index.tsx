@@ -1,7 +1,5 @@
-// Selector.tsx
 import React from "react";
 import Select, { SingleValue } from "react-select";
-import { useSelectOption } from "@shared/lib/hooks/useSelectOption"; // Adjust the import path as necessary
 
 import "./styles.scss";
 
@@ -9,18 +7,17 @@ type OptionType = { value: string; label: string };
 
 interface SelectorProps {
   options: OptionType[];
+  selectedOption: OptionType | null;
   onChange: (newValue: SingleValue<OptionType>) => void;
-  defaultValue?: OptionType;
   placeholder?: string;
 }
 
 export const Selector: React.FC<SelectorProps> = ({
   options,
+  selectedOption,
   onChange,
-  defaultValue,
+  placeholder = "Выберите категорию",
 }) => {
-  const { selectedOption, handleSelectChange } = useSelectOption(defaultValue); // Correct function name used
-
   const style = {
     control: (base: any) => ({
       ...base,
@@ -33,18 +30,20 @@ export const Selector: React.FC<SelectorProps> = ({
     }),
   };
 
+  const defaultValue = { value: "Дизайн Интерьера", label: "Дизайн Интерьера" };
+
   return (
     <Select
       classNamePrefix="react-select"
       className="react-select-container mt-8"
       value={selectedOption}
       defaultValue={defaultValue}
-      onChange={(newValue) => handleSelectChange(newValue as OptionType)} // Cast newValue to OptionType
+      onChange={onChange}
       options={options}
       menuPortalTarget={document.body}
       styles={style}
       menuPosition={"fixed"}
-      placeholder="Выберите категорию"
+      placeholder={placeholder}
     />
   );
 };

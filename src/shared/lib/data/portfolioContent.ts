@@ -1,7 +1,7 @@
 // Assets
 import gallery01 from "@assets/design_gallery_01.webp";
 
-interface ServiceInfo {
+interface PortfolioInfo {
   title: string;
   description: string;
   image: string;
@@ -10,9 +10,9 @@ interface ServiceInfo {
   image4: string;
 }
 
-export const serviceContent: Record<string, ServiceInfo> = {
-  design: {
-    title: "Дизайн Интерьеров",
+export const portfolioContent: Record<string, PortfolioInfo> = {
+  astana_bank: {
+    title: "Офис Астана Банк",
     description:
       "Компания Special Solution занимается разработкой передовых решений, способных удовлетворить самые изысканные и специфические запросы наших клиентов. Мы сочетаем глубокие знания отрасли с инновационным мышлением, чтобы предлагать продукты и услуги, выходящие за рамки стандартных предложений.",
     image: gallery01,

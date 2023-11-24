@@ -17,9 +17,7 @@ export const ServicePage = () => {
       <div className="content-container">
         <Form />
       </div>
-      <div className="content-container">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };

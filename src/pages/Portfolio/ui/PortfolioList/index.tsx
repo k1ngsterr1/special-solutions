@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { Form } from "@widgets/Form";
 import { Footer } from "@features/Footer/ui";
 
-interface ServiceDetailsProps {
+interface PortfolioDetailsProps {
   title: string;
   description: string;
   image: string;
@@ -17,7 +17,7 @@ interface ServiceDetailsProps {
   image4: string;
 }
 
-export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
+export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
   title,
   description,
   image,
@@ -29,6 +29,7 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
 
   return (
     <>
+      {" "}
       <Header />
       {isMenuOpen && <Menu />}
       <main className="content-container min-[1024px]:hidden">
