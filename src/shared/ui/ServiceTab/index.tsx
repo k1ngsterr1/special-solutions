@@ -7,15 +7,17 @@ interface ServiceTabProps {
   img: string;
   text: string;
   marginTop: string;
+  onClick: () => void;
 }
 
 export const ServiceTab: React.FC<ServiceTabProps> = ({
   img,
   text,
   marginTop,
+  onClick,
 }) => {
   return (
-    <div className={`service-tab ${marginTop}`}>
+    <div className={`service-tab ${marginTop}`} onClick={onClick}>
       <FontAwesomeIcon
         icon={faArrowUpRightFromSquare}
         className="service-tab__icon"

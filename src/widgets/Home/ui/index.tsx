@@ -9,8 +9,8 @@ import gallery01 from "@assets/design_gallery_01.webp";
 export const HomeScreen = () => {
   const navigate = useNavigate();
 
-  function navigatePortfolio() {
-    navigate("/portfolio");
+  function navigateServices() {
+    navigate("/services");
   }
 
   return (
@@ -42,7 +42,7 @@ export const HomeScreen = () => {
         <Button
           text="Все проекты"
           type="outline"
-          onClick={navigatePortfolio}
+          onClick={navigateServices}
           marginTop="mt-8"
         />
       </div>
@@ -71,7 +71,7 @@ export const HomeScreen = () => {
         <Slide direction="right" delay={200} triggerOnce={true}>
           <Button
             text="Все проекты"
-            onClick={navigatePortfolio}
+            onClick={navigateServices}
             marginTop="mt-8"
             type="outline"
           />

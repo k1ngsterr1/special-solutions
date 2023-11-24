@@ -18,6 +18,10 @@ export const ServicesScreen = () => {
     navigate("/services");
   }
 
+  function navigateServiceCase() {
+    navigate("/services/astana_bank");
+  }
+
   useEffect(() => {
     console.log("Service Details");
 
@@ -45,6 +49,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service01}
+            onClick={navigateServiceCase}
             marginTop="mt-8"
           />
         </Slide>
@@ -52,6 +57,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service02}
+            onClick={navigateServiceCase}
             marginTop="mt-8"
           />
         </Slide>
@@ -59,6 +65,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service03}
+            onClick={navigateServiceCase}
             marginTop="mt-8"
           />
         </Slide>
@@ -66,6 +73,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             text="Облицовка стен стеклом"
             img={service04}
+            onClick={navigateServiceCase}
             marginTop="mt-8"
           />
         </Slide>
@@ -111,6 +119,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service01}
+              onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
@@ -118,6 +127,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service02}
+              onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
@@ -125,6 +135,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service03}
+              onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
@@ -132,6 +143,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               text="Облицовка стен стеклом"
               img={service04}
+              onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
