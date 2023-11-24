@@ -9,7 +9,7 @@ import portfolio01 from "@assets/portfolio01.webp";
 type OptionType = { value: string; label: string };
 
 export const PortfolioList = () => {
-  const navigate = useNavigate("");
+  const navigate = useNavigate();
   const [selectedValue, setSelectedValue] = useState("");
 
   function navigatePortfolioCase() {
@@ -39,41 +39,10 @@ export const PortfolioList = () => {
         <h1>Наше портфолио</h1>
         <p className="paragraph mt-8 text-center">
           Компания Special Solution занимается разработкой передовых решений,
-          способных удовлетворить самые изыска{" "}
-          <div className="w-full flex items-center justify-between">
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8"
-            />
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8"
-            />
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8"
-            />
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8"
-            />
-          </div>
-          нные и специфические запросы наших клиентов. Мы сочетаем глубокие
-          знания отрасли с инновационным мышлением, чтобы предлагать продукты и
-          услуги, выходящие за рамки стандартных предложений.
+          способных удовлетворить самые изыска нные и специфические запросы
+          наших клиентов. Мы сочетаем глубокие знания отрасли с инновационным
+          мышлением, чтобы предлагать продукты и услуги, выходящие за рамки
+          стандартных предложений.
         </p>
         <Selector
           key={selectedValue}
