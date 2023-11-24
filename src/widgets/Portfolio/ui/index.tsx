@@ -71,14 +71,19 @@ export const PortfolioList = () => {
           onChange={handleChange}
         />
         {selectedValue == "Дизайн Интерьера" ? (
-          <div className="flex items-center justify-between">
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              image={portfolio01}
-              marginTop="mt-8"
-            />
-          </div>
+          <>
+            <InteriorDesign />
+          </>
+        ) : null}
+        {selectedValue == "Дизайн Офиса" ? (
+          <>
+            <InteriorDesign />
+          </>
+        ) : null}
+        {selectedValue == "Утепление Офиса" ? (
+          <>
+            <InteriorDesign />
+          </>
         ) : null}
       </main>
       <main className="content-container max-[1024px]:hidden">
@@ -100,23 +105,17 @@ export const PortfolioList = () => {
           <>
             <InteriorDesign />
           </>
-        ) : (
-          <InteriorDesign />
-        )}
+        ) : null}
         {selectedValue == "Дизайн Офиса" ? (
           <>
             <InteriorDesign />
           </>
-        ) : (
-          <InteriorDesign />
-        )}
+        ) : null}
         {selectedValue == "Утепление Офиса" ? (
           <>
             <InteriorDesign />
           </>
-        ) : (
-          <InteriorDesign />
-        )}
+        ) : null}
       </main>
     </>
   );
