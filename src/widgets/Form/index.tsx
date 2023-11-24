@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 import { Input } from "@shared/ui/Input";
 import { Button } from "@shared/ui/Button";
@@ -6,8 +7,29 @@ import { Selector } from "@shared/ui/Selector";
 
 import "./styles.scss";
 
+type OptionType = { value: string; label: string };
+
 export const Form = () => {
   const { register, handleSubmit, errors, onSubmit } = useSendEmail();
+
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const options: OptionType[] = [
+    { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
+    { value: "Дизайн Офиса", label: "Дизайн Офиса" },
+    { value: "Утепление Офиса", label: "Утепление Офиса" },
+  ];
+
+  const handleChange = (selectedOption: OptionType | null) => {
+    if (selectedOption && "value" in selectedOption) {
+      setSelectedValue(selectedOption.value);
+    } else {
+      setSelectedValue("");
+    }
+  };
+
+  const selectedOptionObject =
+    options.find((option) => option.value === selectedValue) || null;
 
   return (
     <>
@@ -85,7 +107,12 @@ export const Form = () => {
             </div>
           </Slide>
           <Slide direction="right" className="w-full" triggerOnce>
-            <Selector />
+            <Selector
+              key={selectedValue}
+              options={options}
+              selectedOption={selectedOptionObject}
+              onChange={handleChange}
+            />
           </Slide>
           <Slide
             direction="right"
@@ -170,7 +197,12 @@ export const Form = () => {
             </div>
           </Slide>
           <Slide direction="right" className="w-[60%]" triggerOnce>
-            <Selector />
+            <Selector
+              key={selectedValue}
+              options={options}
+              selectedOption={selectedOptionObject}
+              onChange={handleChange}
+            />
           </Slide>
           <Slide
             direction="right"

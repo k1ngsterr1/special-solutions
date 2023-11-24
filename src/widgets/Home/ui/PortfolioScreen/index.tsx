@@ -1,10 +1,21 @@
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "@shared/ui/Button";
+import { useNavigate } from "react-router-dom";
 
 import portfolio01 from "@assets/portfolio01.webp";
 
 export const PorfolioScreen = () => {
+  const navigate = useNavigate();
+
+  function navigatePortfolio() {
+    navigate("/portfolio");
+  }
+
+  function navigatePortfolioCase() {
+    navigate("/portfolio/astana_bank");
+  }
+
   return (
     <>
       <div
@@ -27,6 +38,7 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8"
           />
@@ -35,6 +47,7 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8"
           />
@@ -43,6 +56,7 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8"
           />
@@ -52,7 +66,7 @@ export const PorfolioScreen = () => {
             text="Все проекты"
             type="outline"
             marginTop="mt-8"
-            onClick={() => console.log("holla")}
+            onClick={navigatePortfolio}
           />
         </Slide>
       </div>
@@ -79,7 +93,7 @@ export const PorfolioScreen = () => {
           <Slide direction="right" triggerOnce={true}>
             <Button
               text="Все проекты"
-              onClick={() => console.log("holla")}
+              onClick={navigatePortfolio}
               type="outline"
             />
           </Slide>
@@ -89,6 +103,7 @@ export const PorfolioScreen = () => {
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8"
             />
@@ -102,6 +117,7 @@ export const PorfolioScreen = () => {
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8 ml-8"
             />
@@ -115,6 +131,7 @@ export const PorfolioScreen = () => {
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8 ml-8"
             />
@@ -128,6 +145,7 @@ export const PorfolioScreen = () => {
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8 ml-8"
             />

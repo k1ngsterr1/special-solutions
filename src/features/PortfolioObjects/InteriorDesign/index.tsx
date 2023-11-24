@@ -1,9 +1,16 @@
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
 
 import portfolio01 from "@assets/portfolio01.webp";
 
 export const InteriorDesign = () => {
+  const navigate = useNavigate();
+
+  function navigatePortfolioCase() {
+    navigate("/portfolio/astana_bank");
+  }
+
   return (
     <>
       {" "}
@@ -12,6 +19,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8"
           />
@@ -20,6 +28,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8 ml-8"
           />
@@ -33,6 +42,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8 ml-8"
           />
@@ -46,6 +56,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8 ml-8"
           />
@@ -56,6 +67,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8"
           />
@@ -64,6 +76,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8 ml-8"
           />
@@ -77,6 +90,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8 ml-8"
           />
@@ -90,6 +104,7 @@ export const InteriorDesign = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
+            onClick={navigatePortfolioCase}
             image={portfolio01}
             marginTop="mt-8 ml-8"
           />

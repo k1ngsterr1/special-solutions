@@ -1,11 +1,18 @@
 import { Gallery } from "@features/Gallery/ui";
 import { Button } from "@shared/ui/Button";
 import { Slide } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
 
 // Assets
 import gallery01 from "@assets/design_gallery_01.webp";
 
 export const HomeScreen = () => {
+  const navigate = useNavigate();
+
+  function navigatePortfolio() {
+    navigate("/portfolio");
+  }
+
   return (
     <>
       <div
@@ -35,7 +42,7 @@ export const HomeScreen = () => {
         <Button
           text="Все проекты"
           type="outline"
-          onClick={() => console.log("holla")}
+          onClick={navigatePortfolio}
           marginTop="mt-8"
         />
       </div>
@@ -64,7 +71,7 @@ export const HomeScreen = () => {
         <Slide direction="right" delay={200} triggerOnce={true}>
           <Button
             text="Все проекты"
-            onClick={() => console.log("All Projects")}
+            onClick={navigatePortfolio}
             marginTop="mt-8"
             type="outline"
           />

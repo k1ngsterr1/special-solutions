@@ -8,6 +8,7 @@ interface PortfolioTabProps {
   subText: string;
   image: string;
   marginTop: string;
+  onClick: () => void;
 }
 
 export const PortfolioTab: React.FC<PortfolioTabProps> = ({
@@ -15,9 +16,10 @@ export const PortfolioTab: React.FC<PortfolioTabProps> = ({
   image,
   subText,
   marginTop,
+  onClick,
 }) => {
   return (
-    <div className={`portfolio-tab ${marginTop}`}>
+    <div className={`portfolio-tab ${marginTop}`} onClick={onClick}>
       <FontAwesomeIcon
         icon={faArrowUpRightFromSquare}
         className="portfolio-tab__icon"

@@ -2,9 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { GalleryPhoto } from "@shared/ui/GalleryPhoto";
 import { Autoplay } from "swiper/modules";
 
-// Assets
-import gallery01 from "@assets/design_gallery_01.webp";
-
 import "swiper/css";
 import "swiper/css";
 import "swiper/css/autoplay";

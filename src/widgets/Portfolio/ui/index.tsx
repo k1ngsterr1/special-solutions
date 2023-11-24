@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Selector } from "@shared/ui/Selector";
+import { InteriorDesign } from "@features/PortfolioObjects/InteriorDesign";
+import { useNavigate } from "react-router-dom";
 
 import portfolio01 from "@assets/portfolio01.webp";
-import { InteriorDesign } from "@features/PortfolioObjects/InteriorDesign";
 
 type OptionType = { value: string; label: string };
 
 export const PortfolioList = () => {
+  const navigate = useNavigate("");
   const [selectedValue, setSelectedValue] = useState("");
+
+  function navigatePortfolioCase() {
+    navigate("/portfolio/astana_bank");
+  }
 
   const options: OptionType[] = [
     { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
@@ -38,24 +44,29 @@ export const PortfolioList = () => {
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8"
             />
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8"
             />
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8"
             />
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
+              onClick={navigatePortfolioCase}
+              onClick={navigatePortfolioCase}
               image={portfolio01}
               marginTop="mt-8"
             />
