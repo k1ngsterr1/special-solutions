@@ -13,6 +13,7 @@ import { ServiceDetails } from "./Services/ui/ServiceDetails";
 
 // Data
 import { serviceContent } from "@shared/lib/data/serviceContent";
+import { portfolioContent } from "@shared/lib/data/portfolioContent";
 import { PorfolioPage } from "./Portfolio/ui";
 
 export const MyRoutes: FC = () => {
@@ -39,6 +40,16 @@ export const MyRoutes: FC = () => {
             path={ROUTE_CONSTANTS.SERVICE_DETAILS.replace(
               ":serviceType",
               serviceType
+            )}
+            element={<ServiceDetails {...content} />}
+          />
+        ))}
+        {Object.entries(portfolioContent).map(([portfolioType, content]) => (
+          <Route
+            key={portfolioType}
+            path={ROUTE_CONSTANTS.PORTFOLIO_DETAILS.replace(
+              ":portfolioType",
+              portfolioType
             )}
             element={<ServiceDetails {...content} />}
           />
