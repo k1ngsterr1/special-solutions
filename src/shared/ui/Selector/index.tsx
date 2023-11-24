@@ -8,7 +8,7 @@ type OptionType = { value: string; label: string };
 
 interface SelectorProps {
   options: OptionType[];
-  selectedOption: OptionType | null; // Change this to OptionType | null
+  selectedOption: OptionType | null;
   onChange: (newValue: SingleValue<OptionType>) => void;
   placeholder?: string;
 }
