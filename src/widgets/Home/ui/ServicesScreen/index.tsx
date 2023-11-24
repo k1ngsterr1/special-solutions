@@ -19,7 +19,7 @@ export const ServicesScreen = () => {
   }
 
   function navigateServiceCase() {
-    navigate("/services/astana_bank");
+    navigate("/services/design");
   }
 
   useEffect(() => {
