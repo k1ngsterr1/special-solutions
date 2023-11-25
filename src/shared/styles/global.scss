@@ -60,6 +60,16 @@ h5 {
   margin: auto;
   margin-top: clamp(32px, 14.95296vw, 128px);
 }
+
+.content-container-row {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: clamp(32px, 14.95296vw, 128px);
+}
+
 .paragraph {
   color: $dark;
   font-family: Inter;
@@ -106,6 +116,16 @@ h5 {
     margin: auto;
     @apply mt-40;
   }
+
+  .content-container-row {
+    width: 86.6% !important;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    @apply mt-40;
+  }
+
   .paragraph {
     color: $dark;
     font-family: Inter;

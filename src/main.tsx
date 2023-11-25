@@ -7,6 +7,7 @@ import { store } from "@shared/lib/redux/store";
 import { Provider } from "react-redux";
 
 // Styles
+import "react-image-gallery/styles/css/image-gallery.css";
 import "./shared/styles/global.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

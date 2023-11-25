@@ -1,29 +1,28 @@
 import React from "react";
 import { Header } from "@features/Header/ui";
 import { Slide } from "react-awesome-reveal";
-import { Gallery } from "@features/Gallery/ui";
 import { RootState } from "@shared/lib/redux/store";
 import { Menu } from "@features/Menu/ui";
 import { useSelector } from "react-redux";
 import { Form } from "@widgets/Form";
 import { Footer } from "@features/Footer/ui";
+import { ThumbnailsGallery } from "@features/ThumbnailsGallery/ui";
+
+interface PhotoItem {
+  photo: string;
+  thumbnail: string;
+}
 
 interface ServiceDetailsProps {
   title: string;
   description: string;
-  image: string;
-  image2: string;
-  image3: string;
-  image4: string;
+  photos: PhotoItem[];
 }
 
 export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   title,
   description,
-  image,
-  image2,
-  image3,
-  image4,
+  photos,
 }) => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
 
@@ -38,19 +37,18 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
         <Slide direction="right" triggerOnce>
           <p className="paragraph mt-8 mb-8 text-center">{description}</p>
         </Slide>
-        <Gallery
-          image={image}
-          image2={image2}
-          image3={image3}
-          image4={image4}
-        />
+        <ThumbnailsGallery photos={photos} />
         <Form />
       </main>
-      <main className="content-container max-[1024px]:hidden">
+      <main className="content-container-row items-start max-[1024px]:hidden">
         <section className="w-full mt-12 flex flex-col items-start">
           <h1 className="main-heading text-left">{title}</h1>
           <p className="paragraph w-[60%] mt-8">{description}</p>
+          <p className="paragraph w-[60%] mt-8">{description}</p>
+          <p className="paragraph w-[60%] mt-8">{description}</p>
+          <p className="paragraph w-[60%] mt-8">{description}</p>
         </section>
+        <ThumbnailsGallery photos={photos} />
       </main>
       <Footer />
     </>

@@ -1,5 +1,21 @@
 import React from "react";
+import ImageGallery from "react-image-gallery";
 
-export const ThumbnaillsGallery = () => {
-  return <div>index</div>;
+interface PhotoItem {
+  photo: string;
+  thumbnail: string;
+}
+
+interface ThumbnailsGalleryProps {
+  photos: PhotoItem[];
+}
+export const ThumbnailsGallery: React.FC<ThumbnailsGalleryProps> = ({
+  photos,
+}) => {
+  const images = photos.map((photo) => ({
+    original: photo.photo,
+    thumbnail: photo.thumbnail,
+  }));
+
+  return <ImageGallery items={images} />;
 };
