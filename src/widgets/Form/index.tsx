@@ -106,14 +106,14 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="right" className="w-full" triggerOnce>
+          <div className="w-[60%]">
             <Selector
               key={selectedValue}
               options={options}
               selectedOption={selectedOptionObject}
               onChange={handleChange}
             />
-          </Slide>
+          </div>
           <Slide
             direction="right"
             className="w-full flex items-center justify-center"
@@ -196,14 +196,14 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <Slide direction="right" className="w-[60%]" triggerOnce>
+          <div className="w-[60%]">
             <Selector
               key={selectedValue}
               options={options}
               selectedOption={selectedOptionObject}
               onChange={handleChange}
             />
-          </Slide>
+          </div>
           <Slide
             direction="right"
             className="w-full flex items-center justify-center"

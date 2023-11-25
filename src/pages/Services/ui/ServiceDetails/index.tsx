@@ -47,21 +47,10 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
         <Form />
       </main>
       <main className="content-container max-[1024px]:hidden">
-        <Slide direction="left" triggerOnce>
-          <h1>{title}</h1>
-        </Slide>
-        <Slide direction="right" triggerOnce>
-          <p className="paragraph w-[50%] m-auto mt-8 mb-8 text-center ">
-            {description}
-          </p>
-        </Slide>
-        <Gallery
-          image={image}
-          image2={image2}
-          image3={image3}
-          image4={image4}
-        />
-        <Form />
+        <section className="w-full mt-12 flex flex-col items-start">
+          <h1 className="main-heading text-left">{title}</h1>
+          <p className="paragraph w-[60%] mt-8">{description}</p>
+        </section>
       </main>
       <Footer />
     </>
