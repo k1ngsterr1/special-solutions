@@ -117,7 +117,7 @@ export const Form = () => {
               )}
             </div>
           </Slide>
-          <div className="w-[60%]">
+          <div className="w-[100%]">
             <Selector
               key={selectedValue}
               options={options}

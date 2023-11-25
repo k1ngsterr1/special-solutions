@@ -22,6 +22,7 @@ export const HomeScreen = () => {
         <Slide direction="left">
           <h1 className="bigger text-custom-orange">Special Solutions</h1>
         </Slide>
+        <span className="w-[50%] border-[1px] mt-4 border-custom-black"></span>
         <Slide direction="right">
           <h2 className="mt-4">Ваш Партнер в Строительстве</h2>
         </Slide>
