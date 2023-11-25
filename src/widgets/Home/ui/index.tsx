@@ -47,7 +47,7 @@ export const HomeScreen = () => {
         />
       </div>
       <div
-        className="pc-screen w-full max-[1024px]:hidden max-[2560px]:mt-[220px]"
+        className="pc-screen w-full max-[1024px]:hidden min-[2560px]:mt-[100px]"
         id="main"
       >
         <Slide direction="left" triggerOnce={true}>

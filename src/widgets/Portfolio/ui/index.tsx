@@ -62,7 +62,7 @@ export const PortfolioList = () => {
           </>
         ) : null}
       </main>
-      <main className="content-container max-[1024px]:hidden">
+      <main className="content-container max-[1024px]:hidden min-[2560px]:mt-[100px]">
         <h1>Наше портфолио</h1>
         <p className="paragraph mt-8 text-center">
           Компания Special Solution занимается разработкой передовых решений,
