@@ -41,6 +41,25 @@ h5 {
   text-align: center;
 }
 
+.image-gallery {
+  width: auto;
+  height: auto;
+}
+
+.image-gallery-thumbnail.active {
+  border: 2px solid red; /* Replace #yourColor with the desired border color */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Optional: add a shadow for more emphasis */
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav,
+.image-gallery-icon {
+  @apply text-custom-orange;
+  &:hover {
+    @apply text-custom-orange;
+  }
+}
+
 .bigger {
   width: 100%;
   font-size: clamp(22.5px, 10.5138vw, 90px);
