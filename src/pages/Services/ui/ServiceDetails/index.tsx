@@ -30,7 +30,7 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
     <>
       <Header />
       {isMenuOpen && <Menu />}
-      <main className="content-container min-[1024px]:hidden">
+      <main className="content-container mt-6 min-[1024px]:hidden">
         <Slide direction="left" triggerOnce>
           <h1>{title}</h1>
         </Slide>
@@ -40,7 +40,7 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
         <ThumbnailsGallery photos={photos} />
         <Form />
       </main>
-      <main className="content-container-row items-start max-[1024px]:hidden">
+      <main className="content-container-row items-start max-[1024px]:hidden max-[2560px]:mt-[220px]">
         <section className="w-full mt-0 flex flex-col items-start">
           <h1 className="main-heading text-left">{title}</h1>
           <p className="paragraph w-[85%] mt-8">{description}</p>

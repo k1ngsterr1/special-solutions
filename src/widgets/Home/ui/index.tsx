@@ -46,7 +46,10 @@ export const HomeScreen = () => {
           marginTop="mt-8"
         />
       </div>
-      <div className="pc-screen w-full max-[1024px]:hidden" id="main">
+      <div
+        className="pc-screen w-full max-[1024px]:hidden max-[2560px]:mt-[220px]"
+        id="main"
+      >
         <Slide direction="left" triggerOnce={true}>
           <h1 className="w-[60%]">
             Special Solutions - Ваш Партнер в Строительстве

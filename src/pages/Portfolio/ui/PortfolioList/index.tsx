@@ -29,7 +29,6 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
 
   return (
     <>
-      {" "}
       <Header />
       {isMenuOpen && <Menu />}
       <main className="content-container min-[1024px]:hidden">
@@ -47,7 +46,7 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
         />
         <Form />
       </main>
-      <main className="content-container max-[1024px]:hidden">
+      <main className="content-container max-[1024px]:hidden max-[2560px]:mt-[220px]">
         <Slide direction="left" triggerOnce>
           <h1>{title}</h1>
         </Slide>
