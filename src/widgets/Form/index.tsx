@@ -56,7 +56,13 @@ export const Form = () => {
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input mt-4">
               <Input
-                {...register("full_name", { required: "Заполните ваше имя" })}
+                {...register("full_name", {
+                  required: "Заполните ваше имя",
+                  pattern: {
+                    value: /^[A-Za-zА-Яа-яёЁ]+(\s[A-Za-zА-Яа-яёЁ]+)*$/,
+                    message: "Пожалуйста введите ваше имя правильно",
+                  },
+                })}
                 type="text"
                 placeholder="Ваше Имя*"
                 isError={Boolean(errors.full_name)}
@@ -73,6 +79,11 @@ export const Form = () => {
               <Input
                 {...register("phone_number", {
                   required: "Заполните ваш телефон",
+                  pattern: {
+                    value:
+                      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                    message: "Пожалуйста введите номер телефона правильно",
+                  },
                 })}
                 type="text"
                 placeholder="Ваш Номер Телефона*"
