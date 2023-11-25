@@ -42,13 +42,20 @@ h5 {
 }
 
 .image-gallery {
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
 .image-gallery-thumbnail.active {
-  border: 2px solid red; /* Replace #yourColor with the desired border color */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Optional: add a shadow for more emphasis */
+  border: 3px solid;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  @apply border-custom-orange;
+}
+
+.image-gallery-thumbnail.hover {
+  border: 3px solid;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  @apply border-custom-orange;
 }
 
 .image-gallery-left-nav,

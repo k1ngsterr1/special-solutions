@@ -41,12 +41,11 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
         <Form />
       </main>
       <main className="content-container-row items-start max-[1024px]:hidden">
-        <section className="w-full mt-12 flex flex-col items-start">
+        <section className="w-full mt-0 flex flex-col items-start">
           <h1 className="main-heading text-left">{title}</h1>
-          <p className="paragraph w-[60%] mt-8">{description}</p>
-          <p className="paragraph w-[60%] mt-8">{description}</p>
-          <p className="paragraph w-[60%] mt-8">{description}</p>
-          <p className="paragraph w-[60%] mt-8">{description}</p>
+          <p className="paragraph w-[85%] mt-8">{description}</p>
+          <p className="paragraph w-[85%] mt-8">{description}</p>
+          <p className="paragraph w-[85%] mt-8">{description}</p>
         </section>
         <ThumbnailsGallery photos={photos} />
       </main>
