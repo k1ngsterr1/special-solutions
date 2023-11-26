@@ -26,22 +26,26 @@ export const AboutScreen = () => {
           </p>
         </Slide>
         <Slide direction="left" triggerOnce={true}>
+          <Feature number="01" text="На рынке с 2011 года" marginTop="mt-6" />
+        </Slide>
+        <Slide direction="right" triggerOnce={true}>
           <Feature
-            number="01"
-            text="Архитектурное Проектирование"
+            number="02"
+            text="Более с 80.000 кв.м выполненных объектов"
+            marginTop="mt-6"
+          />
+        </Slide>
+        <Slide direction="left" triggerOnce={true}>
+          <Feature
+            number="03"
+            text="Годовая гарантия на работу"
             marginTop="mt-6"
           />
         </Slide>
         <Slide direction="right" triggerOnce={true}>
-          <Feature number="02" text="Строительство" marginTop="mt-6" />
-        </Slide>
-        <Slide direction="left" triggerOnce={true}>
-          <Feature number="03" text="Фасадное остекление" marginTop="mt-6" />
-        </Slide>
-        <Slide direction="right" triggerOnce={true}>
           <Feature
             number="04"
-            text="Изготовление и монтаж офисных перегородок"
+            text="Убираем и увеличиваем текст"
             marginTop="mt-6"
           />
         </Slide>
@@ -92,22 +96,26 @@ export const AboutScreen = () => {
           </Slide>
           <div className="about-content__text-container flex flex-col justify-between items-start ml-28">
             <Slide direction="right" triggerOnce={true} delay={100}>
-              <Feature number="01" text="Архитектурное  Проектирование" />
+              <Feature number="01" text="На рынке с 2011 года" />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={200}>
-              <Feature number="02" text="Строительство" marginTop="mt-4" />
+              <Feature
+                number="02"
+                text="Более с 80.000 кв.м выполненных объектов"
+                marginTop="mt-4"
+              />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={300}>
               <Feature
                 number="03"
-                text="Фасадное остекление"
+                text="Годовая гарантия на работу"
                 marginTop="mt-4"
               />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={400}>
               <Feature
                 number="04"
-                text="Изготовление и монтаж офисных перегородок"
+                text="Убираем и увеличиваем текст"
                 marginTop="mt-4"
               />
             </Slide>
