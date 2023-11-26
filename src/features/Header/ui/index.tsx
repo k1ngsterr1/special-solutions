@@ -32,7 +32,7 @@ export const Header = () => {
           alt="logotype"
           className="header-mob__logo cursor-pointer"
         />
-        <Hamburger color="#FF6600" onToggle={openMenu} />
+        <Hamburger color="#FF6600" onToggle={openMenu} toggled={isMenuOpen} />
       </header>
       <header className="header flex items-center justify-center max-[1024px]:hidden">
         <div className="header__content-container flex justify-between items-center">
