@@ -30,6 +30,7 @@ export const Header = () => {
         <img
           src={logo}
           alt="logotype"
+          onClick={navigateToMain}
           className="header-mob__logo cursor-pointer"
         />
         <Hamburger color="#FF6600" onToggle={openMenu} toggled={isMenuOpen} />

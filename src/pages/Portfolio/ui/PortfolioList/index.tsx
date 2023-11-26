@@ -5,7 +5,6 @@ import { Gallery } from "@features/Gallery/ui";
 import { RootState } from "@shared/lib/redux/store";
 import { Menu } from "@features/Menu/ui";
 import { useSelector } from "react-redux";
-import { Form } from "@widgets/Form";
 import { Footer } from "@features/Footer/ui";
 
 interface PortfolioDetailsProps {
@@ -44,7 +43,6 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           image3={image3}
           image4={image4}
         />
-        <Form />
       </main>
       <main className="content-container max-[1024px]:hidden min-[2560px]:mt-[100px]">
         <Slide direction="left" triggerOnce>
@@ -61,7 +59,6 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           image3={image3}
           image4={image4}
         />
-        <Form />
       </main>
       <Footer />
     </>

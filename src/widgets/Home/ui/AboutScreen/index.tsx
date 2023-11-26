@@ -31,7 +31,7 @@ export const AboutScreen = () => {
         <Slide direction="right" triggerOnce={true}>
           <Feature
             number="02"
-            text="Более с 80.000 кв.м выполненных объектов"
+            text="Более 80.000 кв.м выполненных объектов"
             marginTop="mt-6"
           />
         </Slide>
@@ -42,13 +42,7 @@ export const AboutScreen = () => {
             marginTop="mt-6"
           />
         </Slide>
-        <Slide direction="right" triggerOnce={true}>
-          <Feature
-            number="04"
-            text="Убираем и увеличиваем текст"
-            marginTop="mt-6"
-          />
-        </Slide>
+
         <Slide direction="left" triggerOnce={true}>
           <img src={Image} className="about-image mt-12" alt="about-image" />
         </Slide>
@@ -109,13 +103,6 @@ export const AboutScreen = () => {
               <Feature
                 number="03"
                 text="Годовая гарантия на работу"
-                marginTop="mt-4"
-              />
-            </Slide>
-            <Slide direction="right" triggerOnce={true} delay={400}>
-              <Feature
-                number="04"
-                text="Убираем и увеличиваем текст"
                 marginTop="mt-4"
               />
             </Slide>

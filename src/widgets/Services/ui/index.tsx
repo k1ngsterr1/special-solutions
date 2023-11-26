@@ -27,7 +27,7 @@ export const ServicesList = () => {
         </Slide>
         <Slide direction="left" triggerOnce>
           <ServiceTab
-            text="Облицовка стен стеклом"
+            text="Инженерные коммуникации"
             img={service02}
             onClick={navigateServiceCase}
             marginTop="mt-16"
@@ -35,7 +35,7 @@ export const ServicesList = () => {
         </Slide>
         <Slide direction="right" triggerOnce>
           <ServiceTab
-            text="Облицовка стен стеклом"
+            text="Проектирование"
             img={service02}
             onClick={navigateServiceCase}
             marginTop="mt-16"
@@ -43,7 +43,7 @@ export const ServicesList = () => {
         </Slide>
         <Slide direction="left" triggerOnce>
           <ServiceTab
-            text="Облицовка стен стеклом"
+            text="Монтаж перегородок"
             img={service02}
             onClick={navigateServiceCase}
             marginTop="mt-16"
@@ -51,7 +51,7 @@ export const ServicesList = () => {
         </Slide>
         <Slide direction="right" triggerOnce>
           <ServiceTab
-            text="Облицовка стен стеклом"
+            text="Строительно монтажные работы"
             img={service02}
             onClick={navigateServiceCase}
             marginTop="mt-16"
@@ -59,7 +59,7 @@ export const ServicesList = () => {
         </Slide>
         <Slide direction="left" triggerOnce>
           <ServiceTab
-            text="Облицовка стен стеклом"
+            text="Поставка мебели и оборудования"
             img={service02}
             onClick={navigateServiceCase}
             marginTop="mt-16"
@@ -81,7 +81,7 @@ export const ServicesList = () => {
         <div className="w-full mt-16 flex items-center justify-between">
           <Slide direction="up" duration={500} triggerOnce>
             <ServiceTab
-              text="Облицовка стен стеклом"
+              text="Инженерные коммуникации"
               img={service02}
               onClick={navigateServiceCase}
               marginTop="ml-4"
@@ -89,7 +89,7 @@ export const ServicesList = () => {
           </Slide>
           <Slide direction="up" duration={600} triggerOnce>
             <ServiceTab
-              text="Облицовка стен стеклом"
+              text="Проектирование"
               img={service02}
               onClick={navigateServiceCase}
               marginTop="ml-4"
@@ -97,7 +97,7 @@ export const ServicesList = () => {
           </Slide>
           <Slide direction="up" duration={700} triggerOnce>
             <ServiceTab
-              text="Облицовка стен стеклом"
+              text="Монтаж перегородок"
               img={service02}
               onClick={navigateServiceCase}
               marginTop="ml-4"
@@ -105,7 +105,7 @@ export const ServicesList = () => {
           </Slide>
           <Slide direction="up" duration={800} triggerOnce>
             <ServiceTab
-              text="Облицовка стен стеклом"
+              text="Строительно монтажные работы"
               img={service02}
               onClick={navigateServiceCase}
               marginTop="ml-4"
@@ -115,7 +115,7 @@ export const ServicesList = () => {
         <div className="w-full mt-16 flex items-center justify-between">
           <Slide direction="up" duration={500} triggerOnce>
             <ServiceTab
-              text="Облицовка стен стеклом"
+              text="Поставка мебели и оборудования"
               img={service02}
               onClick={navigateServiceCase}
               marginTop="ml-4"

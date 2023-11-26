@@ -41,6 +41,10 @@ h5 {
   text-align: center;
 }
 
+.smaller {
+  font-size: clamp(15px, 7.0092vw, 60px) !important;
+}
+
 .image-gallery {
   width: 100%;
   height: auto;
@@ -126,6 +130,10 @@ h5 {
   .bigger {
     width: 100%;
     font-size: clamp(30px, 3.1248vw, 120px);
+  }
+
+  .smaller {
+    font-size: clamp(25px, 2.604vw, 100px) !important;
   }
 
   .app-wrapper {

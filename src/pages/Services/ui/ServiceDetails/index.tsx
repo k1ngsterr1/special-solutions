@@ -4,7 +4,6 @@ import { Slide } from "react-awesome-reveal";
 import { RootState } from "@shared/lib/redux/store";
 import { Menu } from "@features/Menu/ui";
 import { useSelector } from "react-redux";
-import { Form } from "@widgets/Form";
 import { Footer } from "@features/Footer/ui";
 import { ThumbnailsGallery } from "@features/ThumbnailsGallery/ui";
 
@@ -38,7 +37,6 @@ export const ServiceDetails: React.FC<ServiceDetailsProps> = ({
           <p className="paragraph mt-8 mb-8 text-center">{description}</p>
         </Slide>
         <ThumbnailsGallery photos={photos} />
-        <Form />
       </main>
       <main className="content-container-row items-start max-[1024px]:hidden min-[2560px]:mt-[100px]">
         <section className="w-full mt-0 flex flex-col items-start">

@@ -24,7 +24,7 @@ export const HomeScreen = () => {
         </Slide>
         <span className="w-[50%] border-[1px] mt-4 border-custom-black"></span>
         <Slide direction="right">
-          <h2 className="mt-4">Ваш Партнер в Строительстве</h2>
+          <h2 className="mt-4 smaller">На рынке с 2011 года</h2>
         </Slide>
         <Slide direction="left">
           <p className="paragraph text-center mt-4">
@@ -53,7 +53,11 @@ export const HomeScreen = () => {
       >
         <Slide direction="left" triggerOnce={true}>
           <h1 className="w-[60%]">
-            Special Solutions - Ваш Партнер в Строительстве
+            Special Solutions -{" "}
+            <span className="smaller">
+              {" "}
+              Ваш Партнер в Cоздании Бизнес Пространства
+            </span>{" "}
           </h1>
         </Slide>
         <Slide direction="right" triggerOnce={true} delay={100}>
