@@ -47,7 +47,7 @@ export const ServicesScreen = () => {
         </Slide>
         <Slide direction="right" triggerOnce={true}>
           <ServiceTab
-            text="Инженерные коммуникации"
+            text="Проектирование"
             img={service01}
             onClick={navigateServiceCase}
             marginTop="mt-8"
@@ -55,7 +55,7 @@ export const ServicesScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <ServiceTab
-            text="Проектирование"
+            text="Строительно монтажные работы"
             img={service02}
             onClick={navigateServiceCase}
             marginTop="mt-8"
@@ -63,7 +63,7 @@ export const ServicesScreen = () => {
         </Slide>
         <Slide direction="right" triggerOnce={true}>
           <ServiceTab
-            text="Монтаж перегородок"
+            text="Инженерные коммуникации"
             img={service03}
             onClick={navigateServiceCase}
             marginTop="mt-8"
@@ -71,7 +71,7 @@ export const ServicesScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <ServiceTab
-            text="Строительные монтажные работы"
+            text="Поставка мебели и оборудования"
             img={service04}
             onClick={navigateServiceCase}
             marginTop="mt-8"
@@ -117,7 +117,7 @@ export const ServicesScreen = () => {
         <div className="w-full flex items-centes justify-between mt-16">
           <Slide direction="up" triggerOnce={true}>
             <ServiceTab
-              text="Инженерные коммуникации"
+              text="Проектирование"
               img={service01}
               onClick={navigateServiceCase}
               marginTop="mt-8"
@@ -125,7 +125,7 @@ export const ServicesScreen = () => {
           </Slide>
           <Slide direction="up" triggerOnce={true} delay={200}>
             <ServiceTab
-              text="Проектирование"
+              text="Строительно монтажные работы"
               img={service02}
               onClick={navigateServiceCase}
               marginTop="mt-8"
@@ -133,7 +133,7 @@ export const ServicesScreen = () => {
           </Slide>
           <Slide direction="up" triggerOnce={true} delay={300}>
             <ServiceTab
-              text="Монтаж перегородок"
+              text="Инженерные коммуникации"
               img={service03}
               onClick={navigateServiceCase}
               marginTop="mt-8"

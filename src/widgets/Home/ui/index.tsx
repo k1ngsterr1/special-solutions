@@ -24,7 +24,9 @@ export const HomeScreen = () => {
         </Slide>
         <span className="w-[50%] border-[1px] mt-4 border-custom-black"></span>
         <Slide direction="right">
-          <h2 className="mt-4 smaller">На рынке с 2011 года</h2>
+          <h2 className="mt-4 smaller">
+            Ваш Партнер в создании Бизнес Пространства
+          </h2>
         </Slide>
         <Slide direction="left">
           <p className="paragraph text-center mt-4">
