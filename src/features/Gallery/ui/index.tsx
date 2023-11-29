@@ -12,6 +12,10 @@ interface GalleryProps {
   image2: string;
   image3: string;
   image4: string;
+  onClick: () => void;
+  onClick2: () => void;
+  onClick3: () => void;
+  onClick4: () => void;
 }
 
 export const Gallery: React.FC<GalleryProps> = ({
@@ -19,6 +23,10 @@ export const Gallery: React.FC<GalleryProps> = ({
   image2,
   image3,
   image4,
+  onClick,
+  onClick2,
+  onClick3,
+  onClick4,
 }) => {
   return (
     <Swiper
@@ -31,7 +39,7 @@ export const Gallery: React.FC<GalleryProps> = ({
         disableOnInteraction: false,
       }}
     >
-      <SwiperSlide className="swiper__slide">
+      <SwiperSlide className="swiper__slide" onClick={onClick}>
         <GalleryPhoto
           text="Дизайн Интерьера"
           subText="Интерьер"
@@ -39,7 +47,7 @@ export const Gallery: React.FC<GalleryProps> = ({
           img={image}
         />
       </SwiperSlide>
-      <SwiperSlide className="swiper__slide">
+      <SwiperSlide className="swiper__slide" onClick={onClick2}>
         <GalleryPhoto
           text="Дизайн Интерьера"
           subText="Интерьер"
@@ -47,7 +55,7 @@ export const Gallery: React.FC<GalleryProps> = ({
           img={image2}
         />
       </SwiperSlide>
-      <SwiperSlide className="swiper__slide">
+      <SwiperSlide className="swiper__slide" onClick={onClick3}>
         <GalleryPhoto
           text="Дизайн Интерьера"
           subText="Интерьер"
@@ -55,7 +63,7 @@ export const Gallery: React.FC<GalleryProps> = ({
           img={image3}
         />
       </SwiperSlide>
-      <SwiperSlide className="swiper__slide">
+      <SwiperSlide className="swiper__slide" onClick={onClick4}>
         <GalleryPhoto
           text="Дизайн Интерьера"
           subText="Интерьер"

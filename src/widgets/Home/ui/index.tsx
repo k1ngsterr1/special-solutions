@@ -12,6 +12,9 @@ export const HomeScreen = () => {
   function navigateServices() {
     navigate("/services");
   }
+  function navigatePortfolio() {
+    navigate("/portfolio");
+  }
 
   return (
     <>
@@ -41,11 +44,15 @@ export const HomeScreen = () => {
           image2={gallery01}
           image3={gallery01}
           image4={gallery01}
+          onClick={navigatePortfolio}
+          onClick2={navigatePortfolio}
+          onClick3={navigatePortfolio}
+          onClick4={navigatePortfolio}
         />
         <Button
           text="Все проекты"
           type="outline"
-          onClick={navigateServices}
+          onClick={navigatePortfolio}
           marginTop="mt-8"
         />
       </div>
@@ -76,12 +83,16 @@ export const HomeScreen = () => {
             image2={gallery01}
             image3={gallery01}
             image4={gallery01}
+            onClick={navigatePortfolio}
+            onClick2={navigatePortfolio}
+            onClick3={navigatePortfolio}
+            onClick4={navigatePortfolio}
           />
         </Slide>
         <Slide direction="right" delay={200} triggerOnce={true}>
           <Button
             text="Все проекты"
-            onClick={navigateServices}
+            onClick={navigatePortfolio}
             marginTop="mt-8"
             type="outline"
           />

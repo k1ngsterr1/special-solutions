@@ -95,15 +95,15 @@ export const AboutScreen = () => {
             <Slide direction="right" triggerOnce={true} delay={200}>
               <Feature
                 number="02"
-                text="Более с 80.000 кв.м выполненных объектов"
-                marginTop="mt-4"
+                text="Более 80.000 кв.м выполненных объектов"
+                marginTop="mt-0"
               />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={300}>
               <Feature
                 number="03"
                 text="Годовая гарантия на работу"
-                marginTop="mt-4"
+                marginTop="mt-0"
               />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={500}>
