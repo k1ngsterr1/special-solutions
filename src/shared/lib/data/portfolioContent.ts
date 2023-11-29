@@ -6,10 +6,15 @@ interface PhotoItem {
   thumbnail: string;
 }
 
+interface ServiceItem {
+  service: string;
+}
 interface PortfolioInfo {
   title: string;
   description: string;
+  servicesHeading: string;
   photos: PhotoItem[];
+  services: ServiceItem[];
 }
 
 export const portfolioContent: Record<string, PortfolioInfo> = {
@@ -17,6 +22,24 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     title: "Офис Астана Банк",
     description:
       "Компания Special Solution занимается разработкой передовых решений, способных удовлетворить самые изысканные и специфические запросы наших клиентов. Мы сочетаем глубокие знания отрасли с инновационным мышлением, чтобы предлагать продукты и услуги, выходящие за рамки стандартных предложений.",
+    servicesHeading: "Выполненные услуги:",
+    services: [
+      {
+        service: "Новый интерьер",
+      },
+      {
+        service: "Новый интерьер",
+      },
+      {
+        service: "Новый интерьер",
+      },
+      {
+        service: "Новый интерьер",
+      },
+      {
+        service: "Новый интерьер",
+      },
+    ],
     photos: [
       {
         photo: gallery02,

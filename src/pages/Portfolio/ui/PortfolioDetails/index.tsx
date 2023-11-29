@@ -12,23 +12,16 @@ interface PhotoItem {
   thumbnail: string;
 }
 
-interface ServiceItem {
-  service: string;
-}
 interface PortfolioDetailsProps {
   title: string;
-  servicesHeading: string;
   description: string;
   photos: PhotoItem[];
-  services: ServiceItem[];
 }
 
 export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
   title,
   description,
   photos,
-  servicesHeading,
-  services,
 }) => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
 
@@ -49,16 +42,8 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
         <section className="w-full mt-0 flex flex-col items-start">
           <h1 className="main-heading text-left">{title}</h1>
           <p className="paragraph w-[85%] mt-8">{description}</p>
-          <h2 className="text-4xl text-custom-orange text-left mt-8">
-            {servicesHeading}
-          </h2>
-          <ul className="list-disc">
-            {services.map((serviceItem, index) => (
-              <li key={index} className="text-xl ml-8 mt-4 text-custom-black">
-                {serviceItem.service}
-              </li>
-            ))}
-          </ul>
+          <p className="paragraph w-[85%] mt-8">{description}</p>
+          <p className="paragraph w-[85%] mt-8">{description}</p>
         </section>
         <ThumbnailsGallery photos={photos} />
       </main>

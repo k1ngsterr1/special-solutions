@@ -15,6 +15,7 @@ import { ServiceDetails } from "./Services/ui/ServiceDetails";
 import { serviceContent } from "@shared/lib/data/serviceContent";
 import { portfolioContent } from "@shared/lib/data/portfolioContent";
 import { PorfolioPage } from "./Portfolio/ui";
+import { PortfolioDetails } from "./Portfolio/ui/PortfolioList";
 
 export const MyRoutes: FC = () => {
   function ScrollToTop() {
@@ -51,7 +52,7 @@ export const MyRoutes: FC = () => {
               ":portfolioType",
               portfolioType
             )}
-            element={<ServiceDetails {...content} />}
+            element={<PortfolioDetails {...content} />}
           />
         ))}
       </Routes>

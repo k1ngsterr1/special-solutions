@@ -12,10 +12,10 @@ interface GalleryProps {
   image2: string;
   image3: string;
   image4: string;
-  onClick: () => void;
-  onClick2: () => void;
-  onClick3: () => void;
-  onClick4: () => void;
+  onClick?: () => void;
+  onClick2?: () => void;
+  onClick3?: () => void;
+  onClick4?: () => void;
 }
 
 export const Gallery: React.FC<GalleryProps> = ({
