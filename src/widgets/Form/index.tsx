@@ -14,8 +14,6 @@ export const Form = () => {
 
   const [selectedValue, setSelectedValue] = useState("");
 
-
-  
   const options: OptionType[] = [
     { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
     { value: "Дизайн Офиса", label: "Дизайн Офиса" },
@@ -55,11 +53,7 @@ export const Form = () => {
         </Slide>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
-<<<<<<< HEAD
-          onSubmit={onSubmit}
-=======
           onSubmit={onFormSubmit}
->>>>>>> 5fe0940f4aee3309f8ff89d4dc7deff7fa8f909d
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input mt-4">
