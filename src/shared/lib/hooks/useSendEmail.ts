@@ -1,6 +1,6 @@
-// useSendEmail.ts
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+import { OptionType } from "@shared/ui/Selector";
+import emailjs from "@emailjs/browser";
 
 export interface SendFormData {
   full_name: string;
@@ -13,37 +13,44 @@ export function useSendEmail() {
   const {
     register,
     handleSubmit,
+    formState: { errors },
+    setValue,
     reset,
-    formState: { errors, isSubmitting, isValid },
-    getValues, // This will be used to get form values
   } = useForm<SendFormData>({
     mode: "onChange",
   });
 
-  const onSubmit = handleSubmit((formData) => {
-    const form = document.querySelector("form") as HTMLFormElement; // Assuming there's only one form on the page
+  const onSubmit = (data: SendFormData, event?: React.BaseSyntheticEvent) => {
+    if (event) {
+      event.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID!,
-        process.env.REACT_APP_TEMPLATE_ID!,
-        form,
-        process.env.REACT_APP_EMAILJS_KEY!
-      )
-      .then((res: unknown) => {
-        console.log("send");
-        reset(); // Reset the form fields after successful submission
-      })
-      .catch((err: unknown) => console.error(err));
-  });
+      emailjs
+        .sendForm(
+          "service_mpcvnod",
+          "template_exf8ibb",
+          event.target,
+          "WDWj-JZ9ORopqFaG3"
+        )
+        .then(
+          (result) => {
+            console.log("Email successfully sent!", result.text);
+            reset();
+          },
+          (error) => {
+            console.error("Failed to send email:", error.text);
+          }
+        );
+    }
+  };
 
-  // If you need to do something with the form data before sending, use getValues() here
+  const handleSelectChange = (selectedOption: OptionType | null) => {
+    setValue("service_option", selectedOption ? selectedOption.value : "");
+  };
 
   return {
     register,
-    onSubmit, // No need to wrap handleSubmit here again
+    handleSubmit: handleSubmit(onSubmit),
+    handleSelectChange,
     errors,
-    isSubmitting,
-    isValid,
   };
 }

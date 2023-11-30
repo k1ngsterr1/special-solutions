@@ -10,7 +10,7 @@ import "./styles.scss";
 type OptionType = { value: string; label: string };
 
 export const Form = () => {
-  const { register, handleSubmit, errors, onSubmit } = useSendEmail();
+  const { register, handleSubmit, errors, handleSelectChange } = useSendEmail();
 
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -51,7 +51,7 @@ export const Form = () => {
         </Slide>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit}
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input mt-4">
@@ -63,6 +63,7 @@ export const Form = () => {
                     message: "Пожалуйста введите ваше имя правильно",
                   },
                 })}
+                name="full_name"
                 type="text"
                 placeholder="Ваше Имя*"
                 isError={Boolean(errors.full_name)}
@@ -85,6 +86,7 @@ export const Form = () => {
                     message: "Пожалуйста введите номер телефона правильно",
                   },
                 })}
+                name="phone_number"
                 type="text"
                 placeholder="Ваш Номер Телефона*"
                 isError={Boolean(errors.phone_number)}
@@ -106,6 +108,7 @@ export const Form = () => {
                     message: "Пожалуйста введите электронную почту правильно",
                   },
                 })}
+                name="email"
                 type="email"
                 placeholder="Ваша почта*"
                 isError={Boolean(errors.email)}
@@ -152,12 +155,13 @@ export const Form = () => {
         </p>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit}
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input flex flex-col justify-center items-center mt-4">
               <Input
                 {...register("full_name", { required: "Заполните ваше имя" })}
+                name="full_name"
                 type="text"
                 placeholder="Ваше Имя*"
                 isError={Boolean(errors.full_name)}
@@ -175,6 +179,7 @@ export const Form = () => {
                 {...register("phone_number", {
                   required: "Заполните ваш телефон",
                 })}
+                name="phone_number"
                 type="text"
                 placeholder="Ваш Номер Телефона*"
                 isError={Boolean(errors.phone_number)}
@@ -196,6 +201,7 @@ export const Form = () => {
                     message: "Пожалуйста введите электронную почту правильно",
                   },
                 })}
+                name="email"
                 type="email"
                 placeholder="Ваша почта*"
                 isError={Boolean(errors.email)}
@@ -212,7 +218,10 @@ export const Form = () => {
               key={selectedValue}
               options={options}
               selectedOption={selectedOptionObject}
-              onChange={handleChange}
+              onChange={(selectedOption) => {
+                handleSelectChange(selectedOption);
+                handleChange(selectedOption);
+              }}
             />
           </div>
           <Slide
@@ -220,12 +229,7 @@ export const Form = () => {
             className="w-full flex items-center justify-center"
             triggerOnce
           >
-            <Button
-              text="Отправить"
-              marginTop="mt-16"
-              type="full"
-              onClick={() => console.log("submit")}
-            />
+            <Button text="Отправить" marginTop="mt-16" type="full" />
           </Slide>
         </form>
       </div>
