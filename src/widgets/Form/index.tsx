@@ -21,15 +21,17 @@ export const Form = () => {
   ];
 
   const handleChange = (selectedOption: OptionType | null) => {
-    if (selectedOption && "value" in selectedOption) {
-      setSelectedValue(selectedOption.value);
-    } else {
-      setSelectedValue("");
-    }
+    setSelectedValue(selectedOption ? selectedOption.value : "");
+    handleSelectChange(selectedOption);
   };
 
   const selectedOptionObject =
     options.find((option) => option.value === selectedValue) || null;
+
+  const onFormSubmit = (data: any) => {
+    console.log(data); // Debugging line to see what data is being sent
+    handleSubmit(data);
+  };
 
   return (
     <>
@@ -51,7 +53,7 @@ export const Form = () => {
         </Slide>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
-          onSubmit={handleSubmit}
+          onSubmit={onFormSubmit}
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input mt-4">
@@ -132,12 +134,7 @@ export const Form = () => {
             direction="right"
             className="w-full flex items-center justify-center"
           >
-            <Button
-              text="Отправить"
-              marginTop="mt-8"
-              type="full"
-              onClick={() => console.log("submit")}
-            />
+            <Button text="Отправить" marginTop="mt-8" type="full" />
           </Slide>
         </form>
       </div>
@@ -155,7 +152,7 @@ export const Form = () => {
         </p>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
-          onSubmit={handleSubmit}
+          onSubmit={onFormSubmit}
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input flex flex-col justify-center items-center mt-4">
@@ -218,10 +215,7 @@ export const Form = () => {
               key={selectedValue}
               options={options}
               selectedOption={selectedOptionObject}
-              onChange={(selectedOption) => {
-                handleSelectChange(selectedOption);
-                handleChange(selectedOption);
-              }}
+              onChange={handleChange}
             />
           </div>
           <Slide
