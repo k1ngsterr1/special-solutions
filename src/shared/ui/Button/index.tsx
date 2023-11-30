@@ -4,7 +4,7 @@ interface ButtonProps {
   type: string;
   text: string;
   marginTop?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({

@@ -3,7 +3,7 @@ import Select, { SingleValue } from "react-select";
 
 import "./styles.scss";
 
-type OptionType = { value: string; label: string };
+export type OptionType = { value: string; label: string };
 
 interface SelectorProps {
   options: OptionType[];

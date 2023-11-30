@@ -10,7 +10,7 @@ import "./styles.scss";
 type OptionType = { value: string; label: string };
 
 export const Form = () => {
-  const { register, handleSubmit, errors, onSubmit } = useSendEmail();
+  const { register, handleSubmit, errors, handleSelectChange } = useSendEmail();
 
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -23,15 +23,17 @@ export const Form = () => {
   ];
 
   const handleChange = (selectedOption: OptionType | null) => {
-    if (selectedOption && "value" in selectedOption) {
-      setSelectedValue(selectedOption.value);
-    } else {
-      setSelectedValue("");
-    }
+    setSelectedValue(selectedOption ? selectedOption.value : "");
+    handleSelectChange(selectedOption);
   };
 
   const selectedOptionObject =
     options.find((option) => option.value === selectedValue) || null;
+
+  const onFormSubmit = (data: any) => {
+    console.log(data); // Debugging line to see what data is being sent
+    handleSubmit(data);
+  };
 
   return (
     <>
@@ -53,7 +55,11 @@ export const Form = () => {
         </Slide>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
+<<<<<<< HEAD
           onSubmit={onSubmit}
+=======
+          onSubmit={onFormSubmit}
+>>>>>>> 5fe0940f4aee3309f8ff89d4dc7deff7fa8f909d
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input mt-4">
@@ -65,6 +71,7 @@ export const Form = () => {
                     message: "Пожалуйста введите ваше имя правильно",
                   },
                 })}
+                name="full_name"
                 type="text"
                 placeholder="Ваше Имя*"
                 isError={Boolean(errors.full_name)}
@@ -87,6 +94,7 @@ export const Form = () => {
                     message: "Пожалуйста введите номер телефона правильно",
                   },
                 })}
+                name="phone_number"
                 type="text"
                 placeholder="Ваш Номер Телефона*"
                 isError={Boolean(errors.phone_number)}
@@ -108,6 +116,7 @@ export const Form = () => {
                     message: "Пожалуйста введите электронную почту правильно",
                   },
                 })}
+                name="email"
                 type="email"
                 placeholder="Ваша почта*"
                 isError={Boolean(errors.email)}
@@ -131,12 +140,7 @@ export const Form = () => {
             direction="right"
             className="w-full flex items-center justify-center"
           >
-            <Button
-              text="Отправить"
-              marginTop="mt-8"
-              type="full"
-              onClick={() => console.log("submit")}
-            />
+            <Button text="Отправить" marginTop="mt-8" type="full" />
           </Slide>
         </form>
       </div>
@@ -154,12 +158,13 @@ export const Form = () => {
         </p>
         <form
           className="form flex flex-col items-center mt-8 mb-16"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={onFormSubmit}
         >
           <Slide direction="left" className="w-full" triggerOnce>
             <div className="form__input flex flex-col justify-center items-center mt-4">
               <Input
                 {...register("full_name", { required: "Заполните ваше имя" })}
+                name="full_name"
                 type="text"
                 placeholder="Ваше Имя*"
                 isError={Boolean(errors.full_name)}
@@ -177,6 +182,7 @@ export const Form = () => {
                 {...register("phone_number", {
                   required: "Заполните ваш телефон",
                 })}
+                name="phone_number"
                 type="text"
                 placeholder="Ваш Номер Телефона*"
                 isError={Boolean(errors.phone_number)}
@@ -198,6 +204,7 @@ export const Form = () => {
                     message: "Пожалуйста введите электронную почту правильно",
                   },
                 })}
+                name="email"
                 type="email"
                 placeholder="Ваша почта*"
                 isError={Boolean(errors.email)}
@@ -222,12 +229,7 @@ export const Form = () => {
             className="w-full flex items-center justify-center"
             triggerOnce
           >
-            <Button
-              text="Отправить"
-              marginTop="mt-16"
-              type="full"
-              onClick={() => console.log("submit")}
-            />
+            <Button text="Отправить" marginTop="mt-16" type="full" />
           </Slide>
         </form>
       </div>
