@@ -3,7 +3,7 @@
   height: clamp(27.5px, 12.8502vw, 110px);
   border-radius: clamp(25px, 11.681999999999999vw, 100px);
   cursor: pointer;
-  z-index: -5;
+  z-index: 100;
 }
 
 .full {
@@ -16,7 +16,7 @@
   font-weight: 400;
   line-height: normal;
   transition: 0.3s all;
-  z-index: -5;
+  z-index: 100;
 
   &:hover {
     @apply bg-custom-black;
@@ -33,7 +33,7 @@
   font-weight: 300;
   line-height: normal;
   transition: 0.3s all;
-  z-index: -5;
+  z-index: 100;
 
   &:hover {
     @apply bg-custom-orange;

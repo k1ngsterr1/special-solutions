@@ -1,6 +1,7 @@
 import { Feature } from "@shared/ui/Feature";
 import { Slide } from "react-awesome-reveal";
-import { Button } from "@shared/ui/Button";
+import { animateScroll as scroll, scrollSpy } from "react-scroll";
+import { Button, ScrollButton } from "@shared/ui/Button";
 
 import Image from "@assets/about_image.webp";
 
@@ -56,11 +57,11 @@ export const AboutScreen = () => {
           </p>
         </Slide>
         <Slide direction="left" triggerOnce={true}>
-          <Button
+          <ScrollButton
             text="Связаться нами"
             marginTop="mt-8"
             type="outline"
-            onClick={() => console.log("holla")}
+            to={"contacts-mob"}
           />
         </Slide>
       </section>

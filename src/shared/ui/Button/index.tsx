@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import "./styles.scss";
 
 interface ButtonProps {
@@ -5,6 +6,7 @@ interface ButtonProps {
   text: string;
   marginTop?: string;
   onClick?: () => void;
+  to?: any;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -17,5 +19,22 @@ export const Button: React.FC<ButtonProps> = ({
     <button className={`button ${type} ${marginTop}`} onClick={onClick}>
       {text}
     </button>
+  );
+};
+
+export const ScrollButton: React.FC<ButtonProps> = ({
+  text,
+  type,
+  marginTop,
+  to,
+}) => {
+  return (
+    <Link
+      className={`button flex items-center justify-center ${type} ${marginTop}`}
+      to={to}
+      smooth
+    >
+      {text}
+    </Link>
   );
 };

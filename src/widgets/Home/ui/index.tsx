@@ -28,6 +28,7 @@ export const HomeScreen = () => {
             Ваш Партнер в создании Бизнес Пространства
           </h2>
         </Slide>
+
         <Slide direction="left">
           <p className="paragraph text-center mt-4">
             <span className="orange">Special Solutions</span> представляет
