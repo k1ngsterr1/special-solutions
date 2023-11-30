@@ -9,9 +9,6 @@ import gallery01 from "@assets/design_gallery_01.webp";
 export const HomeScreen = () => {
   const navigate = useNavigate();
 
-  function navigateServices() {
-    navigate("/services");
-  }
   function navigatePortfolio() {
     navigate("/portfolio");
   }

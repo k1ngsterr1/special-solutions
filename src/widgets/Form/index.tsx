@@ -30,7 +30,6 @@ export const Form = () => {
 
   const onFormSubmit = (data: any) => {
     handleSubmit(data);
-    console.log("Data:", data);
   };
 
   return (
