@@ -42,6 +42,7 @@ export const Selector: React.FC<SelectorProps> = ({
       options={options}
       menuPortalTarget={document.body}
       styles={style}
+      name="service"
       menuPosition={"fixed"}
       placeholder={placeholder}
     />
