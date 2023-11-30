@@ -6,7 +6,7 @@ export interface SendFormData {
   full_name: string;
   phone_number: string;
   email: string;
-  service_option: string;
+  service: string;
 }
 
 export function useSendEmail() {
@@ -44,7 +44,9 @@ export function useSendEmail() {
   };
 
   const handleSelectChange = (selectedOption: OptionType | null) => {
-    setValue("service_option", selectedOption ? selectedOption.value : "");
+    setValue("service", selectedOption ? selectedOption.value : "", {
+      shouldValidate: true,
+    });
   };
 
   return {

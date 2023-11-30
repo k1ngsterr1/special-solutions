@@ -29,8 +29,8 @@ export const Form = () => {
     options.find((option) => option.value === selectedValue) || null;
 
   const onFormSubmit = (data: any) => {
-    console.log(data); // Debugging line to see what data is being sent
     handleSubmit(data);
+    console.log("Data:", data);
   };
 
   return (
