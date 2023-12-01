@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMarsStroke } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { Slide } from "react-awesome-reveal";
 import Popup from "reactjs-popup";
 
@@ -26,17 +26,24 @@ export const ThanksPopup: React.FC<PopupProps> = ({ open, closeMenu }) => {
       >
         <Slide direction="up">
           <div className="popup-container__modal">
-            <FontAwesomeIcon
-              icon={faMarsStroke}
-              className="popup-container__modal__icon"
-            />
-            <h1 className="popup-container__modal__heading mt-4">
-              Спасибо за вашу заявку!
-            </h1>
-            <p className="popup-container__modal__paragraph mt-4 w-[50%] text-center">
-              В скором времени мы с вами свяжемся
-            </p>
-            <Button text="Закрыть" onClick={closeMenu} type="filled" />
+            <div className="popup-container__modal__content">
+              <FontAwesomeIcon
+                icon={faCheck}
+                className="popup-container__modal__content__icon"
+              />
+              <h1 className="popup-container__modal__content__heading mt-4">
+                Спасибо за вашу заявку!
+              </h1>
+              <p className="popup-container__modal__content__paragraph mt-4 w-[90%] text-center">
+                В скором времени мы с вами свяжемся
+              </p>
+              <Button
+                text="Закрыть"
+                onClick={closeMenu}
+                type="full"
+                marginTop="mt-8"
+              />
+            </div>
           </div>
         </Slide>
       </Popup>
