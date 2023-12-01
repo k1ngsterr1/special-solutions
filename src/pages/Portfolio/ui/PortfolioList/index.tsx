@@ -44,6 +44,16 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           <p className="paragraph mt-8 mb-8 text-center">{description}</p>
         </Slide>
         <ThumbnailsGallery photos={photos} />
+        <h2 className="text-4xl text-custom-orange text-left mt-8">
+          {servicesHeading}
+        </h2>
+        <ul className="list-disc">
+          {services.map((serviceItem, index) => (
+            <li key={index} className="text-xl ml-8 mt-4 text-custom-black">
+              {serviceItem.service}
+            </li>
+          ))}
+        </ul>
       </main>
       <main className="content-container-row items-start max-[1024px]:hidden min-[2560px]:mt-[100px]">
         <section className="w-full mt-0 flex flex-col items-start">
