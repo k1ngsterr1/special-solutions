@@ -4,8 +4,9 @@ import { faMarsStroke } from "@fortawesome/free-solid-svg-icons";
 import { Slide } from "react-awesome-reveal";
 import Popup from "reactjs-popup";
 
-import "./styles.scss";
 import { Button } from "@shared/ui/Button";
+
+import "./styles.scss";
 
 interface PopupProps {
   closeMenu: () => void;
@@ -29,10 +30,10 @@ export const ThanksPopup: React.FC<PopupProps> = ({ open, closeMenu }) => {
               icon={faMarsStroke}
               className="popup-container__modal__icon"
             />
-            <h1 className="popup-container__modal__heading">
+            <h1 className="popup-container__modal__heading mt-4">
               Спасибо за вашу заявку!
             </h1>
-            <p className="popup-container__modal__paragraph">
+            <p className="popup-container__modal__paragraph mt-4 w-[50%] text-center">
               В скором времени мы с вами свяжемся
             </p>
             <Button text="Закрыть" onClick={closeMenu} type="filled" />

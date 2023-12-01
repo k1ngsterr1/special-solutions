@@ -229,8 +229,8 @@ export const Form = () => {
             <Button text="Отправить" marginTop="mt-16" type="full" />
           </Slide>
         </form>
-        <ThanksPopup open={isOpen} closeMenu={() => setOpen(false)} />
       </div>
+      <ThanksPopup open={isOpen} closeMenu={() => setOpen(false)} />
     </>
   );
 };
