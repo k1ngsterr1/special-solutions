@@ -6,10 +6,10 @@ import { Button } from "@shared/ui/Button";
 import { useEffect } from "react";
 
 // Assets
-import service01 from "@assets/service_01.webp";
-import service02 from "@assets/service_02.webp";
-import service03 from "@assets/service_03.webp";
-import service04 from "@assets/service_04.webp";
+import service01 from "@assets/office01.webp";
+import service02 from "@assets/office02.webp";
+import service03 from "@assets/office03.webp";
+import service04 from "@assets/office04.webp";
 
 export const ServicesScreen = () => {
   const navigate = useNavigate();
