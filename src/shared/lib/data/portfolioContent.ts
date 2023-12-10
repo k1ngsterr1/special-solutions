@@ -14,7 +14,10 @@ interface PortfolioInfo {
   description: string;
   servicesHeading: string;
   photos: PhotoItem[];
-  services: ServiceItem[];
+  serviceYear: string;
+  serviceLocation: string;
+  serviceSquare: string;
+  service: string;
 }
 
 export const portfolioContent: Record<string, PortfolioInfo> = {
@@ -23,23 +26,11 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     description:
       "Компания Special Solution занимается разработкой передовых решений, способных удовлетворить самые изысканные и специфические запросы наших клиентов. Мы сочетаем глубокие знания отрасли с инновационным мышлением, чтобы предлагать продукты и услуги, выходящие за рамки стандартных предложений.",
     servicesHeading: "Выполненные услуги:",
-    services: [
-      {
-        service: "Новый интерьер",
-      },
-      {
-        service: "Новый интерьер",
-      },
-      {
-        service: "Новый интерьер",
-      },
-      {
-        service: "Новый интерьер",
-      },
-      {
-        service: "Новый интерьер",
-      },
-    ],
+    serviceYear: "2021",
+    serviceLocation: "Желтоксан 134",
+    serviceSquare: "1000кв.м",
+    service: "Создание нового интерьера",
+
     photos: [
       {
         photo: gallery02,

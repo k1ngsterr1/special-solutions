@@ -12,15 +12,15 @@ interface PhotoItem {
   thumbnail: string;
 }
 
-interface ServiceItem {
-  service: string;
-}
 interface PortfolioDetailsProps {
   title: string;
   servicesHeading: string;
   description: string;
   photos: PhotoItem[];
-  services: ServiceItem[];
+  serviceYear: string;
+  serviceLocation: string;
+  serviceSquare: string;
+  service: string;
 }
 
 export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
@@ -28,7 +28,10 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
   description,
   photos,
   servicesHeading,
-  services,
+  serviceYear,
+  serviceLocation,
+  serviceSquare,
+  service,
 }) => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
 
@@ -48,11 +51,18 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           {servicesHeading}
         </h2>
         <ul className="list-disc">
-          {services.map((serviceItem, index) => (
-            <li key={index} className="text-xl ml-8 mt-4 text-custom-black">
-              {serviceItem.service}
-            </li>
-          ))}
+          <li className="text-xl ml-8 mt-4 text-custom-black">
+            <strong>Год:</strong> {""}
+            {serviceYear}
+          </li>
+          <li className="text-xl ml-8 mt-4 text-custom-black">
+            <strong>Расположение:</strong> {""}
+            {serviceLocation}
+          </li>
+          <li className="text-xl ml-8 mt-4 text-custom-black">
+            <strong>Площадь:</strong> {""}
+            {serviceSquare}
+          </li>
         </ul>
       </main>
       <main className="content-container-row items-start max-[1024px]:hidden min-[2560px]:mt-[100px]">
@@ -63,11 +73,22 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
             {servicesHeading}
           </h2>
           <ul className="list-disc">
-            {services.map((serviceItem, index) => (
-              <li key={index} className="text-xl ml-8 mt-4 text-custom-black">
-                {serviceItem.service}
-              </li>
-            ))}
+            <li className="text-xl ml-8 mt-4 text-custom-black">
+              <strong>Год:</strong> {""}
+              {serviceYear}
+            </li>
+            <li className="text-xl ml-8 mt-4 text-custom-black">
+              <strong>Расположение:</strong> {""}
+              {serviceLocation}
+            </li>
+            <li className="text-xl ml-8 mt-4 text-custom-black">
+              <strong>Площадь:</strong> {""}
+              {serviceSquare}
+            </li>
+            <li className="text-xl ml-8 mt-4 text-custom-black">
+              <strong>Услуги:</strong> {""}
+              {service}
+            </li>
           </ul>
         </section>
         <ThumbnailsGallery photos={photos} />
