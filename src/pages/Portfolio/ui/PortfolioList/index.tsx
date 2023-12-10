@@ -78,7 +78,7 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
               {serviceYear}
             </li>
             <li className="text-xl ml-8 mt-4 text-custom-black">
-              <strong>Расположение:</strong> {""}
+              <strong>Адрес объекта:</strong> {""}
               {serviceLocation}
             </li>
             <li className="text-xl ml-8 mt-4 text-custom-black">
