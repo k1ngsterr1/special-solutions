@@ -4,7 +4,6 @@ import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 
 // Assets
-
 import koktem01 from "@assets/portfolio/koktem_wide/koktem01_wide.webp";
 import koktem02 from "@assets/portfolio/koktem_wide/koktem02_wide.webp";
 import koktem03 from "@assets/portfolio/koktem_wide/koktem03_wide.webp";

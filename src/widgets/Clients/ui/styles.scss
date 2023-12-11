@@ -1,6 +1,6 @@
 .logo {
-  width: 200px;
-  height: 200px;
+  width: clamp(100px, 10.416vw, 400px);
+  height: clamp(100px, 10.416vw, 400px);
   cursor: pointer;
   transition: 0.3s all;
 }
