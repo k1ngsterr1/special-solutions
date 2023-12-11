@@ -83,7 +83,7 @@ export const Footer = () => {
           </a>
         </div>
         <img
-          className="footer__footer-mob__spark-logo mt-10 mb-10"
+          className="footer__footer-mob__spark-logo mt-10 mb-10 cursor-pointer"
           src={spark_logo}
           alt="spark-studio"
           onClick={SparkRedirect}
@@ -92,7 +92,7 @@ export const Footer = () => {
       <div className="footer__footer-pc flex flex-col items-center max-[1024px]:hidden">
         <nav className="footer__footer-pc__nav w-full flex items-center justify-between max-[1024px]:hidden">
           <img
-            className="footer__footer-pc__logo"
+            className="footer__footer-pc__logo cursor-pointer"
             src={logo}
             onClick={scrollToTop}
             alt="logo"

@@ -16,6 +16,7 @@ import { serviceContent } from "@shared/lib/data/serviceContent";
 import { portfolioContent } from "@shared/lib/data/portfolioContent";
 import { PorfolioPage } from "./Portfolio/ui";
 import { PortfolioDetails } from "./Portfolio/ui/PortfolioList";
+import { ClientsPage } from "./Clients/ui";
 
 export const MyRoutes: FC = () => {
   function ScrollToTop() {
@@ -35,6 +36,7 @@ export const MyRoutes: FC = () => {
         <Route path={ROUTE_CONSTANTS.HOME} element={<HomePage />} />
         <Route path={ROUTE_CONSTANTS.SERVICES} element={<ServicePage />} />
         <Route path={ROUTE_CONSTANTS.PORTFOLIO} element={<PorfolioPage />} />
+        <Route path={ROUTE_CONSTANTS.CLIENTS} element={<ClientsPage />} />+
         {Object.entries(serviceContent).map(([serviceType, content]) => (
           <Route
             key={serviceType}

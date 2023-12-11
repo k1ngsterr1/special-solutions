@@ -10,7 +10,6 @@ import koktem01 from "@assets/portfolio/koktem_wide/koktem01_wide.webp";
 import koktem02 from "@assets/portfolio/koktem_wide/koktem02_wide.webp";
 import koktem03 from "@assets/portfolio/koktem_wide/koktem03_wide.webp";
 import koktem04 from "@assets/portfolio/koktem_wide/koktem04_wide.webp";
-import koktem05 from "@assets/portfolio/koktem_wide/koktem05_wide.webp";
 
 export const HomeScreen = () => {
   const navigate = useNavigate();
@@ -18,6 +17,33 @@ export const HomeScreen = () => {
   function navigatePortfolio() {
     navigate("/portfolio");
   }
+
+  const galleryItems = [
+    {
+      image: koktem02,
+      onClick: navigatePortfolio,
+      name: "Дизайн комплекс Koktem",
+      category: "Дизайн Интерьера",
+    },
+    {
+      image: koktem03,
+      onClick: navigatePortfolio,
+      name: "Дизайн комплекс Koktem",
+      category: "Дизайн Интерьера",
+    },
+    {
+      image: koktem04,
+      onClick: navigatePortfolio,
+      name: "Дизайн комплекс Koktem",
+      category: "Дизайн Интерьера",
+    },
+    {
+      image: koktem01,
+      onClick: navigatePortfolio,
+      name: "Дизайн комплекс Koktem",
+      category: "Дизайн Интерьера",
+    },
+  ];
 
   return (
     <>
@@ -43,16 +69,7 @@ export const HomeScreen = () => {
             привлекательные объекты для наших клиентов.
           </p>
         </Slide>
-        <Gallery
-          image={koktem01}
-          image2={koktem02}
-          image3={koktem03}
-          image4={koktem04}
-          onClick={navigatePortfolio}
-          onClick2={navigatePortfolio}
-          onClick3={navigatePortfolio}
-          onClick4={navigatePortfolio}
-        />
+        <Gallery items={galleryItems} />
         <Button
           text="Все проекты"
           type="outline"
@@ -82,16 +99,7 @@ export const HomeScreen = () => {
           </p>
         </Slide>
         <Slide direction="left" delay={200} triggerOnce={true}>
-          <Gallery
-            image={koktem01}
-            image2={koktem02}
-            image3={koktem03}
-            image4={koktem04}
-            onClick={navigatePortfolio}
-            onClick2={navigatePortfolio}
-            onClick3={navigatePortfolio}
-            onClick4={navigatePortfolio}
-          />
+          <Gallery items={galleryItems} />
         </Slide>
         <Slide direction="right" delay={200} triggerOnce={true}>
           <Button
