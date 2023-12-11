@@ -1,0 +1,67 @@
+.logo {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.thirty-one {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/31_active.svg");
+  }
+}
+
+.apple-city {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/apple_city_active.svg");
+  }
+}
+
+.burger-king {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/burger_king_active.svg");
+  }
+}
+
+.freedom {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/freedom_active.svg");
+  }
+}
+
+.kaspi {
+  @extend .logo;
+  &:hover {
+    transition: 0.3s all;
+    content: url("../../../assets/clients/kaspi_active.svg");
+  }
+}
+
+.lampadario {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/lampadario_active.svg");
+  }
+}
+.lenovo {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/lenovo_active.svg");
+  }
+}
+.siemens {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/siemes_active.svg");
+  }
+}
+.syngenta {
+  @extend .logo;
+  &:hover {
+    content: url("../../../assets/clients/syngenta_active.svg");
+  }
+}
