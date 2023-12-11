@@ -6,3 +6,18 @@
 .cross {
   transform: rotate(135deg);
 }
+
+@media screen and (min-width: 1024px) {
+  .line {
+    width: clamp(125px, 13.02vw, 500px);
+    height: clamp(125px, 13.02vw, 500px);
+  }
+
+  .step {
+    font-size: clamp(11px, 1.1457600000000001vw, 44px);
+  }
+
+  .none {
+    display: none;
+  }
+}
