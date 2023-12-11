@@ -85,10 +85,10 @@ export const ServicesScreen = () => {
         />
       </section>
       <section
-        className="pc-screen w-full flex flex-col items-end max-[1024px]:hidden mt-28"
+        className="pc-screen w-full flex flex-col items-end max-[1024px]:hidden"
         id="services"
       >
-        <div className="w-full flex justify-between  items-center">
+        <div className="w-full flex justify-between  items-center mt-28">
           <Slide direction="left" triggerOnce={true}>
             <Button
               text="Все Услуги"

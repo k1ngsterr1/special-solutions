@@ -71,10 +71,10 @@ export const PorfolioScreen = () => {
         </Slide>
       </div>
       <div
-        className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden mt-24"
+        className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden"
         id="portfolio"
       >
-        <div className="flex w-full justify-between items-center ">
+        <div className="flex w-full justify-between items-center mt-28 ">
           <div className="flex flex-col justify-center w-[90%]">
             <Slide direction="left" triggerOnce={true}>
               <h4>Портфолио</h4>

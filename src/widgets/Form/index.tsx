@@ -142,10 +142,10 @@ export const Form = () => {
         </form>
       </div>
       <div
-        className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden mt-24"
+        className="pc-screen flex flex-col items-center w-full max-[1024px]:hidden "
         id="contacts"
       >
-        <h5>Свяжитесь с нами</h5>
+        <h5 className="mt-28">Свяжитесь с нами</h5>
         <p className="paragraph text-center w-[60%] mt-8">
           Компания <span className="orange">Special Solution</span> занимается
           разработкой передовых решений, способных удовлетворить самые

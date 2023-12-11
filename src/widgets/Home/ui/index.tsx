@@ -8,6 +8,7 @@ import koktem01 from "@assets/portfolio/koktem_wide/koktem01_wide.webp";
 import koktem02 from "@assets/portfolio/koktem_wide/koktem02_wide.webp";
 import koktem03 from "@assets/portfolio/koktem_wide/koktem03_wide.webp";
 import koktem04 from "@assets/portfolio/koktem_wide/koktem04_wide.webp";
+import test from "@assets/test.jpg";
 
 export const HomeScreen = () => {
   const navigate = useNavigate();
@@ -18,25 +19,13 @@ export const HomeScreen = () => {
 
   const galleryItems = [
     {
+      image: test,
+      onClick: navigatePortfolio,
+      name: "Дизайн комплекс Koktem",
+      category: "Дизайн Интерьера",
+    },
+    {
       image: koktem02,
-      onClick: navigatePortfolio,
-      name: "Дизайн комплекс Koktem",
-      category: "Дизайн Интерьера",
-    },
-    {
-      image: koktem03,
-      onClick: navigatePortfolio,
-      name: "Дизайн комплекс Koktem",
-      category: "Дизайн Интерьера",
-    },
-    {
-      image: koktem04,
-      onClick: navigatePortfolio,
-      name: "Дизайн комплекс Koktem",
-      category: "Дизайн Интерьера",
-    },
-    {
-      image: koktem01,
       onClick: navigatePortfolio,
       name: "Дизайн комплекс Koktem",
       category: "Дизайн Интерьера",

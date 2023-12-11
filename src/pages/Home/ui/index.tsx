@@ -4,6 +4,7 @@ import { HomeScreen } from "@widgets/Home";
 import { RootState } from "@shared/lib/redux/store";
 import { useSelector } from "react-redux";
 import { AboutScreen } from "@widgets/Home/ui/AboutScreen";
+import { StepsScreen } from "@widgets/Home/ui/StepsScreen";
 import { ServicesScreen } from "@widgets/Home/ui/ServicesScreen";
 import { PorfolioScreen } from "@widgets/Home/ui/PortfolioScreen";
 import { Form } from "@widgets/Form";
@@ -21,6 +22,7 @@ export const HomePage = () => {
           <HomeScreen />
         </main>
         <AboutScreen />
+        <StepsScreen />
         <ServicesScreen />
         <PorfolioScreen />
         <Form />

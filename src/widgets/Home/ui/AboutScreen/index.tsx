@@ -78,11 +78,8 @@ export const AboutScreen = () => {
           />
         </Slide>
       </section>
-      <section
-        className="pc-screen w-full max-[1024px]:hidden mt-24"
-        id="about"
-      >
-        <Slide direction="left" triggerOnce={true}>
+      <section className="pc-screen w-full max-[1024px]:hidden mt-1" id="about">
+        <Slide direction="left" className="mt-28" triggerOnce={true}>
           <h2>О компании</h2>
         </Slide>
         <Slide direction="right" triggerOnce={true}>
