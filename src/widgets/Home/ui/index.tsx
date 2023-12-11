@@ -4,7 +4,6 @@ import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 
 // Assets
-import gallery01 from "@assets/design_gallery_01.webp";
 
 import koktem01 from "@assets/portfolio/koktem_wide/koktem01_wide.webp";
 import koktem02 from "@assets/portfolio/koktem_wide/koktem02_wide.webp";
@@ -60,7 +59,6 @@ export const HomeScreen = () => {
             Ваш Партнер в создании Бизнес Пространства
           </h2>
         </Slide>
-
         <Slide direction="left">
           <p className="paragraph text-center mt-4">
             <span className="orange">Special Solutions</span> представляет

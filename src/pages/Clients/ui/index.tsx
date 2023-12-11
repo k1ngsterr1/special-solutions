@@ -1,4 +1,3 @@
-import React from "react";
 import { Header } from "@features/Header/ui";
 import { Menu } from "@features/Menu/ui";
 import { useSelector } from "react-redux";
