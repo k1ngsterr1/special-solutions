@@ -10,6 +10,10 @@ export const StepsScreen = () => {
   const [stepOne, setStepOne] = useState(false);
   const [stepTwo, setStepTwo] = useState(false);
   const [stepThree, setStepThree] = useState(false);
+  const [stepFour, setStepFour] = useState(false);
+  const [stepFive, setStepFive] = useState(false);
+  const [stepSix, setStepSix] = useState(false);
+  const [stepSeven, setStepSeven] = useState(false);
 
   function useSteps() {
     setOpen(!isOpen);
@@ -23,7 +27,20 @@ export const StepsScreen = () => {
   function useStepTwo() {
     setStepTwo(!stepTwo);
     setStepThree(!stepThree);
-    console.log("stepOpen:", stepOne, stepTwo);
+    setStepFour(true);
+  }
+
+  function useStepFour() {
+    setStepFour(!stepFour);
+    setStepFive(!stepFive);
+    if (stepFour == false) {
+      setStepSix(true);
+    }
+  }
+
+  function useStepFive() {
+    // setStepSix(!stepSix);
+    // setStepSeven(!stepSeven);
   }
 
   return (
@@ -116,12 +133,16 @@ export const StepsScreen = () => {
         </p>
         <div className="w-full h-auto flex flex-col items-center relative">
           <>
-            <img
-              src={line}
-              onClick={useStepOne}
-              className={`cursor-pointer line mt-16 ${stepOne ? "hidden" : ""}`}
-              alt="line"
-            />
+            <Slide direction="right">
+              <img
+                src={line}
+                onClick={useStepOne}
+                className={`cursor-pointer line mt-16 ${
+                  stepOne ? "hidden" : ""
+                }`}
+                alt="line"
+              />
+            </Slide>
           </>
           {stepOne ? (
             <>
@@ -137,14 +158,16 @@ export const StepsScreen = () => {
           ) : null}
           {stepTwo ? (
             <>
-              <img
-                src={line}
-                onClick={useStepTwo}
-                className={`cursor-pointer line mt-16 ${
-                  stepTwo ? "" : "hidden"
-                }`}
-                alt="line"
-              />
+              <Slide direction="right">
+                <img
+                  src={line}
+                  onClick={useStepTwo}
+                  className={`cursor-pointer line mt-16 ${
+                    stepTwo ? "" : "hidden"
+                  }`}
+                  alt="line"
+                />
+              </Slide>
             </>
           ) : null}
           {stepThree ? (
@@ -154,6 +177,58 @@ export const StepsScreen = () => {
                   <span className="text-custom-orange text-5xl">02</span>
                   <span className="text-custom-black step mt-4 text-center w-[60%]">
                     Выезд на объект, обследование, замеры, видеосъемка
+                  </span>
+                </div>
+              </Slide>
+            </>
+          ) : null}
+          {stepFour ? (
+            <>
+              <Slide direction="right">
+                <img
+                  src={line}
+                  onClick={useStepFour}
+                  className={`cursor-pointer line mt-16 ${
+                    stepFour ? "" : "hidden"
+                  }`}
+                  alt="line"
+                />
+              </Slide>
+            </>
+          ) : null}
+          {stepFive ? (
+            <>
+              <Slide direction="left">
+                <div className="step-container flex flex-col items-center mt-12">
+                  <span className="text-custom-orange text-5xl">03</span>
+                  <span className="text-custom-black step mt-4 text-center w-[60%]">
+                    Эскизный проект
+                  </span>
+                </div>
+              </Slide>
+            </>
+          ) : null}
+          {stepSix ? (
+            <>
+              <Slide direction="right">
+                <img
+                  src={line}
+                  onClick={useStepFive}
+                  className={`cursor-pointer line mt-16 ${
+                    stepFour ? "" : "hidden"
+                  }`}
+                  alt="line"
+                />
+              </Slide>
+            </>
+          ) : null}
+          {stepSeven ? (
+            <>
+              <Slide direction="left">
+                <div className="step-container flex flex-col items-center mt-12">
+                  <span className="text-custom-orange text-5xl">03</span>
+                  <span className="text-custom-black step mt-4 text-center w-[60%]">
+                    Эскизный проект
                   </span>
                 </div>
               </Slide>
