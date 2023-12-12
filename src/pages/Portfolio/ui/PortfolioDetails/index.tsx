@@ -40,11 +40,12 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
       </main>
       <main className="content-container-row items-start max-[1024px]:hidden min-[2560px]:mt-[100px]">
         <section className="w-full mt-0 flex flex-col items-start">
-          <h1 className="main-heading text-left">{title}</h1>
+          <h2 className="main-heading text-left">{title}</h2>
           <p className="paragraph w-[85%] mt-8">{description}</p>
           <p className="paragraph w-[85%] mt-8">{description}</p>
           <p className="paragraph w-[85%] mt-8">{description}</p>
         </section>
+
         <ThumbnailsGallery photos={photos} />
       </main>
       <Footer />
