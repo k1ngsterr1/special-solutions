@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Feature } from "@shared/ui/Feature";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import line from "@assets/plus.svg";
 
 import "./styles.scss";
@@ -14,6 +14,8 @@ export const StepsScreen = () => {
   const [stepFive, setStepFive] = useState(false);
   const [stepSix, setStepSix] = useState(false);
   const [stepSeven, setStepSeven] = useState(false);
+  const [stepEight, setStepEight] = useState(false);
+  const [stepNine, setStepNine] = useState(false);
 
   function useSteps() {
     setOpen(!isOpen);
@@ -31,16 +33,21 @@ export const StepsScreen = () => {
   }
 
   function useStepFour() {
-    setStepFour(!stepFour);
     setStepFive(!stepFive);
-    if (stepFour == false) {
-      setStepSix(true);
-    }
+    setStepFour(!stepFour);
+    setStepSix(true);
   }
 
   function useStepFive() {
-    // setStepSix(!stepSix);
-    // setStepSeven(!stepSeven);
+    setStepSix(!stepSix);
+    setStepSeven(!stepSeven);
+    setStepEight(true);
+  }
+
+  function useStepSix() {
+    setStepSeven(!stepSeven);
+    setStepEight(!stepEight);
+    setStepNine(true);
   }
 
   return (
@@ -133,7 +140,7 @@ export const StepsScreen = () => {
         </p>
         <div className="w-full h-auto flex flex-col items-center relative">
           <>
-            <Slide direction="right">
+            <Slide direction="right" triggerOnce>
               <img
                 src={line}
                 onClick={useStepOne}
@@ -146,7 +153,7 @@ export const StepsScreen = () => {
           </>
           {stepOne ? (
             <>
-              <Slide direction="left">
+              <Slide direction="left" triggerOnce>
                 <div className="step-container flex flex-col items-center mt-12">
                   <span className="text-custom-orange text-5xl">01</span>
                   <span className="text-custom-black step mt-4">
@@ -158,7 +165,7 @@ export const StepsScreen = () => {
           ) : null}
           {stepTwo ? (
             <>
-              <Slide direction="right">
+              <Slide direction="right" triggerOnce>
                 <img
                   src={line}
                   onClick={useStepTwo}
@@ -172,7 +179,7 @@ export const StepsScreen = () => {
           ) : null}
           {stepThree ? (
             <>
-              <Slide direction="left">
+              <Slide direction="left" triggerOnce>
                 <div className="step-container flex flex-col items-center mt-12">
                   <span className="text-custom-orange text-5xl">02</span>
                   <span className="text-custom-black step mt-4 text-center w-[60%]">
@@ -184,7 +191,7 @@ export const StepsScreen = () => {
           ) : null}
           {stepFour ? (
             <>
-              <Slide direction="right">
+              <Slide direction="right" triggerOnce>
                 <img
                   src={line}
                   onClick={useStepFour}
@@ -198,7 +205,7 @@ export const StepsScreen = () => {
           ) : null}
           {stepFive ? (
             <>
-              <Slide direction="left">
+              <Slide direction="left" triggerOnce>
                 <div className="step-container flex flex-col items-center mt-12">
                   <span className="text-custom-orange text-5xl">03</span>
                   <span className="text-custom-black step mt-4 text-center w-[60%]">
@@ -210,12 +217,12 @@ export const StepsScreen = () => {
           ) : null}
           {stepSix ? (
             <>
-              <Slide direction="right">
+              <Slide direction="right" triggerOnce>
                 <img
                   src={line}
                   onClick={useStepFive}
                   className={`cursor-pointer line mt-16 ${
-                    stepFour ? "" : "hidden"
+                    stepSix ? "" : "hidden"
                   }`}
                   alt="line"
                 />
@@ -224,11 +231,37 @@ export const StepsScreen = () => {
           ) : null}
           {stepSeven ? (
             <>
-              <Slide direction="left">
+              <Slide direction="left" triggerOnce>
                 <div className="step-container flex flex-col items-center mt-12">
-                  <span className="text-custom-orange text-5xl">03</span>
+                  <span className="text-custom-orange text-5xl">04</span>
                   <span className="text-custom-black step mt-4 text-center w-[60%]">
-                    Эскизный проект
+                    Рабочая документация
+                  </span>
+                </div>
+              </Slide>
+            </>
+          ) : null}
+          {stepEight ? (
+            <>
+              <Slide direction="right" triggerOnce>
+                <img
+                  src={line}
+                  onClick={useStepSix}
+                  className={`cursor-pointer line mt-16 ${
+                    stepEight ? "" : "hidden"
+                  }`}
+                  alt="line"
+                />
+              </Slide>
+            </>
+          ) : null}
+          {stepNine ? (
+            <>
+              <Slide direction="left" triggerOnce>
+                <div className="step-container flex flex-col items-center mt-12">
+                  <span className="text-custom-orange text-5xl">05</span>
+                  <span className="text-custom-black step mt-4 text-center w-[60%]">
+                    Реализация проекта
                   </span>
                 </div>
               </Slide>
