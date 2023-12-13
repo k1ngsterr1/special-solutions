@@ -1,5 +1,5 @@
 export const ROUTE_CONSTANTS = {
-  HOME: "/",
+  HOME: "/home",
   SERVICES: "/services",
   SERVICE_DETAILS: "/services/:serviceType",
   PORTFOLIO: "/portfolio",

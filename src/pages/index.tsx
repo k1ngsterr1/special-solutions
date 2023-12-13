@@ -1,5 +1,10 @@
 import { FC } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -34,6 +39,9 @@ export const MyRoutes: FC = () => {
       <ScrollToTop />
       <Routes>
         <Route path={ROUTE_CONSTANTS.HOME} element={<HomePage />} />
+        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/index.html" element={<Navigate replace to="/home" />} />
+        <Route path="/index.shtml" element={<Navigate replace to="/home" />} />
         <Route path={ROUTE_CONSTANTS.SERVICES} element={<ServicePage />} />
         <Route path={ROUTE_CONSTANTS.PORTFOLIO} element={<PorfolioPage />} />
         <Route path={ROUTE_CONSTANTS.CLIENTS} element={<ClientsPage />} />+
