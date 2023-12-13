@@ -4,11 +4,32 @@ import { useNavigate } from "react-router-dom";
 
 import portfolio01 from "@assets/portfolio01.webp";
 
+import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
+import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
+import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
+import syngenta_cover from "@assets/portfolio/syngenta/syngent_cover.webp";
+
 export const InteriorDesign = () => {
   const navigate = useNavigate();
 
-  function navigatePortfolioCase() {
+  function navigatePortfolio() {
+    navigate("/portfolio");
+  }
+
+  function navigateBankAstana() {
     navigate("/portfolio/astana_bank");
+  }
+
+  function navigateMars() {
+    navigate("/portfolio/mars");
+  }
+
+  function navigateDar() {
+    navigate("/portfolio/dar");
+  }
+
+  function navigateSyngenta() {
+    navigate("/portfolio/syngent");
   }
 
   return (
@@ -16,20 +37,20 @@ export const InteriorDesign = () => {
       <div className="w-full flex flex-col items-center mt-8 min-[1024px]:hidden">
         <Slide className="w-full" direction="up" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса"
+            text="Интерьер Офиса Mars"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
-            image={portfolio01}
+            onClick={navigateMars}
+            image={mars_cover}
             marginTop="mt-8"
           />
         </Slide>
         <Slide className="w-full" delay={200} direction="up" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса"
+            text="Офис компании DAR"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
-            image={portfolio01}
-            marginTop="mt-8 "
+            onClick={navigateDar}
+            image={dar_cover}
+            marginTop="mt-8"
           />
         </Slide>
         <Slide
@@ -39,11 +60,11 @@ export const InteriorDesign = () => {
           triggerOnce={true}
         >
           <PortfolioTab
-            text="Интерьер Офиса"
+            text="Офис компании Syngenta Казахстан"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
-            image={portfolio01}
-            marginTop="mt-8 "
+            onClick={navigateSyngenta}
+            image={syngenta_cover}
+            marginTop="mt-8"
           />
         </Slide>
         <Slide
@@ -53,11 +74,11 @@ export const InteriorDesign = () => {
           triggerOnce={true}
         >
           <PortfolioTab
-            text="Интерьер Офиса"
+            text="Интерьер Офиса Astana Bank"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
-            image={portfolio01}
-            marginTop="mt-8 "
+            onClick={navigateBankAstana}
+            image={astana_cover}
+            marginTop="mt-8"
           />
         </Slide>
       </div>
@@ -65,10 +86,10 @@ export const InteriorDesign = () => {
         <div className="w-full flex justify-between items-center">
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Интерьер Офиса Mars"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
+              onClick={navigateMars}
+              image={mars_cover}
               marginTop="mt-8"
             />
           </Slide>
@@ -79,11 +100,11 @@ export const InteriorDesign = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Офис компании DAR"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8 ml-8"
+              onClick={navigateDar}
+              image={dar_cover}
+              marginTop="mt-8"
             />
           </Slide>
           <Slide
@@ -93,11 +114,11 @@ export const InteriorDesign = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Офис компании Syngenta Казахстан"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8 ml-8"
+              onClick={navigateSyngenta}
+              image={syngenta_cover}
+              marginTop="mt-8"
             />
           </Slide>
           <Slide
@@ -107,15 +128,15 @@ export const InteriorDesign = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Интерьер Офиса Astana Bank"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8 ml-8"
+              onClick={navigateBankAstana}
+              image={astana_cover}
+              marginTop="mt-8"
             />
           </Slide>
         </div>
-        <div className="w-full flex justify-between items-center">
+        {/* <div className="w-full flex justify-between items-center">
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
               text="Интерьер Офиса"
@@ -167,7 +188,7 @@ export const InteriorDesign = () => {
               marginTop="mt-8 ml-8"
             />
           </Slide>
-        </div>
+        </div> */}
       </div>
     </>
   );

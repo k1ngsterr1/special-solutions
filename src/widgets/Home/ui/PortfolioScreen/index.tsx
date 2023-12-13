@@ -51,23 +51,14 @@ export const PorfolioScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса"
-            subText="Интерьер"
-            onClick={navigateBankAstana}
-            image={astana_cover}
-            marginTop="mt-8"
-          />
-        </Slide>
-        <Slide direction="right" triggerOnce={true}>
-          <PortfolioTab
-            text="Интерьер Офиса"
+            text="Интерьер Офиса Mars"
             subText="Интерьер"
             onClick={navigateMars}
             image={mars_cover}
             marginTop="mt-8"
           />
         </Slide>
-        <Slide direction="left" triggerOnce={true}>
+        <Slide direction="right" triggerOnce={true}>
           <PortfolioTab
             text="Офис компании DAR"
             subText="Интерьер"
@@ -75,13 +66,22 @@ export const PorfolioScreen = () => {
             image={dar_cover}
             marginTop="mt-8"
           />
-        </Slide>{" "}
-        <Slide direction="right" triggerOnce={true}>
+        </Slide>
+        <Slide direction="left" triggerOnce={true}>
           <PortfolioTab
             text="Офис компании Syngenta Казахстан"
             subText="Интерьер"
             onClick={navigateSyngenta}
             image={syngenta_cover}
+            marginTop="mt-8"
+          />
+        </Slide>{" "}
+        <Slide direction="right" triggerOnce={true}>
+          <PortfolioTab
+            text="Интерьер Офиса Astana Bank"
+            subText="Интерьер"
+            onClick={navigateBankAstana}
+            image={astana_cover}
             marginTop="mt-8"
           />
         </Slide>
@@ -124,30 +124,16 @@ export const PorfolioScreen = () => {
         <div className="w-full flex justify-between items-center mt-8">
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
-              text="Офис Банк Астаны"
+              text="Офис Mars Казахстан"
               subText="Интерьер"
-              onClick={navigateBankAstana}
-              image={astana_cover}
-              marginTop="mt-8"
+              onClick={navigateMars}
+              image={mars_cover}
+              marginTop="mt-8 mr-8"
             />
           </Slide>
           <Slide
             className="w-full"
             delay={200}
-            direction="up"
-            triggerOnce={true}
-          >
-            <PortfolioTab
-              text="Офис Mars Казахстан"
-              subText="Интерьер"
-              onClick={navigateMars}
-              image={mars_cover}
-              marginTop="mt-8 ml-8"
-            />
-          </Slide>
-          <Slide
-            className="w-full ml-8"
-            delay={300}
             direction="up"
             triggerOnce={true}
           >
@@ -161,7 +147,7 @@ export const PorfolioScreen = () => {
           </Slide>
           <Slide
             className="w-full ml-8"
-            delay={400}
+            delay={300}
             direction="up"
             triggerOnce={true}
           >
@@ -170,6 +156,20 @@ export const PorfolioScreen = () => {
               subText="Интерьер"
               onClick={navigateSyngenta}
               image={syngenta_cover}
+              marginTop="mt-8 ml-8"
+            />
+          </Slide>
+          <Slide
+            className="w-full ml-8"
+            delay={400}
+            direction="up"
+            triggerOnce={true}
+          >
+            <PortfolioTab
+              text="Офис Банк Астаны"
+              subText="Интерьер"
+              onClick={navigateBankAstana}
+              image={astana_cover}
               marginTop="mt-8 ml-8"
             />
           </Slide>

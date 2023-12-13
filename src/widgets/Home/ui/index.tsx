@@ -9,6 +9,8 @@ import koktem02 from "@assets/portfolio/koktem_wide/koktem02_wide.webp";
 import koktem03 from "@assets/portfolio/koktem_wide/koktem03_wide.webp";
 import koktem04 from "@assets/portfolio/koktem_wide/koktem04_wide.webp";
 import test from "@assets/test.jpg";
+import mob_photo from "@assets/portfolio/office03.webp";
+import mob_photo02 from "@assets/portfolio/dar_office.webp";
 
 export const HomeScreen = () => {
   const navigate = useNavigate();
@@ -21,13 +23,28 @@ export const HomeScreen = () => {
     {
       image: test,
       onClick: navigatePortfolio,
-      name: "Дизайн комплекс Koktem",
+      name: "Дизайн офиса Syngent",
       category: "Дизайн Интерьера",
     },
     {
       image: koktem02,
       onClick: navigatePortfolio,
-      name: "Дизайн комплекс Koktem",
+      name: "Дизайн офиса DAR",
+      category: "Дизайн Интерьера",
+    },
+  ];
+
+  const galleryItemsMob = [
+    {
+      image: mob_photo,
+      onClick: navigatePortfolio,
+      name: "Дизайн офиса Syngent",
+      category: "Дизайн Интерьера",
+    },
+    {
+      image: mob_photo02,
+      onClick: navigatePortfolio,
+      name: "Дизайн офиса DAR",
       category: "Дизайн Интерьера",
     },
   ];
@@ -55,7 +72,7 @@ export const HomeScreen = () => {
             привлекательные объекты для наших клиентов.
           </p>
         </Slide>
-        <Gallery items={galleryItems} />
+        <Gallery items={galleryItemsMob} />
         <Button
           text="Все проекты"
           type="outline"
