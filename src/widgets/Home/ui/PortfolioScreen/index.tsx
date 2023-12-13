@@ -7,6 +7,8 @@ import portfolio01 from "@assets/portfolio01.webp";
 
 import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
 import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
+import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
+
 export const PorfolioScreen = () => {
   const navigate = useNavigate();
 
@@ -20,6 +22,10 @@ export const PorfolioScreen = () => {
 
   function navigateMars() {
     navigate("/portfolio/mars");
+  }
+
+  function navigateDar() {
+    navigate("/portfolio/dar");
   }
 
   return (
@@ -53,17 +59,17 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
-            onClick={navigateBankAstana}
+            onClick={navigateMars}
             image={mars_cover}
             marginTop="mt-8"
           />
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса"
+            text="Офис компании DAR"
             subText="Интерьер"
-            onClick={navigateBankAstana}
-            image={portfolio01}
+            onClick={navigateDar}
+            image={dar_cover}
             marginTop="mt-8"
           />
         </Slide>
@@ -134,10 +140,10 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офис Syngenta"
+              text="Офис компании DAR"
               subText="Интерьер"
-              onClick={navigateBankAstana}
-              image={mars_cover}
+              onClick={navigateDar}
+              image={dar_cover}
               marginTop="mt-8 ml-8"
             />
           </Slide>
