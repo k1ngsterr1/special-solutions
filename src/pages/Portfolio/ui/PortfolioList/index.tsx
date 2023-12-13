@@ -55,7 +55,7 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           <p className="paragraph mt-8 mb-8 text-center">{description}</p>
         </Slide>
         <ThumbnailsGallery photos={photos} />
-        <h2 className="text-4xl text-custom-orange mt-8 text-center">
+        <h2 className="text-3xl text-custom-orange mt-8 text-center">
           {servicesHeading}
         </h2>
         <ul className="list-none text-center mt-2">
@@ -72,7 +72,7 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
             {serviceSquare}
           </li>
         </ul>
-        <h2 className="text-4xl text-custom-orange  mt-12 text-center">
+        <h2 className="text-3xl text-custom-orange  mt-12 text-center">
           {objectAddress}
         </h2>
         <ul className="list-none">
@@ -88,7 +88,7 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           <h1 className="main-heading text-left">{title}</h1>
           <p className="paragraph w-[85%] mt-8">{description}</p>
 
-          <h2 className="text-4xl text-custom-orange text-left mt-8">
+          <h2 className="text-3xl text-custom-orange text-left mt-8">
             {servicesHeading}
           </h2>
           <ul className="list-disc">
@@ -96,10 +96,6 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
               <strong>Год:</strong> {""}
               {serviceYear}
             </li>
-            {/* <li className="text-xl ml-8 mt-4 text-custom-black">
-              <strong>Адрес объекта:</strong> {""}
-              {serviceLocation}
-            </li> */}
             <li className="text-xl ml-8 mt-4 text-custom-black">
               <strong>Площадь:</strong> {""}
               {serviceSquare}
@@ -109,7 +105,7 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
               {service}
             </li>
           </ul>
-          <h2 className="text-4xl text-custom-orange text-left mt-12">
+          <h2 className="text-3xl text-custom-orange text-left mt-12">
             {objectAddress}
           </h2>
           <ul className="list-disc">

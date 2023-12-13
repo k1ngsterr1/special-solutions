@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import portfolio01 from "@assets/portfolio01.webp";
 
+import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
+import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 export const PorfolioScreen = () => {
   const navigate = useNavigate();
 
@@ -12,8 +14,12 @@ export const PorfolioScreen = () => {
     navigate("/portfolio");
   }
 
-  function navigatePortfolioCase() {
+  function navigateBankAstana() {
     navigate("/portfolio/astana_bank");
+  }
+
+  function navigateMars() {
+    navigate("/portfolio/mars");
   }
 
   return (
@@ -38,8 +44,8 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
-            image={portfolio01}
+            onClick={navigateBankAstana}
+            image={astana_cover}
             marginTop="mt-8"
           />
         </Slide>
@@ -47,8 +53,8 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
-            image={portfolio01}
+            onClick={navigateBankAstana}
+            image={mars_cover}
             marginTop="mt-8"
           />
         </Slide>
@@ -56,7 +62,7 @@ export const PorfolioScreen = () => {
           <PortfolioTab
             text="Интерьер Офиса"
             subText="Интерьер"
-            onClick={navigatePortfolioCase}
+            onClick={navigateBankAstana}
             image={portfolio01}
             marginTop="mt-8"
           />
@@ -100,10 +106,10 @@ export const PorfolioScreen = () => {
         <div className="w-full flex justify-between items-center mt-8">
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Офис Банк Астаны"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
+              onClick={navigateBankAstana}
+              image={astana_cover}
               marginTop="mt-8"
             />
           </Slide>
@@ -114,10 +120,10 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Офис Mars Казахстан"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
+              onClick={navigateMars}
+              image={mars_cover}
               marginTop="mt-8 ml-8"
             />
           </Slide>
@@ -128,10 +134,10 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Офис Syngenta"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
+              onClick={navigateBankAstana}
+              image={mars_cover}
               marginTop="mt-8 ml-8"
             />
           </Slide>
@@ -144,8 +150,8 @@ export const PorfolioScreen = () => {
             <PortfolioTab
               text="Интерьер Офиса"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
+              onClick={navigateBankAstana}
+              image={mars_cover}
               marginTop="mt-8 ml-8"
             />
           </Slide>
