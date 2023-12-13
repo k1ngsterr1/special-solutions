@@ -20,6 +20,13 @@ $light_gray: hsla(0, 0%, 95%, 1);
   // overflow-x: hidden !important;
 }
 
+.ios {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
 body {
   width: 100%;
   height: 100vh;

@@ -3,11 +3,10 @@ import { Slide } from "react-awesome-reveal";
 import { Button } from "@shared/ui/Button";
 import { useNavigate } from "react-router-dom";
 
-import portfolio01 from "@assets/portfolio01.webp";
-
 import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
 import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
+import syngenta_cover from "@assets/portfolio/syngenta/syngent_cover.webp";
 
 export const PorfolioScreen = () => {
   const navigate = useNavigate();
@@ -26,6 +25,10 @@ export const PorfolioScreen = () => {
 
   function navigateDar() {
     navigate("/portfolio/dar");
+  }
+
+  function navigateSyngenta() {
+    navigate("/portfolio/syngent");
   }
 
   return (
@@ -72,8 +75,17 @@ export const PorfolioScreen = () => {
             image={dar_cover}
             marginTop="mt-8"
           />
-        </Slide>
+        </Slide>{" "}
         <Slide direction="right" triggerOnce={true}>
+          <PortfolioTab
+            text="Офис компании Syngenta Казахстан"
+            subText="Интерьер"
+            onClick={navigateSyngenta}
+            image={syngenta_cover}
+            marginTop="mt-8"
+          />
+        </Slide>
+        <Slide direction="left" triggerOnce={true}>
           <Button
             text="Все проекты"
             type="outline"
@@ -154,10 +166,10 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="Офис компании Syngenta Казахстан"
               subText="Интерьер"
-              onClick={navigateBankAstana}
-              image={mars_cover}
+              onClick={navigateSyngenta}
+              image={syngenta_cover}
               marginTop="mt-8 ml-8"
             />
           </Slide>

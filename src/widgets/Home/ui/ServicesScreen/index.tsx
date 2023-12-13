@@ -114,7 +114,7 @@ export const ServicesScreen = () => {
             </Slide>
           </div>
         </div>
-        <div className="w-full flex items-centes justify-between mt-16">
+        <div className="w-full flex items-centes justify-between ios mt-16">
           <Slide direction="up" triggerOnce={true}>
             <ServiceTab
               text="Проектирование"

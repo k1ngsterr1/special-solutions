@@ -16,6 +16,13 @@ import koktem03 from "@assets/portfolio/koktem/koktem3.webp";
 import koktem04 from "@assets/portfolio/koktem/koktem4.webp";
 import koktem05 from "@assets/portfolio/koktem/koktem5.webp";
 
+import syngent01 from "@assets/portfolio/syngenta/syngent01.webp";
+import syngent02 from "@assets/portfolio/syngenta/syngent02.webp";
+import syngent03 from "@assets/portfolio/syngenta/syngent03.webp";
+import syngent04 from "@assets/portfolio/syngenta/syngent04.webp";
+import syngent05 from "@assets/portfolio/syngenta/syngent05.webp";
+import syngent06 from "@assets/portfolio/syngenta/syngent06.webp";
+
 interface PhotoItem {
   photo: string;
   thumbnail: string;
@@ -229,6 +236,71 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
       {
         photo: koktem05,
         thumbnail: koktem05,
+      },
+    ],
+  },
+  syngent: {
+    title: "Офис компании Syngenta Казахстан",
+    description:
+      "Фирма «Syngenta» занимает лидирующую позицию среди разработчиков и производителей средств защиты растений, и третье место - на рынке высококачественных семян. Благодаря богатому ассортименту препаратов, мощной технологической базе и большому научно-исследовательскому потенциалу компания лидирует в мировом агробизнесе.",
+    servicesHeading: "Выполненные работы:",
+    objectAddress: "Адрес объекта:",
+    serviceYear: "2021",
+    serviceLocation: "Желтоксан 134",
+    serviceSquare: "1000кв.м",
+    service: "Создание нового интерьера",
+    adresses: [
+      {
+        adress: "Адрес номер 1",
+      },
+      {
+        adress: "Адрес номер 2",
+      },
+      {
+        adress: "Адрес номер 3",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+    ],
+    photos: [
+      {
+        photo: syngent01,
+        thumbnail: syngent01,
+      },
+      {
+        photo: syngent02,
+        thumbnail: syngent02,
+      },
+      {
+        photo: syngent03,
+        thumbnail: syngent03,
+      },
+      {
+        photo: syngent04,
+        thumbnail: syngent04,
+      },
+      {
+        photo: syngent05,
+        thumbnail: syngent05,
       },
     ],
   },
