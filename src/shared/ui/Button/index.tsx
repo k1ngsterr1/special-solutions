@@ -4,6 +4,7 @@ import "./styles.scss";
 interface ButtonProps {
   type: string;
   text: string;
+  buttonType?: string | any;
   marginTop?: string;
   onClick?: () => void;
   to?: any;
@@ -12,11 +13,16 @@ interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({
   text,
   type,
+  buttonType,
   marginTop,
   onClick,
 }) => {
   return (
-    <button className={`button ${type} ${marginTop}`} onClick={onClick}>
+    <button
+      className={`button ${type} ${marginTop}`}
+      type={buttonType}
+      onClick={onClick}
+    >
       {text}
     </button>
   );
@@ -33,6 +39,7 @@ export const ScrollButton: React.FC<ButtonProps> = ({
       className={`button flex items-center justify-center ${type} ${marginTop}`}
       to={to}
       smooth
+      type={type}
     >
       {text}
     </Link>
