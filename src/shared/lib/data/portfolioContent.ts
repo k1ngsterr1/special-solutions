@@ -21,7 +21,7 @@ import syngent02 from "@assets/portfolio/syngenta/syngent02.webp";
 import syngent03 from "@assets/portfolio/syngenta/syngent03.webp";
 import syngent04 from "@assets/portfolio/syngenta/syngent04.webp";
 import syngent05 from "@assets/portfolio/syngenta/syngent05.webp";
-import syngent06 from "@assets/portfolio/syngenta/syngent06.webp";
+// import syngent06 from "@assets/portfolio/syngenta/syngent06.webp";
 
 interface PhotoItem {
   photo: string;
@@ -31,9 +31,10 @@ interface AdressItem {
   adress: string;
 }
 
-interface ServiceItem {
-  service: string;
-}
+// interface ServiceItem {
+//   service: string;
+// }
+
 interface PortfolioInfo {
   title: string;
   description: string;
@@ -45,11 +46,16 @@ interface PortfolioInfo {
   serviceLocation: string;
   serviceSquare: string;
   service: string;
+  officeName: string;
+  metaDescription: string;
 }
 
 export const portfolioContent: Record<string, PortfolioInfo> = {
   astana_bank: {
     title: "Офис Астана Банк",
+    officeName: "Астана Банк",
+    metaDescription:
+      "Банк Астаны — коммерческое банковское учреждение. По размеру активов входил в двадцатку крупнейших казахстанских финансовых предприятий. До 2015 года банк был известен под названием Астана-Финанс.",
     description:
       "Банк Астаны — коммерческое банковское учреждение. По размеру активов входил в двадцатку крупнейших казахстанских финансовых предприятий. До 2015 года банк был известен под названием Астана-Финанс.",
     servicesHeading: "Выполненные работы:",
@@ -115,6 +121,9 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
   },
   mars: {
     title: "Офис компании Mars Казахстан",
+    officeName: "Mars",
+    metaDescription:
+      "Mars - это одна из ведущих международных компаний по производству продуктов питания и кормов для животных. Офис Mars в Алматы является региональной штаб-квартирой и отвечает за бизнес компании в 12 странах: Азербайджан, Армения, Беларусь, Грузия, Казахстан, Кыргызстан, Молдова, Монголия, Узбекистан, Таджикистан, Туркменистан и Турция.",
     description:
       "Mars - это одна из ведущих международных компаний по производству продуктов питания и кормов для животных. Офис Mars в Алматы является региональной штаб-квартирой и отвечает за бизнес компании в 12 странах: Азербайджан, Армения, Беларусь, Грузия, Казахстан, Кыргызстан, Молдова, Монголия, Узбекистан, Таджикистан, Туркменистан и Турция.",
     servicesHeading: "Выполненные работы:",
@@ -176,6 +185,9 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
   },
   dar: {
     title: "Офис компании DAR Казахстан",
+    officeName: "DAR Казахстан",
+    metaDescription:
+      "DAR - группа компаний, создающая цифровые продукты. DAR разрабатываем проекты в сфере образования, спорта и финтеха, а также цифровые инструменты для работы бизнеса и улучшения качества жизни и развития людей. ",
     description:
       "DAR - группа компаний, создающая цифровые продукты. DAR разрабатываем проекты в сфере образования, спорта и финтеха, а также цифровые инструменты для работы бизнеса и улучшения качества жизни и развития людей. ",
     servicesHeading: "Выполненные работы:",
@@ -241,6 +253,9 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
   },
   syngent: {
     title: "Офис компании Syngenta Казахстан",
+    officeName: "Syngenta Казахстан",
+    metaDescription:
+      "Фирма «Syngenta» занимает лидирующую позицию среди разработчиков и производителей средств защиты растений, и третье место - на рынке высококачественных семян. Благодаря богатому ассортименту препаратов, мощной технологической базе и большому научно-исследовательскому потенциалу компания лидирует в мировом агробизнесе.",
     description:
       "Фирма «Syngenta» занимает лидирующую позицию среди разработчиков и производителей средств защиты растений, и третье место - на рынке высококачественных семян. Благодаря богатому ассортименту препаратов, мощной технологической базе и большому научно-исследовательскому потенциалу компания лидирует в мировом агробизнесе.",
     servicesHeading: "Выполненные работы:",
