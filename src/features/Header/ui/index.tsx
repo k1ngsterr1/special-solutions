@@ -17,11 +17,11 @@ export const Header = () => {
 
   function scrollToTop() {
     window.scroll({ top: 0, left: 0, behavior: "smooth" });
-    navigate("/");
+    navigate("/home");
   }
 
   function navigateToMain() {
-    navigate("/");
+    navigate("/home");
   }
 
   return (

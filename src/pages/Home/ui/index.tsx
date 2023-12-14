@@ -1,4 +1,5 @@
 import { Header } from "@features/Header/ui";
+import { Helmet } from "react-helmet";
 import { Menu } from "@features/Menu/ui";
 import { HomeScreen } from "@widgets/Home";
 import { RootState } from "@shared/lib/redux/store";
@@ -14,6 +15,22 @@ export const HomePage = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Special Solutions - Проектно-строительная компания</title>
+        <meta
+          property="og:title"
+          content="Special Solutions - Проектно-строительная компания"
+        ></meta>
+        <meta
+          property="og:description"
+          content="Special Solutions – ведущая проектно-строительная компания, предлагающая инновационные и устойчивые решения для вашего бизнеса. Специализируемся на разработке и реализации уникальных проектов коммерческого и офисного пространства. Наш подход объединяет передовые технологии, экологичность и индивидуальный дизайн, чтобы создать функциональные и визуально привлекательные здания. Откройте для себя, как Special Solutions может преобразить ваше пространство, обеспечивая эффективность и инновации."
+        ></meta>
+        <meta
+          name="description"
+          content="Special Solutions – ведущая проектно-строительная компания, предлагающая инновационные и устойчивые решения для вашего бизнеса. Специализируемся на разработке и реализации уникальных проектов коммерческого и офисного пространства. Наш подход объединяет передовые технологии, экологичность и индивидуальный дизайн, чтобы создать функциональные и визуально привлекательные здания. Откройте для себя, как Special Solutions может преобразить ваше пространство, обеспечивая эффективность и инновации."
+        ></meta>
+      </Helmet>
       <Header />
       {isMenuOpen && <Menu />}
       <div className="content-container flex flex-col items-center">
