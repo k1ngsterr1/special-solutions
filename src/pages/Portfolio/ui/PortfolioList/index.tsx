@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { Footer } from "@features/Footer/ui";
 import { ThumbnailsGallery } from "@features/ThumbnailsGallery/ui";
 import { Loader } from "@shared/ui/Loader";
+import { Helmet } from "react-helmet";
 
 interface PhotoItem {
   photo: string;
@@ -28,6 +29,7 @@ interface PortfolioDetailsProps {
   serviceLocation: string;
   serviceSquare: string;
   service: string;
+  officeName: string;
 }
 
 export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
@@ -41,12 +43,29 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
   serviceLocation,
   serviceSquare,
   service,
+  officeName,
 }) => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
   const isLoading = useSelector((state: RootState) => state.loader.isLoading);
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{`Special Solutions - Офис ${officeName}`}</title>
+        <meta
+          property="og:title"
+          content="Special Solutions - Наши проекты"
+        ></meta>
+        <meta
+          property="og:description"
+          content="Ознакомьтесь с нашим полным спектром услуг в области архитектуры, дизайна и строительства. Мы предлагаем индивидуальные решения, включая концептуальный дизайн, проектирование, строительство и управление проектами. Наша команда профессионалов готова реализовать проекты любой сложности, обеспечивая высокое качество и эффективность. Узнайте больше о наших услугах и том, как мы можем помочь воплотить ваши идеи в жизнь, создавая функциональные и эстетически привлекательные пространства."
+        ></meta>
+        <meta
+          name="description"
+          content="Ознакомьтесь с нашим полным спектром услуг в области архитектуры, дизайна и строительства. Мы предлагаем индивидуальные решения, включая концептуальный дизайн, проектирование, строительство и управление проектами. Наша команда профессионалов готова реализовать проекты любой сложности, обеспечивая высокое качество и эффективность. Узнайте больше о наших услугах и том, как мы можем помочь воплотить ваши идеи в жизнь, создавая функциональные и эстетически привлекательные пространства."
+        ></meta>
+      </Helmet>
       {isLoading && <Loader />}
       <Header />
       {isMenuOpen && <Menu />}
