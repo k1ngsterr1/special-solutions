@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Header } from "@features/Header/ui";
 import { Slide } from "react-awesome-reveal";
 import { RootState } from "@shared/lib/redux/store";
@@ -45,7 +46,6 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
           <p className="paragraph w-[85%] mt-8">{description}</p>
           <p className="paragraph w-[85%] mt-8">{description}</p>
         </section>
-
         <ThumbnailsGallery photos={photos} />
       </main>
       <Footer />

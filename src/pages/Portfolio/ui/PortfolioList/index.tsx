@@ -6,6 +6,7 @@ import { Menu } from "@features/Menu/ui";
 import { useSelector } from "react-redux";
 import { Footer } from "@features/Footer/ui";
 import { ThumbnailsGallery } from "@features/ThumbnailsGallery/ui";
+import { Loader } from "@shared/ui/Loader";
 
 interface PhotoItem {
   photo: string;
@@ -42,9 +43,11 @@ export const PortfolioDetails: React.FC<PortfolioDetailsProps> = ({
   service,
 }) => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
+  const isLoading = useSelector((state: RootState) => state.loader.isLoading);
 
   return (
     <>
+      {isLoading && <Loader />}
       <Header />
       {isMenuOpen && <Menu />}
       <main className="content-container mt-6 min-[1024px]:hidden">

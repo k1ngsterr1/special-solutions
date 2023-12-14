@@ -22,8 +22,20 @@ import { portfolioContent } from "@shared/lib/data/portfolioContent";
 import { PorfolioPage } from "./Portfolio/ui";
 import { PortfolioDetails } from "./Portfolio/ui/PortfolioList";
 import { ClientsPage } from "./Clients/ui";
+import { useSelector } from "react-redux";
+import { RootState } from "@shared/lib/redux/store";
 
 export const MyRoutes: FC = () => {
+  const isLoading = useSelector((state: RootState) => state.loader.isLoading);
+
+  useEffect(() => {
+    document.body.style.overflow = isLoading ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isLoading]);
+
   function ScrollToTop() {
     const { pathname } = useLocation();
 
