@@ -22,12 +22,6 @@ export const ServicesScreen = () => {
     navigate("/services/design");
   }
 
-  useEffect(() => {
-    console.log("Service Details");
-
-    return () => {};
-  }, []);
-
   return (
     <>
       <section

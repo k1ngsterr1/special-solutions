@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 import { OptionType } from "@shared/ui/Selector";
+import { useDispatch, useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
+import { turnOnLoading } from "../redux/loaderSlice";
+import { togglePopup } from "../redux/popupSlice";
 
 export interface SendFormData {
   full_name: string;
@@ -20,6 +23,8 @@ export function useSendEmail() {
     mode: "onChange",
   });
 
+  const dispatch = useDispatch();
+
   const onSubmit = (data: SendFormData, event?: React.BaseSyntheticEvent) => {
     if (event) {
       event.preventDefault();
@@ -31,15 +36,10 @@ export function useSendEmail() {
           event.target,
           "WDWj-JZ9ORopqFaG3"
         )
-        .then(
-          (result) => {
-            console.log("Email successfully sent!", result.text);
-            reset();
-          },
-          (error) => {
-            console.error("Failed to send email:", error.text);
-          }
-        );
+        .then(() => {
+          dispatch(togglePopup());
+          reset();
+        });
     }
   };
 

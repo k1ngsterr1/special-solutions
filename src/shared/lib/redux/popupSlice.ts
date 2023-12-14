@@ -9,8 +9,11 @@ export const popupSlice = createSlice({
     togglePopup: (state) => {
       state.isOpen = !state.isOpen;
     },
+    disablePopup: (state) => {
+      state.isOpen = false;
+    },
   },
 });
 
-export const { togglePopup } = popupSlice.actions;
+export const { togglePopup, disablePopup } = popupSlice.actions;
 export default popupSlice.reducer;

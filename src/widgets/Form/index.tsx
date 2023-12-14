@@ -5,17 +5,20 @@ import { Button } from "@shared/ui/Button";
 import { Slide } from "react-awesome-reveal";
 import { Selector } from "@shared/ui/Selector";
 import { ThanksPopup } from "@features/ThanksPopup/ui";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@shared/lib/redux/store";
 
 import "./styles.scss";
+import { disablePopup, togglePopup } from "@shared/lib/redux/popupSlice";
 
 type OptionType = { value: string; label: string };
 
 export const Form = () => {
   const { register, handleSubmit, errors, handleSelectChange } = useSendEmail();
-
   const [selectedValue, setSelectedValue] = useState("");
-  const [isOpen, setOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  const isPopupOpen = useSelector((state: RootState) => state.popup.isOpen);
 
   const options: OptionType[] = [
     { value: "Дизайн Интерьера", label: "Дизайн Интерьера" },
@@ -33,7 +36,6 @@ export const Form = () => {
 
   const onFormSubmit = (data: any) => {
     handleSubmit(data);
-    setOpen((o) => !o);
   };
 
   return (
@@ -228,7 +230,10 @@ export const Form = () => {
           </Slide>
         </form>
       </div>
-      <ThanksPopup open={isOpen} closeMenu={() => setOpen(false)} />
+      <ThanksPopup
+        open={isPopupOpen}
+        closeMenu={() => dispatch(disablePopup())}
+      />
     </>
   );
 };

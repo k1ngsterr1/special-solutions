@@ -30,7 +30,6 @@ export const ThumbnailsGallery: React.FC<ThumbnailsGalleryProps> = ({
         loadedImages++;
         console.log(loadedImages);
         if (loadedImages === totalImage) {
-          console.log("should be turned off");
           setTimeout(() => {
             dispatch(turnOffLoading());
           }, 2000);
