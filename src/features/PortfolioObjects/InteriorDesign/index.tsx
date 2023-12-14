@@ -94,7 +94,7 @@ export const InteriorDesign = () => {
             />
           </Slide>
           <Slide
-            className="w-full"
+            className="w-full ml-8"
             delay={200}
             direction="up"
             triggerOnce={true}

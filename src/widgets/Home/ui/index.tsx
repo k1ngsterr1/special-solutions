@@ -19,17 +19,24 @@ export const HomeScreen = () => {
     navigate("/portfolio");
   }
 
+  function navigatePortfolioSyngent() {
+    navigate("/portfolio/syngent");
+  }
+  function navigatePortfolioDar() {
+    navigate("/portfolio/dar");
+  }
+
   const galleryItems = [
     {
       image: test,
-      onClick: navigatePortfolio,
-      name: "Дизайн офиса Syngent",
+      onClick: navigatePortfolioSyngent,
+      name: "Офис Syngent",
       category: "Дизайн Интерьера",
     },
     {
       image: koktem02,
-      onClick: navigatePortfolio,
-      name: "Дизайн офиса DAR",
+      onClick: navigatePortfolioDar,
+      name: "Офис DAR",
       category: "Дизайн Интерьера",
     },
   ];
@@ -37,14 +44,14 @@ export const HomeScreen = () => {
   const galleryItemsMob = [
     {
       image: mob_photo,
-      onClick: navigatePortfolio,
-      name: "Дизайн офиса Syngent",
+      onClick: navigatePortfolioSyngent,
+      name: "Офис Syngent",
       category: "Дизайн Интерьера",
     },
     {
       image: mob_photo02,
-      onClick: navigatePortfolio,
-      name: "Дизайн офиса DAR",
+      onClick: navigatePortfolioDar,
+      name: "Офис DAR",
       category: "Дизайн Интерьера",
     },
   ];

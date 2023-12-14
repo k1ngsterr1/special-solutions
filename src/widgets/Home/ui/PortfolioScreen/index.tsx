@@ -78,7 +78,7 @@ export const PorfolioScreen = () => {
         </Slide>{" "}
         <Slide direction="right" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса Astana Bank"
+            text="Офисы Astana Bank"
             subText="Интерьер"
             onClick={navigateBankAstana}
             image={astana_cover}
@@ -166,7 +166,7 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офис Банк Астаны"
+              text="Офисы Банк Астаны"
               subText="Интерьер"
               onClick={navigateBankAstana}
               image={astana_cover}
