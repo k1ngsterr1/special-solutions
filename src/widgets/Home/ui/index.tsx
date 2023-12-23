@@ -116,6 +116,7 @@ export const HomeScreen = () => {
             text="Все проекты"
             onClick={navigatePortfolio}
             marginTop="mt-8"
+            style={{ marginTop: "clamp(16px, 1.666vw, 64px)" }}
             type="outline"
           />
         </Slide>

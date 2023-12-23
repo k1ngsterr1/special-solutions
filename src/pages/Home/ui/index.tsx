@@ -9,9 +9,11 @@ import { ServicesScreen } from "@widgets/Home/ui/ServicesScreen";
 import { PorfolioScreen } from "@widgets/Home/ui/PortfolioScreen";
 import { Form } from "@widgets/Form";
 import { Footer } from "@features/Footer/ui";
+import { Loader } from "@shared/ui/Loader";
 
 export const HomePage = () => {
   const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen);
+  const isLoading = useSelector((state: RootState) => state.loader.isLoading);
 
   return (
     <>
@@ -31,6 +33,7 @@ export const HomePage = () => {
           content="Special Solutions – ведущая проектно-строительная компания, предлагающая инновационные и устойчивые решения для вашего бизнеса. Специализируемся на разработке и реализации уникальных проектов коммерческого и офисного пространства. Наш подход объединяет передовые технологии, экологичность и индивидуальный дизайн, чтобы создать функциональные и визуально привлекательные здания. Откройте для себя, как Special Solutions может преобразить ваше пространство, обеспечивая эффективность и инновации."
         ></meta>
       </Helmet>
+      {isLoading && <Loader />}
       <Header />
       {isMenuOpen && <Menu />}
       <div className="content-container flex flex-col items-center">

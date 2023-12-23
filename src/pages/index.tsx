@@ -1,11 +1,10 @@
-import { FC, Suspense, lazy } from "react";
+import { FC, Suspense, lazy, useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // Loader
@@ -52,12 +51,18 @@ const PortfolioDetails = lazy(() =>
 
 export const MyRoutes: FC = () => {
   const isLoading = useSelector((state: RootState) => state.loader.isLoading);
+  const [isHomePageLoading, setHomePageLoading] = useState(true);
 
   useEffect(() => {
     document.body.style.overflow = isLoading ? "hidden" : "auto";
 
+    const timer = setTimeout(() => {
+      setHomePageLoading(false);
+    }, 1500);
+
     return () => {
       document.body.style.overflow = "auto";
+      clearTimeout(timer);
     };
   }, [isLoading]);
 
@@ -76,7 +81,11 @@ export const MyRoutes: FC = () => {
       <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path={ROUTE_CONSTANTS.HOME} element={<HomePage />} />
+          {isHomePageLoading ? (
+            <Route path={ROUTE_CONSTANTS.HOME} element={<Loader />} />
+          ) : (
+            <Route path={ROUTE_CONSTANTS.HOME} element={<HomePage />} />
+          )}
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route path="/index.html" element={<Navigate replace to="/home" />} />
           <Route

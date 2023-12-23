@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import "./styles.scss";
+import { CSSProperties } from "react";
 
 interface ButtonProps {
   type: string;
@@ -7,12 +8,14 @@ interface ButtonProps {
   buttonType?: string | any;
   marginTop?: string;
   onClick?: () => void;
+  style?: CSSProperties;
   to?: any;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   text,
   type,
+  style,
   buttonType,
   marginTop,
   onClick,
@@ -22,6 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={`button ${type} ${marginTop}`}
       type={buttonType}
       onClick={onClick}
+      style={style}
     >
       {text}
     </button>

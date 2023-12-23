@@ -21,9 +21,9 @@ $light_gray: hsla(0, 0%, 95%, 1);
 }
 
 .ios {
-  display: -webkit-flex;
+  display: -webkit-flex !important;
   display: flex;
-  -webkit-justify-content: space-between;
+  -webkit-justify-content: space-between !important;
   justify-content: space-between;
 }
 
