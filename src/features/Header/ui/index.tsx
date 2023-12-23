@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useOpenMenu } from "@shared/lib/hooks/useOpenMenu";
 import { Link as ScrollLink } from "react-scroll";
 import { LinkButton } from "@shared/ui/LinkButton";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from "@assets/logo.svg";
 import Hamburger from "hamburger-react";
@@ -68,6 +68,12 @@ export const Header = () => {
             >
               Услуги
             </ScrollLink>
+            <Link
+              className="header__content-container__links__link"
+              to="/clients"
+            >
+              Клиенты
+            </Link>
             <ScrollLink
               to="portfolio"
               smooth

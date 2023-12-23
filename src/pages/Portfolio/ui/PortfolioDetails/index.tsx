@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Header } from "@features/Header/ui";
 import { Slide } from "react-awesome-reveal";
 import { RootState } from "@shared/lib/redux/store";
