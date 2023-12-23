@@ -23,6 +23,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@shared/lib/redux/store";
 
 // Pages
+// import { HomePage } from "./Home";
 
 const HomePage = lazy(() =>
   import("./Home").then((module) => ({ default: module.HomePage }))
