@@ -115,7 +115,7 @@ export const ServicesScreen = () => {
             WebkitJustifyContent: "space-between",
           }}
         >
-          <Slide direction="up" triggerOnce={true}>
+          <Slide direction="up" className="flex" triggerOnce={true}>
             <ServiceTab
               text="Проектирование"
               img={service01}
@@ -123,7 +123,7 @@ export const ServicesScreen = () => {
               marginTop="mt-8"
             />
           </Slide>
-          <Slide direction="up" triggerOnce={true} delay={200}>
+          <Slide direction="up" className="flex" triggerOnce={true} delay={200}>
             <ServiceTab
               text="Строительно монтажные работы"
               img={service02}
@@ -131,7 +131,7 @@ export const ServicesScreen = () => {
               marginTop="mt-8"
             />
           </Slide>
-          <Slide direction="up" triggerOnce={true} delay={300}>
+          <Slide direction="up" className="flex" triggerOnce={true} delay={300}>
             <ServiceTab
               text="Инженерные коммуникации"
               img={service03}
@@ -139,7 +139,7 @@ export const ServicesScreen = () => {
               marginTop="mt-8"
             />
           </Slide>
-          <Slide direction="up" triggerOnce={true} delay={400}>
+          <Slide direction="up" className="flex" triggerOnce={true} delay={400}>
             <ServiceTab
               text="Поставка мебели и оборудования"
               img={service04}

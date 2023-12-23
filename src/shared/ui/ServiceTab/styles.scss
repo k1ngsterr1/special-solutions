@@ -42,7 +42,7 @@
 @media screen and (min-width: 1024px) {
   .service-tab {
     position: relative;
-    width: auto;
+    width: 95%;
     height: auto;
     cursor: pointer;
     &:hover .service-tab__text {
@@ -66,7 +66,7 @@
       position: absolute;
       color: #fff;
       font-family: Rubik;
-      font-size: 24px;
+      font-size: clamp(12px, 1.24992vw, 48px);
       font-style: normal;
       font-weight: 500;
       line-height: normal;
