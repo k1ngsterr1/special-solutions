@@ -135,7 +135,7 @@ export const AboutScreen = () => {
                 number="04"
                 textType="text-left"
                 text="Лицензии в области строительства и архитектуры"
-                marginTop="mt-6"
+                marginTop="mt-0"
               />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={500}>
