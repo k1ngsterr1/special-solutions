@@ -223,7 +223,7 @@ export const Form = () => {
           </div>
           <Slide
             direction="right"
-            className="w-full flex items-center justify-center"
+            className="w-full flex items-center justify-center mt-10"
             triggerOnce
           >
             <Button text="Отправить" marginTop="mt-16" type="full" />
