@@ -5,7 +5,7 @@ import "./styles.scss";
 
 interface PortfolioTabProps {
   text: string;
-  subText: string;
+  subText?: string;
   image: string;
   marginTop: string;
   onClick: () => void;
@@ -14,7 +14,6 @@ interface PortfolioTabProps {
 export const PortfolioTab: React.FC<PortfolioTabProps> = ({
   text,
   image,
-  subText,
   marginTop,
   onClick,
 }) => {
@@ -26,9 +25,9 @@ export const PortfolioTab: React.FC<PortfolioTabProps> = ({
       />
       <div className="portfolio-tab__text-container flex flex-col items">
         <span className="portfolio-tab__text-container__text">{text}</span>
-        <span className="portfolio-tab__text-container__sub-text mt-2">
+        {/* <span className="portfolio-tab__text-container__sub-text mt-2">
           {subText}
-        </span>
+        </span> */}
       </div>
       <img src={image} alt="portfolio-image" className="portfolio-tab__image" />
     </div>

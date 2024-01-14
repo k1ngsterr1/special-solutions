@@ -51,7 +51,7 @@ export const PorfolioScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса Mars"
+            text="Mars Казахстан"
             subText="Интерьер"
             onClick={navigateMars}
             image={mars_cover}
@@ -60,7 +60,7 @@ export const PorfolioScreen = () => {
         </Slide>
         <Slide direction="right" triggerOnce={true}>
           <PortfolioTab
-            text="Офис компании DAR"
+            text="DAR"
             subText="Интерьер"
             onClick={navigateDar}
             image={dar_cover}
@@ -69,7 +69,7 @@ export const PorfolioScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <PortfolioTab
-            text="Офис компании Syngenta Казахстан"
+            text="Syngenta Казахстан"
             subText="Интерьер"
             onClick={navigateSyngenta}
             image={syngenta_cover}
@@ -78,7 +78,7 @@ export const PorfolioScreen = () => {
         </Slide>{" "}
         <Slide direction="right" triggerOnce={true}>
           <PortfolioTab
-            text="Офисы Astana Bank"
+            text="Astana Bank"
             subText="Интерьер"
             onClick={navigateBankAstana}
             image={astana_cover}
@@ -124,7 +124,7 @@ export const PorfolioScreen = () => {
         <div className="w-full flex justify-between items-center mt-8">
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
-              text="Офис Mars Казахстан"
+              text="Mars Казахстан"
               subText="Интерьер"
               onClick={navigateMars}
               image={mars_cover}
@@ -138,7 +138,7 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офис компании DAR"
+              text="компании DAR"
               subText="Интерьер"
               onClick={navigateDar}
               image={dar_cover}
@@ -152,7 +152,7 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офис компании Syngenta Казахстан"
+              text="Syngenta Казахстан"
               subText="Интерьер"
               onClick={navigateSyngenta}
               image={syngenta_cover}
@@ -166,7 +166,7 @@ export const PorfolioScreen = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офисы Банк Астаны"
+              text="Банк Астаны"
               subText="Интерьер"
               onClick={navigateBankAstana}
               image={astana_cover}

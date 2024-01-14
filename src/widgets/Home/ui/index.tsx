@@ -45,7 +45,7 @@ export const HomeScreen = () => {
     {
       image: mob_photo,
       onClick: navigatePortfolioSyngent,
-      name: "Офис Syngent",
+      name: "Офис Syngenta",
       category: "Дизайн Интерьера",
     },
     {
