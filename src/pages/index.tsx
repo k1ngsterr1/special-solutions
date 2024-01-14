@@ -92,9 +92,8 @@ export const MyRoutes: FC = () => {
             path="/index.shtml"
             element={<Navigate replace to="/home" />}
           />
-          <Route path={ROUTE_CONSTANTS.SERVICES} element={<ServicePage />} />
           <Route path={ROUTE_CONSTANTS.PORTFOLIO} element={<PortfolioPage />} />
-          <Route path={ROUTE_CONSTANTS.CLIENTS} element={<ClientsPage />} />+
+          <Route path={ROUTE_CONSTANTS.CLIENTS} element={<ClientsPage />} />
           {Object.entries(serviceContent).map(([serviceType, content]) => (
             <Route
               key={serviceType}

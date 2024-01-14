@@ -23,6 +23,14 @@ import syngent04 from "@assets/portfolio/syngenta/syngent04.webp";
 import syngent05 from "@assets/portfolio/syngenta/syngent05.webp";
 // import syngent06 from "@assets/portfolio/syngenta/syngent06.webp";
 
+import cat01 from "@assets/portfolio/CAT/cat01.webp";
+import cat02 from "@assets/portfolio/CAT/cat02.webp";
+import cat03 from "@assets/portfolio/CAT/cat03.webp";
+import cat04 from "@assets/portfolio/CAT/cat04.webp";
+import cat05 from "@assets/portfolio/CAT/cat05.webp";
+import cat06 from "@assets/portfolio/CAT/cat06.webp";
+import cat07 from "@assets/portfolio/CAT/cat07.webp";
+
 interface PhotoItem {
   photo: string;
   thumbnail: string;
@@ -366,20 +374,24 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
-        photo: mars01,
-        thumbnail: mars01,
+        photo: cat02,
+        thumbnail: cat02,
       },
       {
-        photo: mars02,
-        thumbnail: mars02,
+        photo: cat03,
+        thumbnail: cat03,
       },
       {
-        photo: mars03,
-        thumbnail: mars03,
+        photo: cat07,
+        thumbnail: cat07,
       },
       {
-        photo: mars04,
-        thumbnail: mars04,
+        photo: cat05,
+        thumbnail: cat05,
+      },
+      {
+        photo: cat06,
+        thumbnail: cat06,
       },
     ],
   },
