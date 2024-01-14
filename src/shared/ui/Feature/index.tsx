@@ -1,14 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.scss";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 interface FeatureProps {
-  number: string;
   text: string;
   textType: string;
   marginTop?: string;
 }
 
 export const Feature: React.FC<FeatureProps> = ({
-  number,
   text,
   textType,
   marginTop,
@@ -17,7 +17,7 @@ export const Feature: React.FC<FeatureProps> = ({
     <div
       className={`feature flex ${marginTop} max-[1024px]:flex-col items-center min-[1024px]:flex-row`}
     >
-      <span className="feature__number">{number}</span>
+      <FontAwesomeIcon className="feature__number" icon={faPlus} />
       <span className={`feature__text ${textType}`}>{text}</span>
     </div>
   );

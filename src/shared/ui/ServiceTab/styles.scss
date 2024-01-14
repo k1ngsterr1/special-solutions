@@ -1,7 +1,10 @@
 .service-tab {
   position: relative;
-  width: 100%;
+  width: 100% !important;
   height: auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
   cursor: pointer;
   &:hover .service-tab__text {
     @apply text-custom-orange;
@@ -11,26 +14,23 @@
   }
 
   &__icon {
-    font-size: clamp(15px, 7.0092vw, 60px);
-    position: absolute;
-    top: clamp(8px, 3.73824vw, 32px);
-    right: clamp(8px, 3.73824vw, 32px);
-    color: white;
+    font-size: clamp(11.5px, 5.37372vw, 46px);
+    @apply text-custom-orange;
     transition: 0.3s all;
   }
 
   &__text {
-    width: 60%;
-    position: absolute;
-    color: #fff;
-    font-family: Rubik;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    bottom: clamp(14px, 6.541919999999999vw, 56px);
-    left: clamp(8px, 3.73824vw, 32px);
-    transition: 0.3s all;
+    width: 80%;
+  }
+
+  &__text,
+  &__number {
+    text-align: center;
+    font-size: clamp(14px, 6.541919999999999vw, 56px);
+    @apply font-semibold;
+    @apply text-custom-orange;
+    @apply pb-4;
+    @apply pt-4;
   }
 
   &__image {
@@ -41,37 +41,45 @@
 
 @media screen and (min-width: 1024px) {
   .service-tab {
-    position: relative;
-    width: 95%;
-    height: auto;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid;
+    transition: 0.3s all;
+    @apply border-custom-orange;
+
+    &:hover {
+      @apply bg-custom-orange;
+    }
+
+    &:hover .service-tab__number {
+      @apply text-custom-white;
+    }
+
     &:hover .service-tab__text {
-      @apply text-custom-orange;
+      @apply text-custom-white;
     }
     &:hover .service-tab__icon {
+      @apply text-custom-white;
+    }
+
+    &__text,
+    &__number {
+      font-size: clamp(16px, 1.66656vw, 64px);
+      @apply font-semibold;
       @apply text-custom-orange;
+      @apply pb-4;
+      @apply pt-4;
+    }
+
+    &__number {
+      @apply ml-4;
     }
 
     &__icon {
       font-size: clamp(16px, 1.66656vw, 64px);
-      position: absolute;
-      top: clamp(16px, 1.66656vw, 64px);
-      right: clamp(16px, 1.66656vw, 64px);
-      color: white;
-      transition: 0.3s all;
-    }
-
-    &__text {
-      width: 60%;
-      position: absolute;
-      color: #fff;
-      font-family: Rubik;
-      font-size: clamp(12px, 1.24992vw, 48px);
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      bottom: clamp(16px, 1.66656vw, 64px);
-      left: clamp(16px, 1.66656vw, 64px);
+      @apply text-custom-orange;
+      @apply mr-4;
       transition: 0.3s all;
     }
 

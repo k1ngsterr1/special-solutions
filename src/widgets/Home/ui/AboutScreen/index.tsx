@@ -1,6 +1,7 @@
 import { Feature } from "@shared/ui/Feature";
 import { Slide } from "react-awesome-reveal";
 import { ScrollButton } from "@shared/ui/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Image from "@assets/about_image.webp";
 
@@ -30,7 +31,6 @@ export const AboutScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <Feature
-            number="01"
             textType="text-center"
             text="На рынке с 2011 года"
             marginTop="mt-6"
@@ -38,7 +38,6 @@ export const AboutScreen = () => {
         </Slide>
         <Slide direction="right" triggerOnce={true}>
           <Feature
-            number="02"
             textType="text-center"
             text="Более 80.000 кв.м выполненных объектов"
             marginTop="mt-6"
@@ -46,7 +45,6 @@ export const AboutScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <Feature
-            number="03"
             textType="text-center"
             text="Годовая гарантия на работу"
             marginTop="mt-6"
@@ -54,7 +52,6 @@ export const AboutScreen = () => {
         </Slide>
         <Slide direction="right" triggerOnce={true}>
           <Feature
-            number="04"
             textType="text-center"
             text="Лицензии в области строительства и архитектуры"
             marginTop="mt-6"
@@ -108,15 +105,10 @@ export const AboutScreen = () => {
           </Slide>
           <div className="about-content__text-container flex flex-col justify-between items-start ml-28">
             <Slide direction="right" triggerOnce={true} delay={100}>
-              <Feature
-                number="01"
-                textType="text-left"
-                text="На рынке с 2011 года"
-              />
+              <Feature textType="text-left" text="На рынке с 2011 года" />
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={200}>
               <Feature
-                number="02"
                 textType="text-left"
                 text="Более 80.000 кв.м выполненных объектов"
                 marginTop="mt-0"
@@ -124,7 +116,6 @@ export const AboutScreen = () => {
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={300}>
               <Feature
-                number="03"
                 textType="text-left"
                 text="Годовая гарантия на работу"
                 marginTop="mt-0"
@@ -132,7 +123,6 @@ export const AboutScreen = () => {
             </Slide>
             <Slide direction="right" triggerOnce={true} delay={400}>
               <Feature
-                number="04"
                 textType="text-left"
                 text="Лицензии в области строительства и архитектуры"
                 marginTop="mt-0"

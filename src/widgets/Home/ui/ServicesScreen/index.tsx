@@ -39,36 +39,36 @@ export const ServicesScreen = () => {
             управление проектами.
           </p>
         </Slide>
-        <Slide direction="right" triggerOnce={true}>
+        <Slide direction="right" className="w-full" triggerOnce={true}>
           <ServiceTab
+            number="01"
             text="Проектирование"
-            img={service01}
             onClick={navigateServiceCase}
-            marginTop="mt-8"
+            marginTop="mt-4"
           />
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <ServiceTab
+            number="02"
             text="Строительно монтажные работы"
-            img={service02}
             onClick={navigateServiceCase}
-            marginTop="mt-8"
+            marginTop="mt-4"
           />
         </Slide>
         <Slide direction="right" triggerOnce={true}>
           <ServiceTab
+            number="03"
             text="Инженерные коммуникации"
-            img={service03}
             onClick={navigateServiceCase}
-            marginTop="mt-8"
+            marginTop="mt-4"
           />
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <ServiceTab
+            number="04"
             text="Поставка мебели и оборудования"
-            img={service04}
             onClick={navigateServiceCase}
-            marginTop="mt-8"
+            marginTop="mt-4"
           />
         </Slide>
         <Button
@@ -109,7 +109,7 @@ export const ServicesScreen = () => {
           </div>
         </div>
         <div
-          className="w-full flex items-centes justify-between ios mt-16"
+          className="w-full flex flex-col  ios mt-16"
           style={{
             display: "-webkit-flex",
             WebkitJustifyContent: "space-between",
@@ -117,32 +117,32 @@ export const ServicesScreen = () => {
         >
           <Slide direction="up" className="flex" triggerOnce={true}>
             <ServiceTab
+              number="01"
               text="Проектирование"
-              img={service01}
               onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
           <Slide direction="up" className="flex" triggerOnce={true} delay={200}>
             <ServiceTab
+              number="02"
               text="Строительно монтажные работы"
-              img={service02}
               onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
           <Slide direction="up" className="flex" triggerOnce={true} delay={300}>
             <ServiceTab
+              number="03"
               text="Инженерные коммуникации"
-              img={service03}
               onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
           <Slide direction="up" className="flex" triggerOnce={true} delay={400}>
             <ServiceTab
+              number="04"
               text="Поставка мебели и оборудования"
-              img={service04}
               onClick={navigateServiceCase}
               marginTop="mt-8"
             />
