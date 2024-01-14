@@ -7,6 +7,7 @@ import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
 import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
 import syngenta_cover from "@assets/portfolio/syngenta/syngent_cover.webp";
+import caterpillar_cover from "@assets/portfolio/CAT/caterpillar.webp";
 
 export const PorfolioScreen = () => {
   const navigate = useNavigate();
@@ -82,6 +83,15 @@ export const PorfolioScreen = () => {
             subText="Интерьер"
             onClick={navigateBankAstana}
             image={astana_cover}
+            marginTop="mt-8"
+          />
+        </Slide>
+        <Slide direction="left" triggerOnce={true}>
+          <PortfolioTab
+            text="CAT Казахстан"
+            subText="Интерьер"
+            onClick={navigateBankAstana}
+            image={caterpillar_cover}
             marginTop="mt-8"
           />
         </Slide>

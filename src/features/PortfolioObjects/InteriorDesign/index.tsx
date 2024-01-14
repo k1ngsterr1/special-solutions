@@ -8,6 +8,7 @@ import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
 import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
 import syngenta_cover from "@assets/portfolio/syngenta/syngent_cover.webp";
+import caterpillar_cover from "@assets/portfolio/CAT/caterpillar.webp";
 
 export const InteriorDesign = () => {
   const navigate = useNavigate();
@@ -32,12 +33,16 @@ export const InteriorDesign = () => {
     navigate("/portfolio/syngent");
   }
 
+  function navigateCAT() {
+    navigate("/portfolio/CAT");
+  }
+
   return (
     <>
       <div className="w-full flex flex-col items-center mt-8 min-[1024px]:hidden">
         <Slide className="w-full" direction="up" triggerOnce={true}>
           <PortfolioTab
-            text="Интерьер Офиса Mars"
+            text="Mars Казахстан"
             subText="Интерьер"
             onClick={navigateMars}
             image={mars_cover}
@@ -46,7 +51,7 @@ export const InteriorDesign = () => {
         </Slide>
         <Slide className="w-full" delay={200} direction="up" triggerOnce={true}>
           <PortfolioTab
-            text="Офис компании DAR"
+            text="DAR Казахстан"
             subText="Интерьер"
             onClick={navigateDar}
             image={dar_cover}
@@ -60,24 +65,33 @@ export const InteriorDesign = () => {
           triggerOnce={true}
         >
           <PortfolioTab
-            text="Офис компании Syngenta Казахстан"
+            text="Syngenta Казахстан"
             subText="Интерьер"
             onClick={navigateSyngenta}
             image={syngenta_cover}
             marginTop="mt-8"
           />
         </Slide>
+        <Slide className="w-full" delay={400} direction="up" triggerOnce={true}>
+          <PortfolioTab
+            text="Astana Bank Казахстан"
+            subText="Интерьер"
+            onClick={navigateBankAstana}
+            image={astana_cover}
+            marginTop="mt-8"
+          />
+        </Slide>
         <Slide
           className="w-full "
-          delay={400}
+          delay={500}
           direction="up"
           triggerOnce={true}
         >
           <PortfolioTab
-            text="Интерьер Офиса Astana Bank"
+            text="CAT Казахстан"
             subText="Интерьер"
-            onClick={navigateBankAstana}
-            image={astana_cover}
+            onClick={navigateCAT}
+            image={caterpillar_cover}
             marginTop="mt-8"
           />
         </Slide>
@@ -86,7 +100,7 @@ export const InteriorDesign = () => {
         <div className="w-full flex justify-between items-center">
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
-              text="Интерьер Офиса Mars"
+              text="Mars Казахстан"
               subText="Интерьер"
               onClick={navigateMars}
               image={mars_cover}
@@ -100,8 +114,7 @@ export const InteriorDesign = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офис компании DAR"
-              subText="Интерьер"
+              text="DAR Казахстан"
               onClick={navigateDar}
               image={dar_cover}
               marginTop="mt-8"
@@ -114,7 +127,7 @@ export const InteriorDesign = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Офис компании Syngenta Казахстан"
+              text="Syngenta Казахстан"
               subText="Интерьер"
               onClick={navigateSyngenta}
               image={syngenta_cover}
@@ -128,7 +141,7 @@ export const InteriorDesign = () => {
             triggerOnce={true}
           >
             <PortfolioTab
-              text="Интерьер Офиса Astana Bank"
+              text="Astana Bank"
               subText="Интерьер"
               onClick={navigateBankAstana}
               image={astana_cover}
@@ -136,59 +149,17 @@ export const InteriorDesign = () => {
             />
           </Slide>
         </div>
-        {/* <div className="w-full flex justify-between items-center">
-          <Slide className="w-full" direction="up" triggerOnce={true}>
+        <div className="w-full flex justify-between items-center">
+          <Slide direction="up" triggerOnce={true}>
             <PortfolioTab
-              text="Интерьер Офиса"
+              text="CAT Казахстан"
               subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
+              onClick={navigateBankAstana}
+              image={caterpillar_cover}
               marginTop="mt-8"
             />
           </Slide>
-          <Slide
-            className="w-full"
-            delay={200}
-            direction="up"
-            triggerOnce={true}
-          >
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8 ml-8"
-            />
-          </Slide>
-          <Slide
-            className="w-full ml-8"
-            delay={300}
-            direction="up"
-            triggerOnce={true}
-          >
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8 ml-8"
-            />
-          </Slide>
-          <Slide
-            className="w-full ml-8"
-            delay={400}
-            direction="up"
-            triggerOnce={true}
-          >
-            <PortfolioTab
-              text="Интерьер Офиса"
-              subText="Интерьер"
-              onClick={navigatePortfolioCase}
-              image={portfolio01}
-              marginTop="mt-8 ml-8"
-            />
-          </Slide>
-        </div> */}
+        </div>
       </div>
     </>
   );
