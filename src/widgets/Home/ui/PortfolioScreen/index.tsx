@@ -34,7 +34,7 @@ export const PorfolioScreen = () => {
   }
 
   function navigateStandartInsurance() {
-    navigate("/standart-insurance");
+    navigate("/standard_insurance");
   }
 
   return (

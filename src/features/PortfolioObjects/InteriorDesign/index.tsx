@@ -2,8 +2,6 @@ import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 
-import portfolio01 from "@assets/portfolio01.webp";
-
 import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
 import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
@@ -39,7 +37,7 @@ export const InteriorDesign = () => {
   }
 
   function navigateStandartInsurance() {
-    navigate("/standart-insurance");
+    navigate("/portfolio/standard_insurance");
   }
 
   return (
@@ -93,14 +91,14 @@ export const InteriorDesign = () => {
           triggerOnce={true}
         >
           <PortfolioTab
-            text="CAT Казахстан"
+            text="Caterpillar Казахстан"
             subText="Интерьер"
             onClick={navigateCAT}
             image={caterpillar_cover}
             marginTop="mt-8"
           />
         </Slide>
-        <Slide triggerOnce={true}>
+        <Slide triggerOnce={true} direction="up">
           <PortfolioTab
             text="Standart Insurance"
             subText="Интерьер"

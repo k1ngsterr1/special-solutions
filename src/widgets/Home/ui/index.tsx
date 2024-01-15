@@ -12,6 +12,8 @@ import test from "@assets/test.jpg";
 import mob_photo from "@assets/portfolio/office03.webp";
 import mob_photo02 from "@assets/portfolio/dar_office.webp";
 
+import dar_wide from "@assets/portfolio/dar_wide.webp";
+
 export const HomeScreen = () => {
   const navigate = useNavigate();
 
@@ -34,7 +36,7 @@ export const HomeScreen = () => {
       category: "Дизайн Интерьера",
     },
     {
-      image: koktem02,
+      image: dar_wide,
       onClick: navigatePortfolioDar,
       name: "Офис DAR",
       category: "Дизайн Интерьера",

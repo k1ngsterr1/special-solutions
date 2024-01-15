@@ -15,6 +15,11 @@ import koktem02 from "@assets/portfolio/koktem/koktem2.webp";
 import koktem03 from "@assets/portfolio/koktem/koktem3.webp";
 import koktem04 from "@assets/portfolio/koktem/koktem4.webp";
 import koktem05 from "@assets/portfolio/koktem/koktem5.webp";
+import koktem06 from "@assets/portfolio/koktem/dar01.webp";
+import koktem07 from "@assets/portfolio/koktem/dar02.webp";
+import koktem08 from "@assets/portfolio/koktem/dar03.webp";
+import koktem09 from "@assets/portfolio/koktem/dar04.webp";
+import koktem10 from "@assets/portfolio/koktem/dar05.webp";
 
 import syngent01 from "@assets/portfolio/syngenta/syngent01.webp";
 import syngent02 from "@assets/portfolio/syngenta/syngent02.webp";
@@ -30,6 +35,11 @@ import cat04 from "@assets/portfolio/CAT/cat04.webp";
 import cat05 from "@assets/portfolio/CAT/cat05.webp";
 import cat06 from "@assets/portfolio/CAT/cat06.webp";
 import cat07 from "@assets/portfolio/CAT/cat07.webp";
+
+import standard01 from "@assets/portfolio/insurance/insurance1.webp";
+import standard02 from "@assets/portfolio/insurance/insurance2.webp";
+import standard03 from "@assets/portfolio/insurance/insurance3.webp";
+import standard04 from "@assets/portfolio/insurance/insurance4.webp";
 
 interface PhotoItem {
   photo: string;
@@ -257,6 +267,18 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
         photo: koktem05,
         thumbnail: koktem05,
       },
+      {
+        photo: koktem06,
+        thumbnail: koktem06,
+      },
+      {
+        photo: koktem07,
+        thumbnail: koktem07,
+      },
+      {
+        photo: koktem08,
+        thumbnail: koktem08,
+      },
     ],
   },
   syngent: {
@@ -392,6 +414,74 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
       {
         photo: cat06,
         thumbnail: cat06,
+      },
+    ],
+  },
+  standard_insurance: {
+    title: "Standard Insurance",
+    officeName: "Standard Insurance",
+    metaDescription:
+      "Mars - это одна из ведущих международных компаний по производству продуктов питания и кормов для животных. Офис Mars в Алматы является региональной штаб-квартирой и отвечает за бизнес компании в 12 странах: Азербайджан, Армения, Беларусь, Грузия, Казахстан, Кыргызстан, Молдова, Монголия, Узбекистан, Таджикистан, Туркменистан и Турция.",
+    description:
+      "Mars - это одна из ведущих международных компаний по производству продуктов питания и кормов для животных. Офис Mars в Алматы является региональной штаб-квартирой и отвечает за бизнес компании в 12 странах: Азербайджан, Армения, Беларусь, Грузия, Казахстан, Кыргызстан, Молдова, Монголия, Узбекистан, Таджикистан, Туркменистан и Турция.",
+    servicesHeading: "Выполненные работы:",
+    objectAddress: "Адрес объекта:",
+    serviceYear: "2021",
+    serviceLocation: "Желтоксан 134",
+    serviceSquare: "1000кв.м",
+    service: "Создание нового интерьера",
+    adresses: [
+      {
+        adress: "Адрес номер 1",
+      },
+      {
+        adress: "Адрес номер 2",
+      },
+      {
+        adress: "Адрес номер 3",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+      {
+        adress: "Адрес номер 4",
+      },
+    ],
+    photos: [
+      {
+        photo: standard01,
+        thumbnail: standard01,
+      },
+      {
+        photo: standard02,
+        thumbnail: standard02,
+      },
+      {
+        photo: standard03,
+        thumbnail: standard03,
+      },
+      {
+        photo: standard04,
+        thumbnail: standard04,
+      },
+      {
+        photo: standard05,
+        thumbnail: standard05,
       },
     ],
   },
