@@ -8,6 +8,7 @@ import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
 import syngenta_cover from "@assets/portfolio/syngenta/syngent_cover.webp";
 import caterpillar_cover from "@assets/portfolio/CAT/caterpillar.webp";
+import standart_cover from "@assets/portfolio/insurance/insurance_cover.webp";
 
 export const PorfolioScreen = () => {
   const navigate = useNavigate();
@@ -30,6 +31,10 @@ export const PorfolioScreen = () => {
 
   function navigateSyngenta() {
     navigate("/portfolio/syngent");
+  }
+
+  function navigateStandartInsurance() {
+    navigate("/standart-insurance");
   }
 
   return (
