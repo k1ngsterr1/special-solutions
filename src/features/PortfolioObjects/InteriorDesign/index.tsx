@@ -110,7 +110,16 @@ export const InteriorDesign = () => {
       </div>
       <div className="w-full flex flex-col justify-between items-center mt-8 max-[1024px]:hidden">
         <div className="w-full flex justify-between items-center">
-          <Slide className="w-full" direction="up" triggerOnce={true}>
+          <Slide direction="up" className="w-full" triggerOnce={true}>
+            <PortfolioTab
+              text="CAT Казахстан"
+              subText="Интерьер"
+              onClick={navigateBankAstana}
+              image={caterpillar_cover}
+              marginTop="mt-8"
+            />
+          </Slide>
+          <Slide className="w-full ml-8" direction="up" triggerOnce={true}>
             <PortfolioTab
               text="Mars Казахстан"
               subText="Интерьер"
@@ -146,28 +155,14 @@ export const InteriorDesign = () => {
               marginTop="mt-8"
             />
           </Slide>
-          <Slide
-            className="w-full ml-8"
-            delay={400}
-            direction="up"
-            triggerOnce={true}
-          >
+        </div>
+        <div className="w-full flex  items-center">
+          <Slide delay={400} direction="up" triggerOnce={true}>
             <PortfolioTab
               text="Astana Bank"
               subText="Интерьер"
               onClick={navigateBankAstana}
               image={astana_cover}
-              marginTop="mt-8"
-            />
-          </Slide>
-        </div>
-        <div className="w-full flex  items-center">
-          <Slide direction="up" triggerOnce={true}>
-            <PortfolioTab
-              text="CAT Казахстан"
-              subText="Интерьер"
-              onClick={navigateBankAstana}
-              image={caterpillar_cover}
               marginTop="mt-8"
             />
           </Slide>

@@ -49,10 +49,6 @@ interface AdressItem {
   adress: string;
 }
 
-// interface ServiceItem {
-//   service: string;
-// }
-
 interface PortfolioInfo {
   title: string;
   description: string;
@@ -478,10 +474,6 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
       {
         photo: standard04,
         thumbnail: standard04,
-      },
-      {
-        photo: standard05,
-        thumbnail: standard05,
       },
     ],
   },

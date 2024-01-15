@@ -57,6 +57,15 @@ export const PorfolioScreen = () => {
         </Slide>
         <Slide direction="left" triggerOnce={true}>
           <PortfolioTab
+            text="CAT Казахстан"
+            subText="Интерьер"
+            onClick={navigateBankAstana}
+            image={caterpillar_cover}
+            marginTop="mt-8"
+          />
+        </Slide>
+        <Slide direction="left" triggerOnce={true}>
+          <PortfolioTab
             text="Mars Казахстан"
             subText="Интерьер"
             onClick={navigateMars}
@@ -88,15 +97,6 @@ export const PorfolioScreen = () => {
             subText="Интерьер"
             onClick={navigateBankAstana}
             image={astana_cover}
-            marginTop="mt-8"
-          />
-        </Slide>
-        <Slide direction="left" triggerOnce={true}>
-          <PortfolioTab
-            text="CAT Казахстан"
-            subText="Интерьер"
-            onClick={navigateBankAstana}
-            image={caterpillar_cover}
             marginTop="mt-8"
           />
         </Slide>
