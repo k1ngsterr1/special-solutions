@@ -33,6 +33,10 @@ export const PorfolioScreen = () => {
     navigate("/portfolio/syngent");
   }
 
+  function navigateCAT() {
+    navigate("/portfolio/CAT");
+  }
+
   function navigateStandartInsurance() {
     navigate("/standard_insurance");
   }
@@ -137,13 +141,22 @@ export const PorfolioScreen = () => {
           </Slide>
         </div>
         <div className="w-full flex justify-between items-center mt-8">
+          <Slide direction="left" className="w-full" triggerOnce={true}>
+            <PortfolioTab
+              text="CAT Казахстан"
+              subText="Интерьер"
+              onClick={navigateCAT}
+              image={caterpillar_cover}
+              marginTop="mt-8 mr-8"
+            />
+          </Slide>
           <Slide className="w-full" direction="up" triggerOnce={true}>
             <PortfolioTab
               text="Mars Казахстан"
               subText="Интерьер"
               onClick={navigateMars}
               image={mars_cover}
-              marginTop="mt-8 mr-8"
+              marginTop="mt-8"
             />
           </Slide>
           <Slide
@@ -157,11 +170,11 @@ export const PorfolioScreen = () => {
               subText="Интерьер"
               onClick={navigateDar}
               image={dar_cover}
-              marginTop="mt-8 ml-8"
+              marginTop="mt-8"
             />
           </Slide>
           <Slide
-            className="w-full ml-8"
+            className="w-full"
             delay={300}
             direction="up"
             triggerOnce={true}
@@ -171,21 +184,7 @@ export const PorfolioScreen = () => {
               subText="Интерьер"
               onClick={navigateSyngenta}
               image={syngenta_cover}
-              marginTop="mt-8 ml-8"
-            />
-          </Slide>
-          <Slide
-            className="w-full ml-8"
-            delay={400}
-            direction="up"
-            triggerOnce={true}
-          >
-            <PortfolioTab
-              text="Банк Астаны"
-              subText="Интерьер"
-              onClick={navigateBankAstana}
-              image={astana_cover}
-              marginTop="mt-8 ml-8"
+              marginTop="mt-8"
             />
           </Slide>
         </div>

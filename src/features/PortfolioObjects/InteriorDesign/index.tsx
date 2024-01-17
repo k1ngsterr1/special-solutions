@@ -114,7 +114,7 @@ export const InteriorDesign = () => {
             <PortfolioTab
               text="CAT Казахстан"
               subText="Интерьер"
-              onClick={navigateBankAstana}
+              onClick={navigateCAT}
               image={caterpillar_cover}
               marginTop="mt-8"
             />
