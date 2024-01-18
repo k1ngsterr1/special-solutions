@@ -18,8 +18,6 @@ import koktem05 from "@assets/portfolio/koktem/koktem5.webp";
 import koktem06 from "@assets/portfolio/koktem/dar01.webp";
 import koktem07 from "@assets/portfolio/koktem/dar02.webp";
 import koktem08 from "@assets/portfolio/koktem/dar03.webp";
-import koktem09 from "@assets/portfolio/koktem/dar04.webp";
-import koktem10 from "@assets/portfolio/koktem/dar05.webp";
 
 import syngent01 from "@assets/portfolio/syngenta/syngent01.webp";
 import syngent02 from "@assets/portfolio/syngenta/syngent02.webp";
@@ -28,10 +26,8 @@ import syngent04 from "@assets/portfolio/syngenta/syngent04.webp";
 import syngent05 from "@assets/portfolio/syngenta/syngent05.webp";
 // import syngent06 from "@assets/portfolio/syngenta/syngent06.webp";
 
-import cat01 from "@assets/portfolio/CAT/cat01.webp";
 import cat02 from "@assets/portfolio/CAT/cat02.webp";
 import cat03 from "@assets/portfolio/CAT/cat03.webp";
-import cat04 from "@assets/portfolio/CAT/cat04.webp";
 import cat05 from "@assets/portfolio/CAT/cat05.webp";
 import cat06 from "@assets/portfolio/CAT/cat06.webp";
 import cat07 from "@assets/portfolio/CAT/cat07.webp";
