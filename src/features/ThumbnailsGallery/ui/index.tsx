@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@shared/lib/redux/store";
+import { useDispatch } from "react-redux";
 import ImageGallery from "react-image-gallery";
 import { turnOffLoading, turnOnLoading } from "@shared/lib/redux/loaderSlice";
-import { Loader } from "@shared/ui/Loader";
 
 interface PhotoItem {
   photo: string;
@@ -28,7 +26,6 @@ export const ThumbnailsGallery: React.FC<ThumbnailsGalleryProps> = ({
       img.src = photo.photo;
       img.onload = () => {
         loadedImages++;
-        console.log(loadedImages);
         if (loadedImages === totalImage) {
           setTimeout(() => {
             dispatch(turnOffLoading());

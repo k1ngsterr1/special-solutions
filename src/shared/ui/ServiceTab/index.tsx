@@ -7,7 +7,7 @@ interface ServiceTabProps {
   number: string;
   text: string;
   marginTop: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const ServiceTab: React.FC<ServiceTabProps> = ({

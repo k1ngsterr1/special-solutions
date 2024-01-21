@@ -43,7 +43,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             number="01"
             text="Проектирование"
-            onClick={navigateServiceCase}
+            // onClick={navigateServiceCase}
             marginTop="mt-4"
           />
         </Slide>
@@ -51,7 +51,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             number="02"
             text="Строительно монтажные работы"
-            onClick={navigateServiceCase}
+            // onClick={navigateServiceCase}
             marginTop="mt-4"
           />
         </Slide>
@@ -59,7 +59,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             number="03"
             text="Инженерные коммуникации"
-            onClick={navigateServiceCase}
+            // onClick={navigateServiceCase}
             marginTop="mt-4"
           />
         </Slide>
@@ -67,7 +67,7 @@ export const ServicesScreen = () => {
           <ServiceTab
             number="04"
             text="Поставка мебели и оборудования"
-            onClick={navigateServiceCase}
+            // onClick={navigateServiceCase}
             marginTop="mt-4"
           />
         </Slide>
@@ -119,7 +119,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               number="01"
               text="Проектирование"
-              onClick={navigateServiceCase}
+              // onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
@@ -127,7 +127,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               number="02"
               text="Строительно монтажные работы"
-              onClick={navigateServiceCase}
+              // onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
@@ -135,7 +135,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               number="03"
               text="Инженерные коммуникации"
-              onClick={navigateServiceCase}
+              // onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
@@ -143,7 +143,7 @@ export const ServicesScreen = () => {
             <ServiceTab
               number="04"
               text="Поставка мебели и оборудования"
-              onClick={navigateServiceCase}
+              // onClick={navigateServiceCase}
               marginTop="mt-8"
             />
           </Slide>
