@@ -46,7 +46,7 @@ export const AboutScreen = () => {
         <Slide direction="left" triggerOnce={true}>
           <Feature
             textType="text-center"
-            text="Годовая гарантия на работу"
+            text="Гарантия на работу"
             marginTop="mt-6"
           />
         </Slide>
@@ -117,7 +117,7 @@ export const AboutScreen = () => {
             <Slide direction="right" triggerOnce={true} delay={300}>
               <Feature
                 textType="text-left"
-                text="Годовая гарантия на работу"
+                text="Гарантия на работу"
                 marginTop="mt-0"
               />
             </Slide>
