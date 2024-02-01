@@ -7,9 +7,9 @@ import { Selector } from "@shared/ui/Selector";
 import { ThanksPopup } from "@features/ThanksPopup/ui";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@shared/lib/redux/store";
+import { disablePopup, togglePopup } from "@shared/lib/redux/popupSlice";
 
 import "./styles.scss";
-import { disablePopup, togglePopup } from "@shared/lib/redux/popupSlice";
 
 type OptionType = { value: string; label: string };
 
