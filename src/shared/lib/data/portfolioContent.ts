@@ -37,7 +37,9 @@ import standard02 from "@assets/portfolio/insurance/insurance2.webp";
 import standard03 from "@assets/portfolio/insurance/insurance3.webp";
 import standard04 from "@assets/portfolio/insurance/insurance4.webp";
 
-interface PhotoItem {
+export interface PhotoItem {
+  type: "image" | "video";
+  source?: string;
   photo: string;
   thumbnail: string;
 }
@@ -108,22 +110,27 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
+        type: "image",
         photo: astana01,
         thumbnail: astana01,
       },
       {
+        type: "image",
         photo: astana02,
         thumbnail: astana02,
       },
       {
+        type: "image",
         photo: astana03,
         thumbnail: astana03,
       },
       {
+        type: "image",
         photo: astana04,
         thumbnail: astana04,
       },
       {
+        type: "image",
         photo: astana05,
         thumbnail: astana05,
       },
@@ -176,20 +183,30 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
+        type: "image",
         photo: mars01,
         thumbnail: mars01,
       },
       {
+        type: "image",
         photo: mars02,
         thumbnail: mars02,
       },
       {
+        type: "image",
         photo: mars03,
         thumbnail: mars03,
       },
       {
+        type: "image",
         photo: mars04,
         thumbnail: mars04,
+      },
+      {
+        type: "video",
+        photo: mars04,
+        thumbnail: mars04,
+        source: "https://www.youtube.com/embed/F5rerYMmK90?si=_Iy5Wb8LKMnl2ZgD",
       },
     ],
   },
@@ -240,34 +257,42 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
+        type: "image",
         photo: koktem01,
         thumbnail: koktem01,
       },
       {
+        type: "image",
         photo: koktem02,
         thumbnail: koktem02,
       },
       {
+        type: "image",
         photo: koktem03,
         thumbnail: koktem03,
       },
       {
+        type: "image",
         photo: koktem04,
         thumbnail: koktem04,
       },
       {
+        type: "image",
         photo: koktem05,
         thumbnail: koktem05,
       },
       {
+        type: "image",
         photo: koktem06,
         thumbnail: koktem06,
       },
       {
+        type: "image",
         photo: koktem07,
         thumbnail: koktem07,
       },
       {
+        type: "image",
         photo: koktem08,
         thumbnail: koktem08,
       },
@@ -320,22 +345,27 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
+        type: "image",
         photo: syngent01,
         thumbnail: syngent01,
       },
       {
+        type: "image",
         photo: syngent02,
         thumbnail: syngent02,
       },
       {
+        type: "image",
         photo: syngent03,
         thumbnail: syngent03,
       },
       {
+        type: "image",
         photo: syngent04,
         thumbnail: syngent04,
       },
       {
+        type: "image",
         photo: syngent05,
         thumbnail: syngent05,
       },
@@ -388,22 +418,27 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
+        type: "image",
         photo: cat02,
         thumbnail: cat02,
       },
       {
+        type: "image",
         photo: cat03,
         thumbnail: cat03,
       },
       {
+        type: "image",
         photo: cat07,
         thumbnail: cat07,
       },
       {
+        type: "image",
         photo: cat05,
         thumbnail: cat05,
       },
       {
+        type: "image",
         photo: cat06,
         thumbnail: cat06,
       },
@@ -456,18 +491,22 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
     ],
     photos: [
       {
+        type: "image",
         photo: standard01,
         thumbnail: standard01,
       },
       {
+        type: "image",
         photo: standard02,
         thumbnail: standard02,
       },
       {
+        type: "image",
         photo: standard03,
         thumbnail: standard03,
       },
       {
+        type: "image",
         photo: standard04,
         thumbnail: standard04,
       },
