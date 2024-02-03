@@ -75,7 +75,7 @@ export const InteriorDesign = () => {
             marginTop="mt-8"
           />
         </Slide>
-        <Slide className="w-full" delay={400} direction="up" triggerOnce={true}>
+        {/* <Slide className="w-full" delay={400} direction="up" triggerOnce={true}>
           <PortfolioTab
             text="Astana Bank Казахстан"
             subText="Интерьер"
@@ -83,7 +83,7 @@ export const InteriorDesign = () => {
             image={astana_cover}
             marginTop="mt-8"
           />
-        </Slide>
+        </Slide> */}
         <Slide
           className="w-full "
           delay={500}
@@ -157,7 +157,7 @@ export const InteriorDesign = () => {
           </Slide>
         </div>
         <div className="w-full flex  items-center">
-          <Slide delay={400} direction="up" triggerOnce={true}>
+          {/* <Slide delay={400} direction="up" triggerOnce={true}>
             <PortfolioTab
               text="Astana Bank"
               subText="Интерьер"
@@ -165,8 +165,8 @@ export const InteriorDesign = () => {
               image={astana_cover}
               marginTop="mt-8"
             />
-          </Slide>
-          <Slide direction="up" className="ml-8" triggerOnce={true}>
+          </Slide> */}
+          <Slide direction="up" className="ml-0" triggerOnce={true}>
             <PortfolioTab
               text="Standart Insurance"
               subText="Интерьер"
