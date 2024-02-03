@@ -9,6 +9,7 @@ import mars01 from "@assets/portfolio/mars/mars01.webp";
 import mars02 from "@assets/portfolio/mars/mars02.webp";
 import mars03 from "@assets/portfolio/mars/mars03.webp";
 import mars04 from "@assets/portfolio/mars/mars04.webp";
+import mars_preview from "@assets/portfolio/mars/mars_preview.png";
 
 import koktem01 from "@assets/portfolio/koktem/koktem1.webp";
 import koktem02 from "@assets/portfolio/koktem/koktem2.webp";
@@ -205,7 +206,7 @@ export const portfolioContent: Record<string, PortfolioInfo> = {
       {
         type: "video",
         photo: mars04,
-        thumbnail: mars04,
+        thumbnail: mars_preview,
         source: "https://www.youtube.com/embed/F5rerYMmK90?si=_Iy5Wb8LKMnl2ZgD",
       },
     ],
