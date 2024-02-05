@@ -2,23 +2,12 @@ import { PortfolioTab } from "@shared/ui/PortfolioTab";
 import { Slide } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 
-import portfolio01 from "@assets/portfolio01.webp";
-
-import astana_cover from "@assets/portfolio/astana_bank/astana01_cover.webp";
 import mars_cover from "@assets/portfolio/mars/mars_cover.webp";
 import dar_cover from "@assets/portfolio/koktem/koktem_cover.webp";
 import syngenta_cover from "@assets/portfolio/syngenta/syngent_cover.webp";
 
 export const InteriorDesign = () => {
   const navigate = useNavigate();
-
-  function navigatePortfolio() {
-    navigate("/portfolio");
-  }
-
-  function navigateBankAstana() {
-    navigate("/portfolio/astana_bank");
-  }
 
   function navigateMars() {
     navigate("/portfolio/mars");
@@ -67,20 +56,6 @@ export const InteriorDesign = () => {
             marginTop="mt-8"
           />
         </Slide>
-        <Slide
-          className="w-full "
-          delay={400}
-          direction="up"
-          triggerOnce={true}
-        >
-          <PortfolioTab
-            text="Интерьер Офиса Astana Bank"
-            subText="Интерьер"
-            onClick={navigateBankAstana}
-            image={astana_cover}
-            marginTop="mt-8"
-          />
-        </Slide>
       </div>
       <div className="w-full flex flex-col justify-between items-center mt-8 max-[1024px]:hidden">
         <div className="w-full flex justify-between items-center">
@@ -118,20 +93,6 @@ export const InteriorDesign = () => {
               subText="Интерьер"
               onClick={navigateSyngenta}
               image={syngenta_cover}
-              marginTop="mt-8"
-            />
-          </Slide>
-          <Slide
-            className="w-full ml-8"
-            delay={400}
-            direction="up"
-            triggerOnce={true}
-          >
-            <PortfolioTab
-              text="Интерьер Офиса Astana Bank"
-              subText="Интерьер"
-              onClick={navigateBankAstana}
-              image={astana_cover}
               marginTop="mt-8"
             />
           </Slide>
