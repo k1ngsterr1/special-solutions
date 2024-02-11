@@ -95,7 +95,7 @@ export const PorfolioScreen = () => {
             marginTop="mt-8"
           />
         </Slide>{" "}
-        <Slide direction="right" triggerOnce={true}>
+        {/* <Slide direction="right" triggerOnce={true}>
           <PortfolioTab
             text="Astana Bank"
             subText="Интерьер"
@@ -103,7 +103,7 @@ export const PorfolioScreen = () => {
             image={astana_cover}
             marginTop="mt-8"
           />
-        </Slide>
+        </Slide> */}
         <Slide direction="left" triggerOnce={true}>
           <Button
             text="Все проекты"
